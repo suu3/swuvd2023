@@ -16,6 +16,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@babel/preset-typescript": "^7.21.5",
     "gatsby": "^5.10.0",
     "gatsby-plugin-postcss": "^6.10.0",
     "postcss": "^8.4.24",
