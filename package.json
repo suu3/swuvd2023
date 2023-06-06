@@ -16,15 +16,21 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@babel/preset-typescript": "^7.21.5",
-    "gatsby": "^5.10.0",
+    "@gatsbyjs/reach-router": "^2.0.1",
+    "gatsby": "^5.0.0",
+    "gatsby-link": "^5.10.0",
     "gatsby-plugin-postcss": "^6.10.0",
     "gatsby-plugin-typescript": "^5.10.0",
-    "postcss": "^8.4.24",
+    "gatsby-react-router-scroll": "^6.10.0",
+    "gatsby-script": "^2.10.0",
+    "mitt": "^3.0.0",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "shallow-compare": "^1.2.2"
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.21.5",
     "@types/node": "^20.2.5",
     "@types/react": "^18.2.8",
     "@types/react-dom": "^18.2.4",
