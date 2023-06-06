@@ -14,6 +14,9 @@ dependencies:
   gatsby-plugin-postcss:
     specifier: ^6.10.0
     version: 6.10.0(gatsby@5.10.0)(postcss@8.4.24)(webpack@5.85.1)
+  gatsby-plugin-typescript:
+    specifier: ^5.10.0
+    version: 5.10.0(gatsby@5.10.0)
   postcss:
     specifier: ^8.4.24
     version: 8.4.24
