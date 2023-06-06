@@ -1,3 +1,11 @@
 @import "./_reset.scss";
 @import "./_fonts.scss";
 @import "./_variables.scss";
+
+/*
+* global Styles
+*/
+
+body {
+  background-color: var(--secondary-400);
+}

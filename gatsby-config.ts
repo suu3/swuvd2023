@@ -1,5 +1,6 @@
 import type { GatsbyConfig } from "gatsby";
 
+//@ see https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v2-to-v3/#css-modules-are-imported-as-es-modules
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `My Gatsby Site`,
