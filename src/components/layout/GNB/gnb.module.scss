@@ -1,10 +1,16 @@
 @mixin css-variables {
   --nav-margin: auto 96px;
   --nav-padding: 74px 96px;
+  --nav-menu-margin: 0 62px;
 }
 
 .nav {
   @include css-variables;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--nav-z-index);
 
   padding: var(--nav-padding);
   margin: var(--nav-margin);
@@ -36,4 +42,5 @@
   height: 27px;
 
   border-right: 3px solid var(--secondary-400);
+  margin: var(--nav-menu-margin);
 }

@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
-import { nav, menu, border } from "./gnb.module.scss";
+import { nav, menu, border, active } from "./gnb.module.scss";
 import classnames from "classnames";
+import { Link } from "gatsby";
 
 const menus = [
   {
@@ -19,14 +20,13 @@ const menus = [
 
 const GNB = ({ pathname }: { pathname: string }) => {
   const renderMenus = menus.map(({ title, link }, idx) => {
-    console.log("pathname", link === pathname);
     return (
       <Fragment key={title}>
-        <a href={link}>
-          <span className={classnames(menu, link === pathname && "active")}>
+        <Link to={link}>
+          <span className={classnames(menu, link === pathname && active)}>
             {title}
           </span>
-        </a>
+        </Link>
         {idx !== menus.length - 1 && <div className={border} />}
       </Fragment>
     );

@@ -1,5 +1,6 @@
 import React from "react";
 import "./src/styles/global.scss";
+import CommonLayout from "@/components/layout/CommonLayout";
 // Logs when the client route changes
 
 export const onRouteUpdate = ({ location, prevLocation }) => {
@@ -9,5 +10,5 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
 // Wraps every page in a component
 export const wrapPageElement = ({ element, props }) => {
-  return <div>{element}</div>;
+  return <CommonLayout>{element} </CommonLayout>;
 };

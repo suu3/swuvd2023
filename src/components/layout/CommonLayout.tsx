@@ -1,20 +1,16 @@
 import React, { ReactNode } from "react";
+import GNB from "@/components/layout/GNB";
 
 type LayoutProps = {
   children: ReactNode;
 };
 
-export default function Layout({ children }: LayoutProps) {
+export default function CommonLayout({ children }: LayoutProps) {
   return (
-    <div
-      style={{
-        backgroundColor: "red",
-        margin: `0 auto`,
-        maxWidth: 650,
-        padding: `0 1rem`,
-      }}
-    >
-      {children}
-    </div>
+    <>
+      <GNB pathname={location.pathname} />
+
+      <main>{children}</main>
+    </>
   );
 }

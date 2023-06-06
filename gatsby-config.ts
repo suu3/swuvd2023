@@ -10,7 +10,13 @@ const config: GatsbyConfig = {
   // If you use VSCode you can also use the GraphQL plugin
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
-  plugins: ["gatsby-plugin-pnpm", `gatsby-plugin-sass`],
+  plugins: [
+    "gatsby-plugin-pnpm",
+    `gatsby-plugin-sass`,
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+  ],
+  trailingSlash: `never`, // url 뒤 후행 슬래쉬 trailing slash
 };
 
 export default config;
