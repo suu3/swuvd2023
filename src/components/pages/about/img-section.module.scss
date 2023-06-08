@@ -1,0 +1,28 @@
+.section {
+  overflow: hidden;
+  color: var(--secondary-400);
+  position: relative;
+}
+
+// .left-text,
+// .right-text {
+//   z-index: 2;
+//   position: absolute;
+//   top: 50%;
+
+//   font-weight: 700;
+//   font-size: 30px;
+//   line-height: 52px;
+// }
+
+.location {
+  z-index: 2;
+  position: absolute;
+  right: 117px;
+  bottom: 73px;
+
+  display: flex;
+  > svg {
+    margin-right: 36px;
+  }
+}

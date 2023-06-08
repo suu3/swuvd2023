@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { nav, menu, border, active } from "./gnb.module.scss";
+import * as styles from "./gnb.module.scss";
 import classnames from "classnames";
 import { Link } from "gatsby";
 
@@ -18,21 +18,28 @@ const menus = [
   },
 ];
 
-const GNB = ({ pathname }: { pathname: string }) => {
+type GNBType = { pathname: string; type: "light" | "dark" };
+
+const GNB = ({ pathname, type = "light" }: GNBType) => {
   const renderMenus = menus.map(({ title, link }, idx) => {
     return (
       <Fragment key={title}>
         <Link to={link}>
-          <span className={classnames(menu, link === pathname && active)}>
+          <span
+            className={classnames(
+              styles["menu"],
+              link === pathname && styles["active"]
+            )}
+          >
             {title}
           </span>
         </Link>
-        {idx !== menus.length - 1 && <div className={border} />}
+        {idx !== menus.length - 1 && <div className={styles["border"]} />}
       </Fragment>
     );
   });
   return (
-    <nav className={nav}>
+    <nav className={classnames(styles["nav"], styles[type])}>
       <div>
         SEOUL WOMEN’S UNIVERSITY <br />
         VISUAL COMMUNICATION DESIGN

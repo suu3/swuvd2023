@@ -23,17 +23,31 @@
   font-weight: 700;
   font-size: 30px;
   line-height: 41px;
-}
 
-.menu {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 41px;
+  .menu {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 41px;
+  }
 
-  color: var(--secondary-400);
+  &.light {
+    .menu {
+      color: var(--secondary-400);
 
-  &.active {
-    color: var(--white);
+      &.active {
+        color: var(--white);
+      }
+    }
+  }
+
+  &.dark {
+    .menu {
+      color: var(--white);
+
+      &.active {
+        color: var(--primary-400);
+      }
+    }
   }
 }
 
