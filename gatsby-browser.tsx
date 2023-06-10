@@ -10,5 +10,5 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
 // Wraps every page in a component
 export const wrapPageElement = ({ element, props }) => {
-  return <CommonLayout>{element} </CommonLayout>;
+  return <CommonLayout {...props}>{element} </CommonLayout>;
 };

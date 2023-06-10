@@ -1,0 +1,22 @@
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 90px;
+
+  color: var(--white);
+
+  padding: 15px 0;
+  margin: auto 210px;
+
+  .info-content {
+    width: 431px;
+  }
+}
+
+.border {
+  border-bottom: 2px solid #404040;
+}

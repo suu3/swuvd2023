@@ -18,9 +18,9 @@ const menus = [
   },
 ];
 
-type GNBType = { pathname: string; type: "light" | "dark" };
+type GNBType = { pathname: string; theme: "light" | "dark" };
 
-const GNB = ({ pathname, type = "light" }: GNBType) => {
+const GNB = ({ pathname, theme = "light" }: GNBType) => {
   const renderMenus = menus.map(({ title, link }, idx) => {
     return (
       <Fragment key={title}>
@@ -39,7 +39,7 @@ const GNB = ({ pathname, type = "light" }: GNBType) => {
     );
   });
   return (
-    <nav className={classnames(styles["nav"], styles[type])}>
+    <nav className={classnames(styles["nav"], styles[theme])}>
       <div>
         SEOUL WOMEN’S UNIVERSITY <br />
         VISUAL COMMUNICATION DESIGN

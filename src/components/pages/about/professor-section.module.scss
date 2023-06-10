@@ -1,0 +1,38 @@
+.text {
+  margin: auto 210px;
+  color: var(--white);
+
+  > h1 {
+    padding-bottom: 52px;
+
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 65px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 124px;
+    row-gap: 37px;
+
+    .message {
+      > h2 {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 52px;
+
+        padding-bottom: 20px;
+      }
+
+      > p {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 42px;
+      }
+    }
+  }
+}
+
+.image {
+}

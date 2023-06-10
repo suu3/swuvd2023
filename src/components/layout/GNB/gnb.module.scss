@@ -6,7 +6,7 @@
 
 .nav {
   @include css-variables;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -28,8 +28,23 @@
     font-weight: 700;
     font-size: 30px;
     line-height: 41px;
+
+    transition: all 0.3s ease-in-out;
   }
 
+  .border {
+    display: inline-block;
+    height: 27px;
+
+    border-right: 3px solid var(--secondary-400);
+    margin: var(--nav-menu-margin);
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  /**
+  * theme
+  */
   &.light {
     .menu {
       color: var(--secondary-400);
@@ -37,6 +52,10 @@
       &.active {
         color: var(--white);
       }
+    }
+
+    .border {
+      border-right-color: var(--secondary-400);
     }
   }
 
@@ -48,13 +67,9 @@
         color: var(--primary-400);
       }
     }
+
+    .border {
+      border-right-color: var(--white);
+    }
   }
-}
-
-.border {
-  display: inline-block;
-  height: 27px;
-
-  border-right: 3px solid var(--secondary-400);
-  margin: var(--nav-menu-margin);
 }

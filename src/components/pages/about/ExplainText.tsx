@@ -10,13 +10,13 @@ const ExplainText = ({ ko, en }: ExplainTextType) => {
   return (
     <>
       <div className={koStyle}>
-        {ko.map((text) => (
-          <p>{text}</p>
+        {ko.map((text, idx) => (
+          <p key={idx}>{text}</p>
         ))}
       </div>
       <div className={enStyle}>
-        {en.map((text) => (
-          <p>{text}</p>
+        {en.map((text, idx) => (
+          <p key={idx}>{text}</p>
         ))}
       </div>
     </>

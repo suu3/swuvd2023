@@ -1,11 +1,18 @@
-@import "./_reset.scss";
-@import "./_fonts.scss";
-@import "./_variables.scss";
+@use "./_reset.scss";
+@use "./_fonts.scss";
+@use "./_variables.scss";
+@use "./_media-query.scss";
 
 /*
 * global Styles
 */
-
 body {
   background-color: var(--secondary-400);
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+  }
 }
