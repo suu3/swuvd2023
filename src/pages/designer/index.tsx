@@ -7,4 +7,4 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>SWUVD 2023</title>;
+export const Head: HeadFC = () => <title>Designer | SWUVD 2023</title>;
