@@ -1,0 +1,67 @@
+.wrapper {
+  position: relative;
+
+  .credit {
+    position: relative;
+    z-index: 2;
+    margin: auto 210px;
+    color: var(--white);
+
+    > h1 {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 65px;
+
+      padding-bottom: 72px;
+    }
+
+    .pic-row {
+      padding-bottom: 114px;
+
+      display: flex;
+
+      > span {
+        width: 194px;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 52px;
+
+        margin-right: 109px;
+      }
+
+      .members-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 42px;
+
+        .memberRow {
+          display: flex;
+          &:not(:last-child) {
+            padding-bottom: 18px;
+          }
+
+          .one-member {
+            display: flex;
+            > span {
+              display: inline-block;
+
+              margin-right: 37px;
+            }
+
+            > div {
+              margin-right: 117px;
+              > span {
+                &:not(:last-child) {
+                  margin-right: 56px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

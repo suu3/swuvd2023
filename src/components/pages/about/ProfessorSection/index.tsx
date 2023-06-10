@@ -1,6 +1,13 @@
 import React, { Fragment } from "react";
-import { text, message, image, grid } from "./professor-section.module.scss";
+import {
+  section,
+  message,
+  image,
+  grid,
+  professor,
+} from "./professor-section.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
+import CreditArticle from "./CreditArticle";
 
 const ProfessorSection = () => {
   const renderMsgs = professorData.map(({ name, content }, idx) => {
@@ -12,23 +19,23 @@ const ProfessorSection = () => {
     );
   });
   return (
-    <section>
-      <article className={text}>
-        <h1>Professor's congratulatory message</h1>
-        <div className={grid}>{renderMsgs}</div>
-      </article>
-
-      <article className={text}>
-        <h1>Credit</h1>
-      </article>
+    <section className={section}>
       <article className={image}>
         <StaticImage
           layout="fixed"
-          alt="line"
-          src="./_images/background-track.svg"
+          placeholder="dominantColor"
+          alt="background - track line"
+          objectFit="cover"
+          height={2080}
+          src="../_images/background-line.svg"
           // aspectRatio={670 / 948}
         />
       </article>
+      <article className={professor}>
+        <h1>Professor's congratulatory message</h1>
+        <div className={grid}>{renderMsgs}</div>
+      </article>
+      <CreditArticle />
     </section>
   );
 };

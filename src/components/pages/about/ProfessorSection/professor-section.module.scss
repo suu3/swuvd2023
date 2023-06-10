@@ -1,15 +1,19 @@
-.text {
+.section {
+  position: relative;
+}
+
+.professor {
+  position: relative;
+  z-index: 2;
   margin: auto 210px;
   color: var(--white);
-
+  padding-bottom: 200px;
   > h1 {
-    padding-bottom: 52px;
-
     font-weight: 700;
     font-size: 40px;
     line-height: 65px;
+    padding-bottom: 52px;
   }
-
   .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -35,4 +39,8 @@
 }
 
 .image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
