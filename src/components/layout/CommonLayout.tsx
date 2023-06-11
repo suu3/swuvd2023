@@ -3,6 +3,7 @@ import GNB from "@/components/layout/GNB";
 
 type LayoutProps = {
   children: ReactNode;
+  location: any;
 };
 
 const pageTheme: {
@@ -13,10 +14,9 @@ const pageTheme: {
   "/designer": "dark",
 };
 
-export default function CommonLayout({
-  children,
-  location: { pathname },
-}: LayoutProps) {
+export default function CommonLayout({ children, location }: LayoutProps) {
+  const { pathname } = location;
+  console.log(location);
   const [theme, setTheme] = useState(pageTheme[pathname]);
   useEffect(() => {
     setTheme(pageTheme[pathname]);

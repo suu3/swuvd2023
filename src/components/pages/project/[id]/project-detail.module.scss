@@ -1,0 +1,12 @@
+.section {
+  width: 1496px;
+  margin: 304px auto 142px auto;
+}
+
+.grid {
+  position: relative;
+
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}

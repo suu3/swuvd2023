@@ -20,7 +20,7 @@ const menus = [
 
 type GNBType = { pathname: string; theme: "light" | "dark" };
 
-const GNB = ({ pathname, theme = "light" }: GNBType) => {
+const GNB = ({ pathname, theme = "dark" }: GNBType) => {
   const renderMenus = menus.map(({ title, link }, idx) => {
     return (
       <Fragment key={title}>
