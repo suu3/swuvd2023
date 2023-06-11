@@ -1,0 +1,26 @@
+@mixin section-styles {
+  margin: auto 210px;
+  padding: 120px 0;
+}
+
+.section {
+  overflow: hidden;
+  position: relative;
+  min-height: 1080px;
+  color: var(--secondary-100);
+
+  > div {
+    position: absolute;
+  }
+
+  > article {
+    @include section-styles;
+    position: relative;
+    z-index: 2;
+
+    > svg {
+      padding-bottom: 80px;
+      box-sizing: content-box;
+    }
+  }
+}

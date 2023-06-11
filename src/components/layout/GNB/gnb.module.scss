@@ -1,0 +1,75 @@
+@mixin css-variables {
+  --nav-margin: auto 96px;
+  --nav-padding: 74px 96px;
+  --nav-menu-margin: 0 62px;
+}
+
+.nav {
+  @include css-variables;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--nav-z-index);
+
+  padding: var(--nav-padding);
+  margin: var(--nav-margin);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: var(--white);
+
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 41px;
+
+  .menu {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 41px;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  .border {
+    display: inline-block;
+    height: 27px;
+
+    border-right: 3px solid var(--secondary-400);
+    margin: var(--nav-menu-margin);
+
+    // transition: all 0.3s ease-in-out;
+  }
+
+  /**
+  * theme
+  */
+  &.light {
+    .menu {
+      color: var(--secondary-400);
+
+      &.active {
+        color: var(--white);
+      }
+    }
+
+    .border {
+      border-right-color: var(--secondary-400);
+    }
+  }
+
+  &.dark {
+    .menu {
+      color: var(--white);
+
+      &.active {
+        color: var(--primary-400);
+      }
+    }
+
+    .border {
+      border-right-color: var(--white);
+    }
+  }
+}

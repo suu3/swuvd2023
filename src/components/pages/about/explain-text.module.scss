@@ -1,0 +1,19 @@
+.ko-style,
+.en-style {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 42px;
+
+  > p:not(:last-of-type) {
+    padding-bottom: 42px;
+  }
+}
+
+.ko-style {
+  color: var(--white);
+  padding-bottom: 42px;
+}
+
+.en-style {
+  color: var(--secondary-200);
+}

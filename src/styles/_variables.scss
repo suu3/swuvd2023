@@ -1,0 +1,29 @@
+$colors: (
+  "primary": (
+    "400": #ffd57f,
+    "300": #ffc95d,
+    "200": #ffd57f,
+    "100": #ffe4ae,
+  ),
+  "secondary": (
+    "400": #000000,
+    "300": #404040,
+    "200": #636363,
+    "100": #a0a0a0,
+  ),
+  "white": #ffffff,
+);
+
+:root {
+  @each $color-category, $densities in $colors {
+    @if ($color-category == "white") {
+      --#{$color-category}: #{$densities};
+    } @else {
+      @each $density, $value in $densities {
+        --#{$color-category}-#{$density}: #{$value};
+      }
+    }
+  }
+
+  --nav-z-index: 1000;
+}

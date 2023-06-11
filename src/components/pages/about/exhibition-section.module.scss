@@ -1,0 +1,35 @@
+.section {
+  padding-top: 103px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.img {
+  margin: 0 68px;
+
+  /*  &:first-of-type,
+  &:last-of-type {
+    width: 700px;
+  }
+  &:nth-of-type(2) {
+    width: 1218px;
+  }
+  */
+
+  position: relative;
+
+  &::after {
+    position: absolute;
+    z-index: 2;
+    content: "";
+    top: 247px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: rotate(180deg);
+    background: linear-gradient(#000000 13.39%, rgba(255, 255, 255, 0) 100%);
+  }
+}

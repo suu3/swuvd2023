@@ -1,0 +1,46 @@
+.section {
+  position: relative;
+}
+
+.professor {
+  position: relative;
+  z-index: 2;
+  margin: auto 210px;
+  color: var(--white);
+  padding-bottom: 200px;
+  > h1 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 65px;
+    padding-bottom: 52px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 124px;
+    row-gap: 37px;
+
+    .message {
+      > h2 {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 52px;
+
+        padding-bottom: 20px;
+      }
+
+      > p {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 42px;
+      }
+    }
+  }
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
