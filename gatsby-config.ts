@@ -15,6 +15,12 @@ const config: GatsbyConfig = {
     `gatsby-plugin-sass`,
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: `src/images/favicon.svg`,
+      },
+    },
   ],
   trailingSlash: `never`, // url 뒤 후행 슬래쉬 trailing slash
 };
