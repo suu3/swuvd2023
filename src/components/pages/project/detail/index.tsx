@@ -7,35 +7,50 @@ import {
   aboutSection,
   detailSection,
 } from "./project-detail.module.scss";
+import { GatsbyImage, IGatsbyImageData, getImage } from "gatsby-plugin-image";
 
 type ProjectDetailType = {
   project: {
-    name: string;
-    designers: {
+    title: string;
+    authors: {
       name: string;
       email: string;
     }[];
     about: string;
+    project_image: IGatsbyImageData;
+    detail_image: {
+      src: IGatsbyImageData;
+    };
   };
 };
-const ProjectDetail = ({
-  project: { name, designers, about },
-}: ProjectDetailType) => {
+const ProjectDetail = ({ project }: ProjectDetailType) => {
+  const { authors, about, project_image, detail_image, title } = project;
+
+  console.log(project);
   return (
     <main className={main}>
-      <h1>{name}</h1>
+      <h1>{title}</h1>
       <section className={designersSection}>
         <div className={designerInfo}>
-          {designers.map((designer) => {
+          {authors?.map((designer, idx) => {
             return (
-              <div>
+              <div key={idx}>
                 <p>{designer.name}</p>
                 <p>{designer.email}</p>
               </div>
             );
           })}
         </div>
-        <div className={imgWrapper}></div>
+        <div className={imgWrapper}>
+          <GatsbyImage
+            layout="fullWidth"
+            objectFit="cover"
+            width={1067}
+            height={716}
+            image={getImage(project_image)}
+            alt={title}
+          />
+        </div>
       </section>
       <section className={aboutSection}>
         <h2>About</h2>

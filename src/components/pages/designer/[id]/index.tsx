@@ -5,11 +5,11 @@ import DesignerNav from "@/components/layout/DesignerNav";
 import classNames from "classnames";
 import Card from "@/components/common/Card";
 
-const DesignerDetail = ({ location, data }) => {
-  const { name, enName, email, instagram } = data.mdx.frontmatter;
+const DesignerDetail = ({ location, list, data }) => {
+  const { name, enName, email, instagram } = data;
   return (
     <main className={main}>
-      <DesignerNav location={location} data={data.allMdx.nodes} />
+      <DesignerNav location={location} data={list} />
       <section>
         <div className={author}>
           <h1>{name}</h1>

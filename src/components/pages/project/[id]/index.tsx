@@ -33,8 +33,8 @@ export default IndexPage;
 export const Head: HeadFC = () => <title>Project | SWUVD 2023</title>;
 
 export const query = graphql`
-  query ($pageId: String) {
-    allProjectJson(filter: { uid: { eq: $pageId } }) {
+  query ($id: String) {
+    allProjectJson(filter: { id: { eq: $id } }) {
       edges {
         node {
           uid
