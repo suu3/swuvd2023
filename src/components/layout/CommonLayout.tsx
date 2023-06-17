@@ -26,7 +26,7 @@ export default function CommonLayout({ children, location }: LayoutProps) {
     <>
       <GNB theme={theme} pathname={location.pathname} />
 
-      <main>{children}</main>
+      {children}
     </>
   );
 }

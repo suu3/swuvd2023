@@ -1,0 +1,82 @@
+.main {
+  max-width: 1496px;
+  margin: 304px auto 142px auto;
+  color: var(--white);
+  overflow: hidden;
+}
+
+// .sidebar {
+//   width: 162px;
+//   max-height: 939px;
+//   overflow-y: scroll;
+
+//   &::-webkit-scrollbar-track {
+//     border-radius: 10px;
+//     border: 1px solid blue;
+//     width: 50px;
+//   }
+//   &::-webkit-scrollbar {
+//     width: 50px;
+//     background-color: blue;
+//     border-radius: 10px;
+//   }
+//   &::-webkit-scrollbar-thumb {
+//     border-radius: 100px;
+//     background-color: red;
+//     border: 5px solid blue;
+//     height: 50px;
+//   }
+// }
+// .menu {
+//   padding: 2px;
+//   font-weight: 400;
+//   font-size: 30px;
+//   line-height: 52px;
+// }
+
+.sidebar {
+  width: 162px;
+  height: 844px;
+  position: relative;
+
+  .menu {
+    text-align: center;
+    padding: 2px;
+    margin-right: 10px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 52px;
+    height: 52px;
+
+    color: var(--secondary-100);
+
+    &.active {
+      color: var(--white);
+    }
+    // &:nth-child(2n-1) {
+    //   border-right: 1px solid var(--primary-100);
+    // }
+    // &:nth-child(2n) {
+    //   margin-right: 9.5px;
+    //   border-right: 2px solid var(--primary-200);
+    // }
+  }
+
+  .scrollbar-style {
+    width: 10px;
+    border-right: 1px solid var(--primary-100);
+    position: absolute;
+    right: 0;
+    top: 25px;
+    bottom: 25px;
+    z-index: 50;
+
+    > div {
+      // transform: translate3d(50%, 0px, 0px) !important;
+      width: 20px;
+      height: 20px !important;
+      border-radius: 50%;
+      background-color: var(--primary-400);
+    }
+  }
+}

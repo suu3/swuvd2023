@@ -1,0 +1,52 @@
+.main {
+  max-width: 1496px;
+  margin: 304px auto 142px auto;
+  color: var(--white);
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 162px;
+  height: 844px;
+  position: relative;
+
+  .menu {
+    text-align: center;
+    padding: 2px;
+    margin-right: 10px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 52px;
+    height: 56.2667px;
+
+    color: var(--secondary-100);
+
+    cursor: pointer;
+
+    &:hover {
+      color: var(--white);
+    }
+
+    &.active {
+      color: var(--white);
+    }
+  }
+
+  .scrollbar-style {
+    width: 10px;
+    border-right: 1px solid var(--primary-100);
+    position: absolute;
+    right: 0;
+    top: 25px;
+    bottom: 25px;
+    z-index: 50;
+
+    > div {
+      // transform: translate3d(50%, 0px, 0px) !important;
+      width: 20px;
+      height: 20px !important;
+      border-radius: 50%;
+      background-color: var(--primary-400);
+    }
+  }
+}

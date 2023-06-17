@@ -3,7 +3,7 @@ import React from "react";
 import { grid, section } from "./project.module.scss";
 
 const Project = () => {
-  const renderCards = datas.map((item) => <Card key={item.idx} item={item} />);
+  const renderCards = datas.map((item) => <Card key={item.id} item={item} />);
   return (
     <section className={section}>
       <div className={grid}>{renderCards}</div>
@@ -14,7 +14,7 @@ const Project = () => {
 export default Project;
 
 const datas = Array(40)
-  .fill()
+  .fill({})
   .map((_, idx) => ({
     id: idx,
     title: "프로젝트 명",
