@@ -1,32 +1,33 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Scrollbar } from "swiper";
 import classNames from "classnames";
-import { sidebar, menu, scrollbarStyle } from "./desinger-nav.module.scss";
+import { sidebar, menu, active } from "./desinger-nav.module.scss";
 import React from "react";
+import { Link, graphql } from "gatsby";
 
-const DesignerNav = () => {
-  const scrollbar = {
-    draggable: true,
-    verticalClass: scrollbarStyle,
-  };
+const DesignerNav = ({ data, location }) => {
+  // const scrollbar = {
+  //   draggable: true,
+  //   verticalClass: scrollbarStyle,
+  // };
+  //https://codingbroker.tistory.com/128
   return (
-    <Swiper
-      scrollbar={scrollbar}
-      modules={[Scrollbar]}
-      slidesPerView={15}
-      direction="vertical"
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
-      className={sidebar}
-    >
-      {designerList.map(({ name }, idx) => {
+    <nav className={sidebar}>
+      {data.map(({ frontmatter }, idx) => {
         return (
-          <SwiperSlide key={idx} className={classNames(menu)}>
-            {name}
-          </SwiperSlide>
+          <Link to={`/designer/${idx}`}>
+            <div
+              key={idx}
+              className={classNames(
+                menu,
+                `/designer/${idx}` === location.pathname && active
+              )}
+            >
+              {frontmatter.name}
+            </div>
+          </Link>
         );
       })}
-    </Swiper>
+    </nav>
   );
 };
 

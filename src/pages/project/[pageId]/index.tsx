@@ -1,5 +1,5 @@
 import React from "react";
-import type { HeadFC, PageProps } from "gatsby";
+import { graphql, type HeadFC, type PageProps } from "gatsby";
 import ProjectDetail from "@/components/pages/project/detail";
 
 const project = {
@@ -23,10 +23,33 @@ const project = {
     "작품설명여백포함최대300글자작품설명여백포함최대300글자작품설명여백포함최대300글자작품설명여백포함최대300글자작품설명여백포함최대300글자작품설명여백포함최대300글자작품설명여백포함최대300글자작품설명여백포함최대300글자작품설명여백포함최대300글자작품설명여백포함최대300글자작품설명여백포함최대300글자작품설명여백포함최대300글자작품설명여백포함최대300글자작품설명여백포함최대300글자작품설명여백포함최대300글자작품설명여백포함최대300글자작품설명여백포함최대300글자작품설명여백포함최대300글자작품설명여백포함최대300글자작품설명여백포함최대300글자",
 };
 
-const IndexPage: React.FC<PageProps> = ({ location }) => {
+const IndexPage: React.FC<PageProps> = ({ location, data }) => {
+  console.log(data);
   return <ProjectDetail project={project} />;
 };
 
 export default IndexPage;
 
 export const Head: HeadFC = () => <title>Project | SWUVD 2023</title>;
+
+export const query = graphql`
+  query ($pageId: String) {
+    allProjectJson(filter: { uid: { eq: $pageId } }) {
+      edges {
+        node {
+          uid
+          title
+          authors {
+            name
+            email
+          }
+          project_image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+        }
+      }
+    }
+  }
+`;

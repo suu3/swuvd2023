@@ -2,10 +2,10 @@ import React from "react";
 import DesignerNav from "@/components/layout/DesignerNav";
 import { main } from "./desinger.module.scss";
 
-const Designer = () => {
+const Designer = (props) => {
   return (
     <main className={main}>
-      <DesignerNav />
+      <DesignerNav {...props} />
     </main>
   );
 };

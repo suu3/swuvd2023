@@ -7,7 +7,12 @@ import {
   rectangle,
   circle,
 } from "./card.module.scss";
-import { StaticImage } from "gatsby-plugin-image";
+import {
+  GatsbyImage,
+  IGatsbyImageData,
+  StaticImage,
+  getImage,
+} from "gatsby-plugin-image";
 import classNames from "classnames";
 import { Link } from "gatsby";
 
@@ -15,22 +20,25 @@ type CardType = {
   item: {
     id: number;
     title: string;
-    authors: string[];
-    src: string;
+    authors: {
+      name: string;
+      email: string;
+    }[];
+    project_image: IGatsbyImageData;
   };
 };
-const Card = ({ item: { title, authors, src, id } }: CardType) => {
-  console.log(src);
+const Card = ({ item: { uid, title, authors, project_image } }: CardType) => {
   return (
-    <Link to={`/project/${id}`}>
+    <Link to={`/project/${uid}`}>
       <div className={card}>
         <div className={image}>
-          <StaticImage
+          {/* <StaticImage
             layout="fullWidth"
             alt={title}
-            src={"./_images/dummy.png"}
+            src={"images/dummy.png"}
             aspectRatio={1067 / 716}
-          />
+          /> */}
+          <GatsbyImage image={getImage(project_image)} alt={title} />
         </div>
         <div className={classNames(hoverImage)}>
           <div className={circle} />
@@ -38,7 +46,7 @@ const Card = ({ item: { title, authors, src, id } }: CardType) => {
           <div className={text}>
             <p>{title}</p>
             <p>
-              {authors.map((name, idx) => (
+              {authors.map(({ name }, idx) => (
                 <span key={idx}>{name}</span>
               ))}
             </p>

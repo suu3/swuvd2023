@@ -1,5 +1,5 @@
 import * as React from "react";
-import type { HeadFC, PageProps } from "gatsby";
+import { graphql, type HeadFC, type PageProps } from "gatsby";
 import ImgSection from "@/components/pages/about/ImgSection";
 import ConceptSection from "@/components/pages/about/ConceptSection";
 import DesignSection from "@/components/pages/about/DesignSection";

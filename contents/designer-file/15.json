@@ -1,0 +1,11 @@
+{
+"id": 1,
+"name": "김슈니",
+"enName": "Kim swuni",
+"email": "kimswuni@swu.co.kr",
+"instagram": "kimswuni",
+"project_image": [
+{ "category": "출판", "src": "./1/dummy.png" },
+{ "category": "UX/UI", "src": "./1/dummy.png" }
+]
+}
