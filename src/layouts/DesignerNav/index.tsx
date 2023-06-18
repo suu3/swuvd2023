@@ -1,15 +1,11 @@
+import React, { useRef } from "react";
 import classNames from "classnames";
-import { sidebar, menu, active } from "./desinger-nav.module.scss";
-import React from "react";
+import { sidebar, menuWrapper, menu, active } from "./desinger-nav.module.scss";
 import { Link } from "gatsby";
+import ScrollBar from "./ScrollBar";
 
 const DesignerNav = ({ data: { edges }, location }) => {
-  // const scrollbar = {
-  //   draggable: true,
-  //   verticalClass: scrollbarStyle,
-  // };
-  //https://codingbroker.tistory.com/128
-
+  const menuRef = useRef(null);
   const renderMenus = edges.map(
     ({ node }: { node: { uid: string; name: string } }, idx: string) => {
       return (
@@ -26,7 +22,14 @@ const DesignerNav = ({ data: { edges }, location }) => {
       );
     }
   );
-  return <nav className={sidebar}>{renderMenus}</nav>;
+  return (
+    <nav className={sidebar}>
+      {/* <ScrollBar menuRef={menuRef} /> */}
+      <div ref={menuRef} className={menuWrapper}>
+        {renderMenus}
+      </div>
+    </nav>
+  );
 };
 
 export default DesignerNav;
