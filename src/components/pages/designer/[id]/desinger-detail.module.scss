@@ -1,12 +1,10 @@
-.main {
-  max-width: var(--global-max-width);
-  margin: 304px auto 142px auto;
-  color: var(--white);
-  position: relative;
-  padding-left: 160px;
+.section {
+  padding-left: 106px;
 }
 
 .author {
+  padding-bottom: 76px;
+
   > h1 {
     font-weight: 700;
     font-size: 55px;

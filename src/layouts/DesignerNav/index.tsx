@@ -3,18 +3,17 @@ import { sidebar, menu, active } from "./desinger-nav.module.scss";
 import React from "react";
 import { Link } from "gatsby";
 
-const DesignerNav = ({ data, location }) => {
+const DesignerNav = ({ data: { edges }, location }) => {
   // const scrollbar = {
   //   draggable: true,
   //   verticalClass: scrollbarStyle,
   // };
   //https://codingbroker.tistory.com/128
 
-  const renderMenus = data.map(
+  const renderMenus = edges.map(
     ({ node }: { node: { uid: string; name: string } }, idx: string) => {
-      console.log(node.uid);
       return (
-        <Link to={`${node.uid}`} key={idx}>
+        <Link to={`/designer/${node.uid}`} key={idx}>
           <div
             className={classNames(
               menu,

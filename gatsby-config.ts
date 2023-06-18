@@ -52,6 +52,7 @@ const config: GatsbyConfig = {
       },
     },
     "gatsby-transformer-sharp",
+    `gatsby-plugin-layout`,
   ],
   trailingSlash: `never`, // url 뒤 후행 슬래쉬 trailing slash
 };

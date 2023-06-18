@@ -11,14 +11,12 @@ import ReactPageScroller from "react-page-scroller";
 const IndexPage: React.FC<PageProps> = ({ location }) => {
   return (
     <>
-      <ReactPageScroller>
-        <ImgSection />
-        <ConceptSection />
-        <DesignSection />
-        <InfoSection />
-        <ExhibitionSection />
-        <ProfessorSection />
-      </ReactPageScroller>
+      <ImgSection />
+      <ConceptSection />
+      <DesignSection />
+      <InfoSection />
+      <ExhibitionSection />
+      <ProfessorSection />
     </>
   );
 };

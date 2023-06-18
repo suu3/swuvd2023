@@ -3,12 +3,12 @@ import { graphql, type HeadFC, type PageProps } from "gatsby";
 import Designer from "@/components/pages/designer";
 
 const IndexPage: React.FC<PageProps> = ({ location, data }) => {
-  return <Designer location={location} data={data.allDesignerJson.edges} />;
+  return <></>;
 };
 
 export const query = graphql`
   query {
-    allDesignerJson {
+    list: allDesignerJson {
       edges {
         node {
           uid

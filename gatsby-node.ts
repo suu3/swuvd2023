@@ -38,3 +38,12 @@ exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
 //   `;
 //   createTypes(typeDefs);
 // };
+
+exports.onCreatePage = ({ page, actions }) => {
+  const { createPage } = actions;
+
+  if (page.path.match(/designer/)) {
+    page.context.layout = "designer";
+    createPage(page);
+  }
+};

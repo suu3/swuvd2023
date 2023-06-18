@@ -1,14 +1,13 @@
 import React from "react";
-import { main, author, projectsStyle } from "./desinger-detail.module.scss";
-import DesignerNav from "@/components/layout/DesignerNav";
+import { section, author, projectsStyle } from "./desinger-detail.module.scss";
 import Card from "@/components/common/Card";
 
-const DesignerDetail = ({ location, list, data }) => {
+const DesignerDetail = ({ data }) => {
   const { name, enName, email, instagram, projects } = data;
   return (
-    <main className={main}>
-      <DesignerNav location={location} data={list} />
-      <section>
+    <>
+      {/* <DesignerNav location={location} data={list} /> */}
+      <section className={section}>
         <div className={author}>
           <h1>{enName}</h1>
           <p>
@@ -67,7 +66,7 @@ const DesignerDetail = ({ location, list, data }) => {
           )}
         </div>
       </section>
-    </main>
+    </>
   );
 };
 

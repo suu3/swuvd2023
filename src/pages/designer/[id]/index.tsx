@@ -21,7 +21,7 @@ export const query = graphql`
     list: allDesignerJson {
       edges {
         node {
-          id
+          uid
           name
         }
       }
