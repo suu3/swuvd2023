@@ -1,5 +1,6 @@
 import React, { ReactNode, useEffect, useState } from "react";
-import GNB from "@/layouts/GNB";
+import DesktopGnb from "@/layouts/GNB/DesktopGnb";
+import MobileGnb from "@/layouts/GNB/MobileGnb";
 import { main } from "./layout.module.scss";
 import DesignerNav from "@/layouts/DesignerNav";
 
@@ -31,7 +32,8 @@ export default function CommonLayout({
   if (pageContext.layout === "designer") {
     return (
       <>
-        <GNB theme={theme} pathname={location.pathname} />
+        <DesktopGnb theme={theme} pathname={location.pathname} />
+        <MobileGnb theme={theme} pathname={location.pathname} />
         <main className={main}>
           <DesignerNav location={location} data={data?.list} />
           {children}
@@ -42,7 +44,8 @@ export default function CommonLayout({
 
   return (
     <>
-      <GNB theme={theme} pathname={location.pathname} />
+      <DesktopGnb theme={theme} pathname={location.pathname} />
+      <MobileGnb theme={theme} pathname={location.pathname} />
       <main>{children}</main>
     </>
   );

@@ -1,0 +1,86 @@
+@import "@/styles/_media-query.scss";
+
+.nav {
+  display: none;
+
+  @include mobile {
+    z-index: var(--nav-z-index);
+    position: fixed;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    height: 100px;
+
+    padding: 25px;
+
+    left: 0px;
+    right: 0;
+    top: 0px;
+
+    background: #000000;
+
+    .hamburger {
+      cursor: pointer;
+    }
+  }
+}
+
+.options {
+  display: none;
+
+  @include mobile {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: calc(var(--nav-z-index) + 1);
+    position: fixed;
+
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: #000000;
+
+    &::after {
+      z-index: calc(var(--nav-z-index) + 2);
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 86px;
+
+      background: radial-gradient(
+        170.93% 170.93% at 50% 9.88%,
+        rgba(245, 245, 245, 0.16) 0%,
+        rgba(255, 255, 255, 0.13) 0.01%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+
+    > p {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 36px;
+
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 20px;
+      /* or 167% */
+
+      text-align: center;
+      letter-spacing: -0.01em;
+
+      /* B3 */
+
+      color: #636363;
+    }
+  }
+}

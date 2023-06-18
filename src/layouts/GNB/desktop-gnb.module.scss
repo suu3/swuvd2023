@@ -1,3 +1,5 @@
+@import "@/styles/_media-query.scss";
+
 @mixin css-variables {
   --nav-margin: auto;
   --nav-padding: 74px 96px;
@@ -71,5 +73,9 @@
     .border {
       border-right-color: var(--white);
     }
+  }
+
+  @include mobile {
+    display: none;
   }
 }
