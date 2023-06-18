@@ -43,7 +43,7 @@ export default function CommonLayout({
         <footer
           className={classNames(
             footer,
-            location.pathname.includes("designer") && light
+            location.pathname.includes("designer/") && light
           )}
         >
           <p>
