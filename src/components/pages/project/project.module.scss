@@ -1,9 +1,12 @@
 .section {
   width: var(--global-max-width);
   margin: 304px auto 142px auto;
+
+  position: relative;
 }
 
 .grid {
+  padding-top: 137px;
   position: relative;
 
   display: grid;

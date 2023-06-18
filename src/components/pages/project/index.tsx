@@ -1,28 +1,44 @@
+import React, { useState } from "react";
 import Card from "@/components/common/Card";
-import React from "react";
 import { grid, section } from "./project.module.scss";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import ProjectNav from "@/layouts/ProjectNav";
 
 const Project = ({ data }) => {
-  // const image = getImage(data?.allProjectJson?.edges?.node?.project_image);
+  const [curMenu, setCurMenu] = useState({
+    id: "all",
+    label: "전체",
+  });
 
-  const renderCards = data?.allProjectJson?.edges.map(({ node: item }) => (
-    <Card key={item.id} item={item} />
-  ));
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen((p) => !p);
+  };
+
+  const handleMenu = (
+    item: React.SetStateAction<{ id: number; label: string }>
+  ) => {
+    setCurMenu(item);
+    toggleMenu();
+  };
+
+  const renderCards = data
+    ?.filter(({ node: item }) => {
+      if (curMenu.id === "all") return true;
+      return item.categoryId === curMenu.id;
+    })
+    .map(({ node: item }) => <Card key={item.id} item={item} />);
   return (
     <section className={section}>
+      <ProjectNav
+        curMenu={curMenu}
+        toggleMenu={toggleMenu}
+        handleMenu={handleMenu}
+        isOpen={isOpen}
+      />
       <div className={grid}>{renderCards}</div>
     </section>
   );
 };
 
 export default Project;
-
-// const datas = Array(40)
-//   .fill({})
-//   .map((_, idx) => ({
-//     id: idx,
-//     title: "프로젝트 명",
-//     authors: ["김슈니", "김슈니", "김슈니"],
-//     src: dummy,
-//   }));

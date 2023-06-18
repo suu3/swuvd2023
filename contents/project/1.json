@@ -1,6 +1,7 @@
 {
   "uid": "1",
   "title": "프로젝트 명1",
+  "categoryId": "ux/ui",
   "authors": [
     {
       "name": "김슈니",

@@ -3,7 +3,7 @@ import { graphql, type HeadFC, type PageProps } from "gatsby";
 import Project from "@/components/pages/project";
 
 const IndexPage: React.FC<PageProps> = ({ location, data }) => {
-  return <Project data={data} />;
+  return <Project data={data.allProjectJson?.edges} />;
 };
 
 export default IndexPage;
@@ -15,6 +15,7 @@ export const query = graphql`
         node {
           uid
           title
+          categoryId
           authors {
             name
             email
