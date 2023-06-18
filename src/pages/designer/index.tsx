@@ -1,9 +1,12 @@
 import * as React from "react";
 import { graphql, type HeadFC, type PageProps } from "gatsby";
 import Designer from "@/components/pages/designer";
+import useIsMobile from "@/hooks/useIsMobile";
 
 const IndexPage: React.FC<PageProps> = ({ location, data }) => {
-  return <></>;
+  const isMobile = useIsMobile();
+
+  return <>{isMobile && <Designer data={data.list.edges} />}</>;
 };
 
 export const query = graphql`

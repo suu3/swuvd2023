@@ -1,14 +1,14 @@
 @import "@/styles/_media-query.scss";
 
 .section {
-  min-width: var(--global-max-width);
+  width: var(--global-max-width);
   margin: 304px auto 142px auto;
 
   position: relative;
 
   @include tablet {
     margin: 0 24px;
-    min-width: auto;
+    width: auto;
     margin-bottom: 100px;
   }
 }

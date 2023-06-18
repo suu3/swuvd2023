@@ -1,10 +1,11 @@
 import React, { ReactNode, useEffect, useState, useCallback } from "react";
 import DesktopGnb from "@/layouts/GNB/DesktopGnb";
 import MobileGnb from "@/layouts/GNB/MobileGnb";
-import { footer, main, designMain } from "./layout.module.scss";
+import { footer, main, designMain, light } from "./layout.module.scss";
 import DesignerNav from "@/layouts/DesignerNav";
 import { type PageProps } from "gatsby";
 import useIsMobile from "@/hooks/useIsMobile";
+import classNames from "classnames";
 
 type LayoutProps = {
   children: ReactNode;
@@ -33,26 +34,18 @@ export default function CommonLayout({
     setTheme(pageTheme[pathname]);
   }, [pathname]);
 
-  if (pageContext.layout === "designer") {
-    return (
-      <>
-        {!isMobile && <DesktopGnb theme={theme} pathname={location.pathname} />}
-        {isMobile && <MobileGnb theme={theme} pathname={location.pathname} />}
-        <main className={designMain}>
-          <DesignerNav location={location} data={data?.list} />
-          {children}
-        </main>
-      </>
-    );
-  }
-
-  return (
+  const CommonLayout = ({ children }) => (
     <>
-      <DesktopGnb theme={theme} pathname={location.pathname} />
-      <MobileGnb theme={theme} pathname={location.pathname} />
-      <main className={main}>{children}</main>
+      {!isMobile && <DesktopGnb theme={theme} pathname={location.pathname} />}
+      {isMobile && <MobileGnb theme={theme} pathname={location.pathname} />}
+      {children}
       {isMobile && (
-        <footer className={footer}>
+        <footer
+          className={classNames(
+            footer,
+            location.pathname.includes("designer") && light
+          )}
+        >
           <p>
             SEOUL WOMEN’S UNIVERSITY
             <br /> VISUAL COMMUNICATION DESIGN
@@ -60,5 +53,22 @@ export default function CommonLayout({
         </footer>
       )}
     </>
+  );
+
+  if (pageContext.layout === "designer") {
+    return (
+      <CommonLayout>
+        <main className={designMain}>
+          {!isMobile && <DesignerNav location={location} data={data?.list} />}
+          {children}
+        </main>
+      </CommonLayout>
+    );
+  }
+
+  return (
+    <CommonLayout>
+      <main className={main}>{children}</main>
+    </CommonLayout>
   );
 }
