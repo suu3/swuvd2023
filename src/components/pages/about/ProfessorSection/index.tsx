@@ -5,9 +5,11 @@ import {
   image,
   grid,
   professor,
+  specialMessage,
 } from "./professor-section.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
 import CreditArticle from "./CreditArticle";
+import lineImg from "../_images/background-line.svg";
 
 const ProfessorSection = () => {
   const renderMsgs = professorData.map(({ name, content }, idx) => {
@@ -21,18 +23,44 @@ const ProfessorSection = () => {
   return (
     <section className={section}>
       <article className={image}>
-        <StaticImage
-          layout="fixed"
-          placeholder="dominantColor"
+        <img
+          // layout="fullWidth"
+          // placeholder="dominantColor"
           alt="background - track line"
-          objectFit="cover"
-          height={2080}
-          src="../_images/background-line.svg"
-          // aspectRatio={670 / 948}
+          // // objectFit="cover"
+          width={960}
+          height={3080}
+          src={lineImg}
         />
       </article>
       <article className={professor}>
         <h1>Professor's congratulatory message</h1>
+
+        <div className={specialMessage}>
+          <h2>이재원 학과장님</h2>
+          <p>여러분, 축하드립니다!</p>
+          <p>
+            여러 해 동안 끊임없는 열정과 노력으로 꾸준한 성장을 이뤄 드디어 졸업
+            작품이라는 결실을 보게 됐습니다. 이제는 역량을 갖춘 디자이너로서
+            현실 세계에 발을 딛고 새로운 도전에 임할 차례입니다. 교수이자
+            디자이너 선배로서 여러분들의 학업 여정을 함께할 수 있어서
+            영광이었습니다.
+          </p>
+          <p>
+            여러분 중 어떤 이는 많은 이가 그렇듯 가장 환한 폴라리스를 좇을
+            것이고, 또 어떤 이는 지치지 않는 동력으로 동시에 여러 폴라리스를
+            좇으며 분주하게 갈지자 항해를 하게 될 수도 있을 것입니다. 그리고
+            어떤 이는 뜻밖의 먼 곳에서 희미하지만, 명확한 방향을 제시하는
+            폴라리스에 끌려 느리고 먼 여정을 떠나기도 할 것입니다.
+          </p>
+          <p>
+            분명한 것은 우리 모두 같은 시대를 살지만 각기 다른 특별함과 다양하게
+            선택한 기회들, 그리고 각자 품은 재능과 생각을 통해 자신만의 궤적을
+            자신만의 속도로 그려낼 것입니다.
+          </p>
+          <p>저는 여러분의 이러한 모든 과정을 응원합니다.</p>
+        </div>
+
         <div className={grid}>{renderMsgs}</div>
       </article>
       <CreditArticle />
@@ -44,15 +72,16 @@ export default ProfessorSection;
 
 const professorData = [
   {
-    name: "민병철",
+    name: "유영재",
     content: (
       <>
-        “금”은 두 공간 사이의 경계를 의미한다.졸업전시는 4년간의 대학 생활을
-        마무리하는 완주 선이자 새로운 시작을 향한 출발선이다. 스스로 정해둔
-        경계를 깨고 금을 넘어서 우리는 각자 꿈을 갖고 다양한 방향으로 나아간다.
-        숨이 벅차오르는 고비를 이겨내고 어쩌고 저쩌고 어쩔티비 두 공간 사이의
-        경계를 의미한다.졸업전시는 4년간의 대학 생활을 마무리하는 완주 선이자
-        새로운 시작을 향한 출발선이다. 스스로 정해둔 경계를 깨고 금방망이
+        이제 우리는 새로운 경계를 넘어갑니다. 그리고 그 경계는 바로 알을 깨고
+        나오는 새처럼 세상의 넓은 스펙트럼입니다. 이 큰 변화는 쉽지 않을
+        것입니다. 취업 준비의 어려움, 다양한 사람들과 원만하게 일하는 법 등을
+        배워야 할 책임이 무거울지 모릅니다. <br />
+        그러나, 여러분이 대학에서 배운 지식과 졸업전시를 통한 경험은 여러분의
+        등대가 될 것입니다. 다시 한 번 졸업전시를 축하 드리며, 여러분의 새로운
+        여정이 흥미롭고 성공적이길 진심으로 기원합니다.
       </>
     ),
   },
@@ -73,20 +102,6 @@ const professorData = [
     ),
   },
   {
-    name: "유영재",
-    content: (
-      <>
-        이제 우리는 새로운 경계를 넘어갑니다. 그리고 그 경계는 바로 알을 깨고
-        나오는 새처럼 세상의 넓은 스펙트럼입니다. 이 큰 변화는 쉽지 않을
-        것입니다. 취업 준비의 어려움, 다양한 사람들과 원만하게 일하는 법 등을
-        배워야 할 책임이 무거울지 모릅니다. <br />
-        그러나, 여러분이 대학에서 배운 지식과 졸업전시를 통한 경험은 여러분의
-        등대가 될 것입니다. 다시 한 번 졸업전시를 축하 드리며, 여러분의 새로운
-        여정이 흥미롭고 성공적이길 진심으로 기원합니다.
-      </>
-    ),
-  },
-  {
     name: "이규락",
     content: (
       <>
@@ -97,6 +112,17 @@ const professorData = [
         졸업전시에서 얻는 기쁨이라 생각합니다. 앞으로도 이 매력과 이 기쁨을
         꾸준히 누릴 수 있길 기원하며, 여러분들 한 명 한 명의 앞날을
         응원하겠습니다.
+      </>
+    ),
+  },
+  {
+    name: "민병철",
+    content: (
+      <>
+        Welcome to Burger Bliss, where we take your cravings to a whole new
+        level! Our mouthwatering burgers are made from 100% beef and are served
+        on freshly baked buns. outhwatering burgers are made from 100% beef and
+        are served on freshly baked buns.
       </>
     ),
   },

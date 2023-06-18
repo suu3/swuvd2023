@@ -1,7 +1,17 @@
-.main {
+@import "@/styles/_media-query.scss";
+
+.design-main {
   margin: 304px 96px 142px 96px;
   color: var(--white);
   position: relative;
 
   padding-left: 227px;
+}
+
+.main {
+  min-width: var(--global-max-width);
+
+  @include tablet {
+    min-width: auto;
+  }
 }

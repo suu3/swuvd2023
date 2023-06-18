@@ -1,5 +1,17 @@
+@import "@/styles/_media-query.scss";
+
 .section {
   position: relative;
+
+  .image {
+    opacity: 0.5;
+    width: 960px;
+    margin: auto;
+
+    @include tablet {
+      display: none;
+    }
+  }
 }
 
 .professor {
@@ -8,12 +20,69 @@
   margin: auto 210px;
   color: var(--white);
   padding-bottom: 200px;
+
   > h1 {
     font-weight: 700;
     font-size: 40px;
     line-height: 65px;
     padding-bottom: 52px;
   }
+
+  .special-message {
+    padding-bottom: 234px;
+
+    > h2 {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 52px;
+
+      padding-bottom: 20px;
+    }
+
+    > p {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 42px;
+
+      padding-bottom: 42px;
+    }
+  }
+
+  @include tablet {
+    padding: 24px 40px 24px 24px;
+    margin: 0;
+
+    > h1 {
+      padding-bottom: 18px;
+
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .special-message {
+      padding-bottom: 40px;
+
+      > h2 {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: -0.01em;
+
+        padding-bottom: 0;
+      }
+
+      > p {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: -0.01em;
+
+        padding-bottom: 20px;
+      }
+    }
+  }
+
   .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -33,6 +102,27 @@
         font-weight: 400;
         font-size: 24px;
         line-height: 42px;
+      }
+    }
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      column-gap: 0px;
+
+      .message {
+        > h2 {
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 20px;
+
+          padding-bottom: 0px;
+        }
+
+        > p {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 20px;
+        }
       }
     }
   }

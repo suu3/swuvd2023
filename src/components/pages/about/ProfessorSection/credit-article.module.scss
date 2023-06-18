@@ -1,3 +1,5 @@
+@import "@/styles/_media-query.scss";
+
 .wrapper {
   position: relative;
 
@@ -15,12 +17,26 @@
       padding-bottom: 72px;
     }
 
+    @include tablet {
+      margin: 0;
+      padding: 24px;
+
+      > h1 {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+
+        padding-bottom: 36px;
+      }
+    }
     .pic-row {
       padding-bottom: 114px;
 
       display: flex;
 
       > span {
+        flex-shrink: 0;
+        //졸업 준비 위원회...
         width: 194px;
         font-weight: 700;
         font-size: 30px;
@@ -29,7 +45,21 @@
         margin-right: 109px;
       }
 
+      @include tablet {
+        padding-bottom: 30px;
+
+        > span {
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 20px;
+
+          margin-right: 24px;
+          width: 91px;
+        }
+      }
+
       .members-wrapper {
+        flex-shrink: 0;
         display: flex;
         flex-direction: column;
 
@@ -41,6 +71,14 @@
           display: flex;
           &:not(:last-child) {
             padding-bottom: 18px;
+          }
+
+          @include tablet {
+            flex-direction: column;
+
+            &:not(:last-child) {
+              padding-bottom: 8px;
+            }
           }
 
           .one-member {
@@ -57,6 +95,27 @@
                 &:not(:last-child) {
                   margin-right: 56px;
                 }
+              }
+            }
+            @include tablet {
+              font-weight: 600;
+              font-size: 12px;
+              line-height: 20px;
+
+              > span {
+                width: 70px;
+                // margin-right: 12px;
+              }
+              > div {
+                > span {
+                  font-weight: 500;
+                  width: 70px;
+                  // margin-right: 12px;
+                }
+
+                display: flex;
+                flex-direction: column;
+                margin-right: 0;
               }
             }
           }

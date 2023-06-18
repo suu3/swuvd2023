@@ -8,6 +8,7 @@
 
 .nav {
   @include css-variables;
+  min-width: var(--global-max-width);
   position: absolute;
   top: 0;
   left: 0;

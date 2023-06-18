@@ -1,7 +1,7 @@
 import React, { ReactNode, useEffect, useState, useCallback } from "react";
 import DesktopGnb from "@/layouts/GNB/DesktopGnb";
 import MobileGnb from "@/layouts/GNB/MobileGnb";
-import { main } from "./layout.module.scss";
+import { main, designMain } from "./layout.module.scss";
 import DesignerNav from "@/layouts/DesignerNav";
 import { graphql, type HeadFC, type PageProps } from "gatsby";
 
@@ -36,7 +36,7 @@ export default function CommonLayout({
       <>
         <DesktopGnb theme={theme} pathname={location.pathname} />
         <MobileGnb theme={theme} pathname={location.pathname} />
-        <main className={main}>
+        <main className={designMain}>
           <DesignerNav location={location} data={data?.list} />
           {children}
         </main>
@@ -48,7 +48,7 @@ export default function CommonLayout({
     <>
       <DesktopGnb theme={theme} pathname={location.pathname} />
       <MobileGnb theme={theme} pathname={location.pathname} />
-      <main>{children}</main>
+      <main className={main}>{children}</main>
     </>
   );
 }
