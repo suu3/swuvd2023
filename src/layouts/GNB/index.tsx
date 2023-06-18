@@ -24,10 +24,7 @@ type GNBType = { pathname: string; theme: "light" | "dark" };
 const GNB = ({ pathname, theme = "dark" }: GNBType) => {
   const renderMenus = menus.map(({ title, link }, idx) => {
     const isActive =
-      typeof window !== "undefined" &&
-      (location.pathname === "/"
-        ? location.pathname === link
-        : location.pathname.includes(link));
+      pathname === "/" ? pathname === link : pathname.includes(link);
     return (
       <Fragment key={title}>
         <Link to={link}>
