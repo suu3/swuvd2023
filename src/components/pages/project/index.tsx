@@ -27,7 +27,7 @@ const Project = ({ data }) => {
       if (curMenu.id === "all") return true;
       return item.categoryId === curMenu.id;
     })
-    .map(({ node: item }) => <Card key={item.id} item={item} />);
+    .map(({ node: item }, idx) => <Card key={idx} item={item} />);
   return (
     <section className={section}>
       <ProjectNav

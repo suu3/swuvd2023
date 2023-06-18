@@ -1,3 +1,5 @@
+@import "@/styles/_media-query.scss";
+
 .left,
 .right {
   position: absolute;
@@ -7,6 +9,12 @@
   font-weight: 700;
   font-size: 30px;
   line-height: 52px;
+
+  &.desktop-only {
+    @include tablet {
+      display: none;
+    }
+  }
 }
 
 .left {
@@ -14,6 +22,7 @@
   transform: rotate(180deg) translateY(50%);
   left: 96px;
 }
+
 .right {
   writing-mode: vertical-rl;
   transform: translateY(-50%);

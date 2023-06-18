@@ -1,4 +1,5 @@
 @mixin rectangle {
+  z-index: 2;
   content: "";
   position: absolute;
   border: 1px solid var(--primary-100);
@@ -6,6 +7,7 @@
 
 .card {
   @mixin circle {
+    z-index: 2;
     content: "";
     position: absolute;
 
@@ -30,17 +32,46 @@
 
     opacity: 0;
     transition: opacity 0.15s ease-in-out;
-    background: rgba(249, 190, 71, 0.8);
-
+    overflow: hidden;
     color: var(--secondary-400);
 
     display: flex;
     justify-content: center;
     align-items: center;
+
     &::before {
       @include circle;
       bottom: 48px;
       left: 80%;
+      z-index: 2;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: 0;
+      height: 0;
+      border-radius: 100%;
+      transform: translate(-50%, -50%);
+
+      @keyframes circle {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+          width: 200%;
+          height: 200%;
+        }
+      }
+      background: rgba(249, 190, 71, 0.8);
+    }
+
+    &:hover::after {
+      animation: circle 0.75s forwards;
     }
     .rectangle {
       &::before {
@@ -75,6 +106,7 @@
     }
 
     .text {
+      z-index: 2;
       > p {
         &:first-of-type {
           font-weight: 700;

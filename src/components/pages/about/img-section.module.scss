@@ -1,7 +1,22 @@
+@import "@/styles/_media-query.scss";
+
 .section {
   overflow: hidden;
   color: var(--secondary-400);
   position: relative;
+
+  .title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+
+    position: absolute;
+    top: 94px;
+    left: 24px;
+
+    z-index: 1;
+    color: var(--secondary-400);
+  }
 }
 
 // .left-text,
@@ -22,7 +37,36 @@
   bottom: 73px;
 
   display: flex;
+
   > svg {
     margin-right: 36px;
+  }
+
+  @include tablet {
+    bottom: 52px;
+    right: 24px;
+
+    flex-direction: column;
+
+    > svg {
+      margin-right: 0;
+
+      &:first-child {
+        display: none;
+      }
+
+      &.location-svg {
+        width: 140px;
+        height: 41px;
+      }
+    }
+
+    > p {
+      padding-top: 2px;
+
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 }

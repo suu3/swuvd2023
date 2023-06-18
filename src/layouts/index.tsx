@@ -1,8 +1,9 @@
-import React, { ReactNode, useEffect, useState } from "react";
+import React, { ReactNode, useEffect, useState, useCallback } from "react";
 import DesktopGnb from "@/layouts/GNB/DesktopGnb";
 import MobileGnb from "@/layouts/GNB/MobileGnb";
 import { main } from "./layout.module.scss";
 import DesignerNav from "@/layouts/DesignerNav";
+import { graphql, type HeadFC, type PageProps } from "gatsby";
 
 type LayoutProps = {
   children: ReactNode;
@@ -22,9 +23,10 @@ export default function CommonLayout({
   children,
   location,
   data,
-}: LayoutProps) {
+}: LayoutProps & React.FC<PageProps>) {
   const { pathname } = location;
   const [theme, setTheme] = useState(pageTheme[pathname]);
+
   useEffect(() => {
     setTheme(pageTheme[pathname]);
   }, [pathname]);

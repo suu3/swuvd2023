@@ -3,7 +3,7 @@
 .nav {
   display: none;
 
-  @include mobile {
+  @include tablet {
     z-index: var(--nav-z-index);
     position: fixed;
 
@@ -20,7 +20,21 @@
     right: 0;
     top: 0px;
 
-    background: #000000;
+    transition: all 0.15s ease-in-out;
+
+    svg {
+      tarnsition: filter 0.15s ease-in-out;
+    }
+    &.dark {
+      background: #000000;
+      svg {
+        filter: invert(100%);
+      }
+    }
+
+    &.light {
+      background-color: rgba(0, 0, 0, 0);
+    }
 
     .hamburger {
       cursor: pointer;
@@ -31,7 +45,7 @@
 .options {
   display: none;
 
-  @include mobile {
+  @include tablet {
     display: flex;
 
     justify-content: center;
@@ -81,6 +95,34 @@
       /* B3 */
 
       color: #636363;
+    }
+
+    > ul {
+      width: 100%;
+      margin: 0 17px;
+
+      .menu {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 40px;
+        /* identical to box height, or 200% */
+
+        text-align: center;
+
+        color: var(--white);
+        padding: 15px;
+
+        border-top: 0.5px solid var(--white);
+        transition: all 0.15s ease-in-out;
+
+        &.active,
+        &:hover {
+          color: var(--primary-400);
+        }
+        &:last-of-type {
+          border-bottom: 0.5px solid var(--white);
+        }
+      }
     }
   }
 }
