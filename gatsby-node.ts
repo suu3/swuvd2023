@@ -22,3 +22,19 @@ exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
     },
   });
 };
+
+// exports.createSchemaCustomization = ({ actions }) => {
+//   const { createTypes } = actions;
+//   const typeDefs = `
+//     type DesignerJson implements Node {
+//       uid: String
+//       title: String
+//       authors: [String]
+//       about: String
+//       project_image: Node
+//       project: ProjectJson
+//     }
+
+//   `;
+//   createTypes(typeDefs);
+// };

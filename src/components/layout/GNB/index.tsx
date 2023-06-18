@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import * as styles from "./gnb.module.scss";
 import classnames from "classnames";
 import { Link } from "gatsby";
+import { withPrefix } from "gatsby";
 
 const menus = [
   {
@@ -22,14 +23,15 @@ type GNBType = { pathname: string; theme: "light" | "dark" };
 
 const GNB = ({ pathname, theme = "dark" }: GNBType) => {
   const renderMenus = menus.map(({ title, link }, idx) => {
+    const isActive =
+      link === "/"
+        ? location.pathname === link
+        : location.pathname.includes(link);
     return (
       <Fragment key={title}>
         <Link to={link}>
           <span
-            className={classnames(
-              styles["menu"],
-              link === pathname && styles["active"]
-            )}
+            className={classnames(styles["menu"], isActive && styles["active"])}
           >
             {title}
           </span>

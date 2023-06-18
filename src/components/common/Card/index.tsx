@@ -18,7 +18,7 @@ import { Link } from "gatsby";
 
 type CardType = {
   item: {
-    id: number;
+    uid: number;
     title: string;
     authors: {
       name: string;

@@ -1,5 +1,5 @@
 .main {
-  max-width: 1496px;
+  max-width: var(--global-max-width);
   margin: 304px auto 142px auto;
   color: var(--white);
   position: relative;
@@ -20,12 +20,26 @@
   }
 }
 
-.projects {
+.projects-style {
   display: flex;
   justify-content: end;
+  gap: 17px;
 
   > div {
     display: flex;
     flex-direction: column;
+
+    > span {
+      //category
+      padding-bottom: 10px;
+
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 52px;
+    }
+
+    > div {
+      width: 518px;
+    }
   }
 }

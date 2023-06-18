@@ -1,8 +1,7 @@
-import { Swiper, SwiperSlide } from "swiper/react";
 import classNames from "classnames";
 import { sidebar, menu, active } from "./desinger-nav.module.scss";
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { Link } from "gatsby";
 
 const DesignerNav = ({ data, location }) => {
   // const scrollbar = {
@@ -10,32 +9,25 @@ const DesignerNav = ({ data, location }) => {
   //   verticalClass: scrollbarStyle,
   // };
   //https://codingbroker.tistory.com/128
-  return (
-    <nav className={sidebar}>
-      {data.map(({ frontmatter }, idx) => {
-        return (
-          <Link to={`/designer/${idx}`}>
-            <div
-              key={idx}
-              className={classNames(
-                menu,
-                `/designer/${idx}` === location.pathname && active
-              )}
-            >
-              {frontmatter.name}
-            </div>
-          </Link>
-        );
-      })}
-    </nav>
+
+  const renderMenus = data.map(
+    ({ node }: { node: { uid: string; name: string } }, idx: string) => {
+      console.log(node.uid);
+      return (
+        <Link to={`${node.uid}`} key={idx}>
+          <div
+            className={classNames(
+              menu,
+              `/designer/${node.uid}` === location.pathname && active
+            )}
+          >
+            {node.name}
+          </div>
+        </Link>
+      );
+    }
   );
+  return <nav className={sidebar}>{renderMenus}</nav>;
 };
 
 export default DesignerNav;
-const designerList = Array(40)
-  .fill({})
-  .map(() => {
-    return {
-      name: "김슈니",
-    };
-  });

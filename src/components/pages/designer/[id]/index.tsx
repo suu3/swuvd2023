@@ -1,18 +1,15 @@
 import React from "react";
-import { main, author, projects } from "./desinger-detail.module.scss";
+import { main, author, projectsStyle } from "./desinger-detail.module.scss";
 import DesignerNav from "@/components/layout/DesignerNav";
-
-import classNames from "classnames";
 import Card from "@/components/common/Card";
 
 const DesignerDetail = ({ location, list, data }) => {
-  const { name, enName, email, instagram } = data;
+  const { name, enName, email, instagram, projects } = data;
   return (
     <main className={main}>
       <DesignerNav location={location} data={list} />
       <section>
         <div className={author}>
-          <h1>{name}</h1>
           <h1>{enName}</h1>
           <p>
             <svg
@@ -45,31 +42,29 @@ const DesignerDetail = ({ location, list, data }) => {
             {email}
           </p>
         </div>
-        <div className={projects}>
-          <div>
-            <span>출판</span>
-            {/* image */}
-            <Card
-              item={{
-                id: 1,
-                title: "프로젝트 명",
-                authors: ["김슈니", "김슈니", "김슈니"],
-                src: "dummy.png",
-              }}
-            />
-          </div>
-          <div>
-            <span>UX</span>
-            {/* image */}
-            <Card
-              item={{
-                id: 1,
-                title: "프로젝트 명",
-                authors: ["김슈니", "김슈니", "김슈니"],
-                src: "dummy.png",
-              }}
-            />
-          </div>
+        <div className={projectsStyle}>
+          {projects.map(
+            (
+              { uid, title, category, authors, project_image }: any,
+              idx: string
+            ) => {
+              return (
+                <div key={idx}>
+                  <span>{category}</span>
+                  <div>
+                    <Card
+                      item={{
+                        uid,
+                        title,
+                        authors,
+                        project_image,
+                      }}
+                    />
+                  </div>
+                </div>
+              );
+            }
+          )}
         </div>
       </section>
     </main>

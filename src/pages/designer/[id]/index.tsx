@@ -6,8 +6,8 @@ const IndexPage: React.FC<PageProps> = ({ location, data }) => {
   return (
     <DesignerDetail
       location={location}
-      list={data.list.allProjectJson.edges}
-      data={data.data.projectJson}
+      list={data.list.edges}
+      data={data.data}
     />
   );
 };
@@ -18,7 +18,7 @@ export const Head: HeadFC = () => <title>Designer | SWUVD 2023</title>;
 
 export const query = graphql`
   query ($id: String) {
-    list: allProjectJson {
+    list: allDesignerJson {
       edges {
         node {
           id
@@ -26,21 +26,24 @@ export const query = graphql`
         }
       }
     }
-  
-    data:{
-      projectJson(uid: { eq: $id }) {
-        id
-        name
-        enName
-        email
-        instagram
+
+    data: designerJson(uid: { eq: $id }) {
+      id
+      name
+      enName
+      email
+      instagram
+      projects {
+        title
+        authors {
+          name
+          email
+        }
+        category
         project_image {
-          src {
-            childImageSharp {
-              gatsbyImageData
-            }
+          childImageSharp {
+            gatsbyImageData
           }
-          category
         }
       }
     }

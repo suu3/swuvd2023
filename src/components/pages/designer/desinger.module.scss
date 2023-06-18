@@ -1,8 +1,8 @@
 .main {
-  max-width: 1496px;
+  max-width: var(--global-max-width);
   margin: 304px auto 142px auto;
   color: var(--white);
-  overflow: hidden;
+  position: relative;
 }
 
 // .sidebar {
