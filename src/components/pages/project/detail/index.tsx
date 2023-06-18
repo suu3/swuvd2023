@@ -26,7 +26,6 @@ type ProjectDetailType = {
 const ProjectDetail = ({ project }: ProjectDetailType) => {
   const { authors, about, project_image, detail_image, title } = project;
 
-  console.log(project);
   return (
     <main className={main}>
       <h1>{title}</h1>
@@ -43,10 +42,10 @@ const ProjectDetail = ({ project }: ProjectDetailType) => {
         </div>
         <div className={imgWrapper}>
           <GatsbyImage
+            // layout="fixed"
             layout="fullWidth"
             objectFit="cover"
-            width={1067}
-            height={716}
+            sizes="100%"
             image={getImage(project_image)}
             alt={title}
           />
@@ -59,7 +58,21 @@ const ProjectDetail = ({ project }: ProjectDetailType) => {
 
       <section className={detailSection}>
         <h2>Project Detail</h2>
-        <div></div>
+        <div>
+          {detail_image.map(({ src }) => {
+            return (
+              <GatsbyImage
+                key={src}
+                // layout="fixed"
+                layout="fullWidth"
+                objectFit="cover"
+                sizes="100%"
+                image={getImage(src)}
+                alt={title}
+              />
+            );
+          })}
+        </div>
       </section>
     </main>
   );

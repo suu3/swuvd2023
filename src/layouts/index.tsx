@@ -1,9 +1,10 @@
 import React, { ReactNode, useEffect, useState, useCallback } from "react";
 import DesktopGnb from "@/layouts/GNB/DesktopGnb";
 import MobileGnb from "@/layouts/GNB/MobileGnb";
-import { main, designMain } from "./layout.module.scss";
+import { footer, main, designMain } from "./layout.module.scss";
 import DesignerNav from "@/layouts/DesignerNav";
-import { graphql, type HeadFC, type PageProps } from "gatsby";
+import { type PageProps } from "gatsby";
+import useIsMobile from "@/hooks/useIsMobile";
 
 type LayoutProps = {
   children: ReactNode;
@@ -26,6 +27,7 @@ export default function CommonLayout({
 }: LayoutProps & React.FC<PageProps>) {
   const { pathname } = location;
   const [theme, setTheme] = useState(pageTheme[pathname]);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     setTheme(pageTheme[pathname]);
@@ -34,8 +36,8 @@ export default function CommonLayout({
   if (pageContext.layout === "designer") {
     return (
       <>
-        <DesktopGnb theme={theme} pathname={location.pathname} />
-        <MobileGnb theme={theme} pathname={location.pathname} />
+        {!isMobile && <DesktopGnb theme={theme} pathname={location.pathname} />}
+        {isMobile && <MobileGnb theme={theme} pathname={location.pathname} />}
         <main className={designMain}>
           <DesignerNav location={location} data={data?.list} />
           {children}
@@ -49,6 +51,14 @@ export default function CommonLayout({
       <DesktopGnb theme={theme} pathname={location.pathname} />
       <MobileGnb theme={theme} pathname={location.pathname} />
       <main className={main}>{children}</main>
+      {isMobile && (
+        <footer className={footer}>
+          <p>
+            SEOUL WOMEN’S UNIVERSITY
+            <br /> VISUAL COMMUNICATION DESIGN
+          </p>
+        </footer>
+      )}
     </>
   );
 }
