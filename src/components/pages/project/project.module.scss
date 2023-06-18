@@ -1,8 +1,16 @@
+@import "@/styles/_media-query.scss";
+
 .section {
-  width: var(--global-max-width);
+  min-width: var(--global-max-width);
   margin: 304px auto 142px auto;
 
   position: relative;
+
+  @include tablet {
+    margin: 0 24px;
+    min-width: auto;
+    margin-bottom: 100px;
+  }
 }
 
 .grid {
@@ -12,4 +20,10 @@
   display: grid;
   grid-gap: 20px;
   grid-template-columns: 1fr 1fr;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    padding-top: 0;
+  }
 }

@@ -1,12 +1,11 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { section, img } from "./exhibition-section.module.scss";
-import { useMediaQuery } from "react-responsive";
+import useIsMobile from "@/hooks/useIsMobile";
 
 const ExhibitionSection = () => {
-  const isMobile = useMediaQuery({
-    query: "(max-width: 991px)",
-  });
+  const isMobile = useIsMobile();
+
   return (
     <section className={section}>
       {!isMobile && (

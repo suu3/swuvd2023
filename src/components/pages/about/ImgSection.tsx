@@ -7,12 +7,10 @@ import {
   title,
 } from "./img-section.module.scss";
 import AbsoluteText from "@/components/common/AbsoluteText";
-import { useMediaQuery } from "react-responsive";
+import useIsMobile from "@/hooks/useIsMobile";
 
 const ImgSection: React.FC = () => {
-  const isMobile = useMediaQuery({
-    query: "(max-width: 991px)",
-  });
+  const isMobile = useIsMobile();
 
   return (
     <section className={section}>

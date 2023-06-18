@@ -1,3 +1,5 @@
+@import "@/styles/_media-query.scss";
+
 @mixin rectangle {
   z-index: 2;
   content: "";
@@ -17,6 +19,11 @@
     background-color: var(--primary-100);
 
     border-radius: 50%;
+
+    @include tablet {
+      width: 8px;
+      height: 8px;
+    }
   }
 
   cursor: pointer;
@@ -44,6 +51,10 @@
       bottom: 48px;
       left: 80%;
       z-index: 2;
+
+      @include tablet {
+        bottom: 22px;
+      }
     }
 
     &::after {
@@ -80,6 +91,13 @@
         left: 32px;
         right: 32px;
         bottom: 32px;
+
+        @include tablet {
+          top: 16px;
+          left: 16px;
+          right: 16px;
+          bottom: 16px;
+        }
       }
 
       &::after {
@@ -88,6 +106,13 @@
         left: 86px;
         right: 80px;
         bottom: 86px;
+
+        @include tablet {
+          top: 35px;
+          left: 35px;
+          right: 35px;
+          bottom: 35px;
+        }
       }
     }
 
@@ -96,17 +121,27 @@
         @include circle;
         top: 48px;
         left: 60%;
+
+        @include tablet {
+          top: 22px;
+        }
       }
       &::after {
         @include circle;
         top: 50%;
         left: 52px;
         transform: translateY(-50%);
+
+        @include tablet {
+          left: 22px;
+        }
       }
     }
 
     .text {
       z-index: 2;
+      text-align: center;
+
       > p {
         &:first-of-type {
           font-weight: 700;
@@ -117,6 +152,19 @@
           font-weight: 400;
           font-size: 24px;
           line-height: 42px;
+        }
+
+        @include tablet {
+          &:first-of-type {
+            font-weight: 700;
+            font-size: 17px;
+            line-height: 23px;
+          }
+          &:last-of-type {
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 18px;
+          }
         }
       }
     }

@@ -32,12 +32,6 @@ const Card = ({ item: { uid, title, authors, project_image } }: CardType) => {
     <Link to={`/project/${uid}`}>
       <div className={card}>
         <div className={image}>
-          {/* <StaticImage
-            layout="fullWidth"
-            alt={title}
-            src={"images/dummy.png"}
-            aspectRatio={1067 / 716}
-          /> */}
           <GatsbyImage image={getImage(project_image)} alt={title} />
         </div>
         <div className={classNames(hoverImage)}>
@@ -47,7 +41,10 @@ const Card = ({ item: { uid, title, authors, project_image } }: CardType) => {
             <p>{title}</p>
             <p>
               {authors.map(({ name }, idx) => (
-                <span key={idx}>{name}</span>
+                <span key={idx}>
+                  {name}
+                  {idx !== authors.length - 1 && ", "}
+                </span>
               ))}
             </p>
           </div>

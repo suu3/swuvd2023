@@ -8,12 +8,11 @@ import {
   memberRow,
   oneMember,
 } from "./credit-article.module.scss";
-import { useMediaQuery } from "react-responsive";
+import useIsMobile from "@/hooks/useIsMobile";
 
 const CreditArticle = () => {
-  const isMobile = useMediaQuery({
-    query: "(max-width: 991px)",
-  });
+  const isMobile = useIsMobile();
+
   const renderCredit = creditList.map(({ pic, width, mwidth, member }, idx) => (
     <div key={pic} className={picRow}>
       <span>{pic}</span>

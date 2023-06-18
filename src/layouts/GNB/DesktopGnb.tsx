@@ -9,7 +9,7 @@ const DesktopGnb = ({ pathname, theme = "dark" }: GNBType) => {
     const isActive = link === "/" ? pathname === link : pathname.includes(link);
     return (
       <Fragment key={title}>
-        <Link to={link}>
+        <Link to={link === "/designer" ? `${link}/1` : link}>
           <span
             className={classnames(styles["menu"], isActive && styles["active"])}
           >

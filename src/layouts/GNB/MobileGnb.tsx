@@ -1,9 +1,10 @@
-import React, { ReactNode, useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import * as styles from "./mobile-gnb.module.scss";
 import classnames from "classnames";
 import { Link } from "gatsby";
 import { menus, GNBType } from "./contants";
 import { AnimatePresence, motion } from "framer-motion";
+import useLockBody from "@/hooks/useLockBody";
 
 const SECTION_HEIGHT = 640;
 
@@ -76,19 +77,6 @@ const MobileGnb = ({ pathname, theme = "dark" }: GNBType) => {
     </svg>
   );
 
-  const renderMenus = menus.map(({ title, link }, idx) => {
-    const isActive = link === "/" ? pathname === link : pathname.includes(link);
-    return (
-      <Link to={link} key={title} onClick={toggleMenu}>
-        <li
-          className={classnames(styles["menu"], isActive && styles["active"])}
-        >
-          {title}
-        </li>
-      </Link>
-    );
-  });
-
   return (
     <>
       <nav
@@ -117,27 +105,46 @@ const MobileGnb = ({ pathname, theme = "dark" }: GNBType) => {
         </div>
       </nav>
       <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            className={styles["options"]}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{
-              ease: "easeInOut",
-              duration: 0.15,
-            }}
-          >
-            <ul>{renderMenus}</ul>
-            <p>
-              SEOUL WOMEN’S UNIVERSITY
-              <br /> VISUAL COMMUNICATION DESIGN
-            </p>
-          </motion.div>
-        )}
+        {isOpen && <Options {...{ pathname, toggleMenu }} />}
       </AnimatePresence>
     </>
   );
 };
 
 export default MobileGnb;
+
+const Options = ({ pathname, toggleMenu }) => {
+  useLockBody();
+
+  const renderMenus = menus.map(({ title, link }, idx) => {
+    const isActive = link === "/" ? pathname === link : pathname.includes(link);
+    return (
+      <Link to={link} key={title} onClick={toggleMenu}>
+        <li
+          className={classnames(styles["menu"], isActive && styles["active"])}
+        >
+          {title}
+        </li>
+      </Link>
+    );
+  });
+
+  return (
+    <motion.div
+      className={styles["options"]}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{
+        ease: "easeInOut",
+        duration: 0.15,
+      }}
+    >
+      <ul>{renderMenus}</ul>
+      <p>
+        SEOUL WOMEN’S UNIVERSITY
+        <br /> VISUAL COMMUNICATION DESIGN
+      </p>
+    </motion.div>
+  );
+};
