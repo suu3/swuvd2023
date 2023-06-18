@@ -31,7 +31,7 @@ const ImgSection: React.FC = () => {
           layout="fixed"
           placeholder="tracedSVG"
           alt="background"
-          src="./_images/background-main.png"
+          src="./_images/m-background-main.png"
           objectFit="contain"
           objectPosition="top right"
           height={640}

@@ -1,3 +1,5 @@
+@import "@/styles/_media-query.scss";
+
 .ko-style,
 .en-style {
   font-weight: 400;
@@ -7,11 +9,26 @@
   > p:not(:last-of-type) {
     padding-bottom: 42px;
   }
+
+  @include tablet {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+
+    > p:not(:last-of-type) {
+      padding-bottom: 20px;
+    }
+  }
 }
 
 .ko-style {
   color: var(--white);
   padding-bottom: 42px;
+
+  @include tablet {
+    padding-bottom: 32px;
+  }
 }
 
 .en-style {

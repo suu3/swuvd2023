@@ -1,10 +1,9 @@
 import React, { ReactNode } from "react";
 import { koStyle, enStyle } from "./explain-text.module.scss";
-import classNames from "classnames";
 
 type ExplainTextType = {
   ko: ReactNode[];
-  en: ReactNode[];
+  en?: ReactNode[];
 };
 const ExplainText = ({ ko, en }: ExplainTextType) => {
   return (
@@ -14,11 +13,13 @@ const ExplainText = ({ ko, en }: ExplainTextType) => {
           <p key={idx}>{text}</p>
         ))}
       </div>
-      <div className={enStyle}>
-        {en.map((text, idx) => (
-          <p key={idx}>{text}</p>
-        ))}
-      </div>
+      {en && (
+        <div className={enStyle}>
+          {en.map((text, idx) => (
+            <p key={idx}>{text}</p>
+          ))}
+        </div>
+      )}
     </>
   );
 };
