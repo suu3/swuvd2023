@@ -1,6 +1,7 @@
+import React from "react";
 import { nav, active, options, option } from "./project-nav.module.scss";
-import React, { useState } from "react";
 import classNames from "classnames";
+import { AnimatePresence, motion } from "framer-motion";
 
 const ProjectNav = ({ curMenu, toggleMenu, handleMenu, isOpen }) => {
   return (
@@ -20,21 +21,31 @@ const ProjectNav = ({ curMenu, toggleMenu, handleMenu, isOpen }) => {
           />
         </svg>
       </nav>
-      {isOpen && (
-        <div className={options}>
-          {navList.map((item) => {
-            return (
-              <div
-                onClick={() => handleMenu(item)}
-                className={classNames(option, curMenu.id === item.id && active)}
-                key={item.id}
-              >
-                {item.label}
-              </div>
-            );
-          })}
-        </div>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className={options}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            {navList.map((item) => {
+              return (
+                <div
+                  onClick={() => handleMenu(item)}
+                  className={classNames(
+                    option,
+                    curMenu.id === item.id && active
+                  )}
+                  key={item.id}
+                >
+                  {item.label}
+                </div>
+              );
+            })}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };
