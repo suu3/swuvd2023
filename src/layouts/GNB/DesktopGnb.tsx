@@ -1,35 +1,17 @@
 import React, { Fragment } from "react";
-import * as styles from "./gnb.module.scss";
+import * as styles from "./desktop-gnb.module.scss";
 import classnames from "classnames";
 import { Link } from "gatsby";
+import { menus, GNBType } from "./contants";
 
-const menus = [
-  {
-    title: "ABOUT",
-    link: "/",
-  },
-  {
-    title: "PROJECT",
-    link: "/project",
-  },
-  {
-    title: "DESIGNER",
-    link: "/designer",
-  },
-];
-
-type GNBType = { pathname: string; theme: "light" | "dark" };
-
-const GNB = ({ pathname, theme = "light" }: GNBType) => {
+const DesktopGnb = ({ pathname, theme = "dark" }: GNBType) => {
   const renderMenus = menus.map(({ title, link }, idx) => {
+    const isActive = link === "/" ? pathname === link : pathname.includes(link);
     return (
       <Fragment key={title}>
-        <Link to={link}>
+        <Link to={link === "/designer" ? `${link}/1` : link}>
           <span
-            className={classnames(
-              styles["menu"],
-              link === pathname && styles["active"]
-            )}
+            className={classnames(styles["menu"], isActive && styles["active"])}
           >
             {title}
           </span>
@@ -50,4 +32,4 @@ const GNB = ({ pathname, theme = "light" }: GNBType) => {
   );
 };
 
-export default GNB;
+export default DesktopGnb;

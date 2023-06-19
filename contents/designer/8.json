@@ -1,0 +1,51 @@
+{
+  "uid": "8",
+  "name": "김슈니",
+  "enName": "Kim swuni",
+  "email": "kimswuni@swu.co.kr",
+  "instagram": "kimswuni",
+  "projects": [
+    {
+      "uid": "1",
+      "title": "프로젝트 명1",
+      "category": "출판",
+
+      "authors": [
+        {
+          "name": "김슈니",
+          "email": "aaaaa"
+        },
+        {
+          "name": "김슈니",
+          "email": "aaaaa"
+        },
+        {
+          "name": "김슈니",
+          "email": "aaaaa"
+        }
+      ],
+      "project_image": "./1/projects/project-1.png"
+    },
+    {
+      "uid": "2",
+      "title": "프로젝트 명1",
+      "category": "출판",
+
+      "authors": [
+        {
+          "name": "김슈니",
+          "email": "aaaaa"
+        },
+        {
+          "name": "김슈니",
+          "email": "aaaaa"
+        },
+        {
+          "name": "김슈니",
+          "email": "aaaaa"
+        }
+      ],
+      "project_image": "./1/projects/project-2.png"
+    }
+  ]
+}

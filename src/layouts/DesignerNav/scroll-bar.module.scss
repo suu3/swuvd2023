@@ -1,0 +1,16 @@
+.scroll-progress {
+  height: 100%;
+  border-right: 1px solid var(--primary-100);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9;
+
+  .progress {
+    z-index: 10;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--primary-400);
+  }
+}

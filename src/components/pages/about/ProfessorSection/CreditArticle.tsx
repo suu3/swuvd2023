@@ -1,5 +1,4 @@
-import React, { Fragment } from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import React from "react";
 import AbsoluteText from "@/components/common/AbsoluteText";
 import {
   wrapper,
@@ -9,9 +8,12 @@ import {
   memberRow,
   oneMember,
 } from "./credit-article.module.scss";
+import useIsMobile from "@/hooks/useIsMobile";
 
 const CreditArticle = () => {
-  const renderCredit = creditList.map(({ pic, width, member }, idx) => (
+  const isMobile = useIsMobile();
+
+  const renderCredit = creditList.map(({ pic, width, mwidth, member }, idx) => (
     <div key={pic} className={picRow}>
       <span>{pic}</span>
       <div className={membersWrapper} key={idx}>
@@ -21,7 +23,7 @@ const CreditArticle = () => {
               <div key={idx} className={oneMember}>
                 <span
                   style={{
-                    width,
+                    width: isMobile ? mwidth : width,
                   }}
                 >
                   {part}
@@ -40,7 +42,7 @@ const CreditArticle = () => {
   ));
   return (
     <div className={wrapper}>
-      <AbsoluteText text="40TH EXHIBITION_CREDITS" type="left" />
+      <AbsoluteText text="40TH EXHIBITION_CREDITS" type="left" desktopOnly />
       <article className={credit}>
         <h1>Credit</h1>
         {renderCredit}
@@ -56,11 +58,13 @@ type MemberType = { part: string; name: string[] }[][];
 const creditList: {
   pic: string;
   width: number;
+  mwith: number;
   member: MemberType;
 }[] = [
   {
     pic: "졸업준비위원회",
     width: 120,
+    mwidth: 70,
     member: [
       [
         {
@@ -105,6 +109,7 @@ const creditList: {
   {
     pic: "교수",
     width: 67,
+    mwidth: 70,
     member: [
       [
         {

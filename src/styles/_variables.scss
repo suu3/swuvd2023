@@ -1,6 +1,6 @@
 $colors: (
   "primary": (
-    "400": #ffd57f,
+    "400": #ffbe39,
     "300": #ffc95d,
     "200": #ffd57f,
     "100": #ffe4ae,
@@ -26,4 +26,5 @@ $colors: (
   }
 
   --nav-z-index: 1000;
+  --global-max-width: 1496px;
 }

@@ -1,0 +1,43 @@
+.menu-wrapper {
+  width: 162px;
+  height: 500px;
+  overflow: scroll;
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.sidebar {
+  width: 162px;
+  height: 500px;
+  // overflow: scroll;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  .menu {
+    padding: 2px;
+    margin-right: 10px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 52px;
+    height: 56.2667px;
+
+    color: var(--secondary-100);
+
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+
+    &:hover {
+      color: var(--white);
+    }
+
+    &.active {
+      color: var(--white);
+    }
+  }
+}

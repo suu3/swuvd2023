@@ -7,38 +7,38 @@ import { StaticImage } from "gatsby-plugin-image";
 const DesignSection = () => {
   return (
     <section className={section}>
-      <AbsoluteText text="40TH EXHIBITION_DESIGN_CONCEPT" type="left" />
+      <AbsoluteText
+        text="40TH EXHIBITION_DESIGN_CONCEPT"
+        type="left"
+        desktopOnly
+      />
       <div>
         <article className={text}>
           <ExplainText
             ko={[
-              <>“금”은 두 공간 사이의 경계를 의미한다.</>,
+              <>“금”은 금색, 선, 깨진 틈 등 다양한 의미를 가집니다. </>,
+
               <>
-                졸업전시는 4년간의 대학 생활을 마무리하는 완주 선이자 새로운
-                시작을 향한 출발선이다. 스스로 정해둔 경계를 깨고 금을 넘어서
-                우리는 각자 꿈을 갖고 다양한 방향으로 나아간다.
+                다양한 의미 중 이번 포스터는 “선”의 의미에 집중했습니다. <br />
+                졸업전시회는 곧 4년간의 대학 생활을 마무리하는 완주 선이자
+                새로운 시작을 향한 출발선입니다.{" "}
+              </>,
+
+              <>
+                각자의 속도에 맞게 나아가며, 순위에 집착하지 않고, 완주하는
+                모두가 축하받는 트랙 위의 마라톤은 꼭 졸업전시회와 비슷합니다.{" "}
+              </>,
+
+              <>
+                앞으로 나아가는 공은 각자 속도에 맞게 길을 개척해 나가는 47명의
+                학우들을, 그늘은 힘들 때 잠깐 쉬어갈 수 있는 안식처를, 허들은
+                모두가 한 번쯤 경험하는 크고 작은 어려움을 의미합니다. 때로는
+                넘어지더라도 각자의 한계를 뛰어넘어 트랙을 완주하길 바라는
+                의도를 담았습니다.{" "}
               </>,
               <>
-                숨이 벅차오르는 고비를 이겨내고 장애물을 넘어 <br />
-                앞으로 나아가는 마라톤처럼 우리는 모두 각자의 <br />
-                속도에 맞춰 트랙을 완주할 것이다. 비로소 완주하고 났을 때
-                모두에게 찬란한 금빛 미래가 펼쳐질 것이다.
-              </>,
-            ]}
-            en={[
-              <>“Gold” means the boundary between two spaces.</>,
-              <>
-                The graduation exhibition is the finishing line of four years of
-                university life and the starting line for a new beginning.
-                <br />
-                Breaking the boundaries we set for ourselves and going beyond
-                gold, each of us has a dream and goes in various directions.
-              </>,
-              <>
-                Like a marathon in which we overcome breath-taking obstacles and
-                move forward over obstacles, we will all complete the track at
-                our own pace. When it is finally completed, a brilliant golden
-                future will unfold for everyone.
+                새로운 시작을 향해 나아가는 47명의 학우분들 앞에 찬란한 금빛
+                미래가 펼쳐지길 진심으로 바랍니다.
               </>,
             ]}
           />

@@ -1,11 +1,14 @@
+@import "@/styles/_media-query.scss";
+
 @mixin css-variables {
-  --nav-margin: auto 96px;
+  --nav-margin: auto;
   --nav-padding: 74px 96px;
   --nav-menu-margin: 0 62px;
 }
 
 .nav {
   @include css-variables;
+  min-width: var(--global-max-width);
   position: absolute;
   top: 0;
   left: 0;
@@ -71,5 +74,9 @@
     .border {
       border-right-color: var(--white);
     }
+  }
+
+  @include tablet {
+    display: none;
   }
 }

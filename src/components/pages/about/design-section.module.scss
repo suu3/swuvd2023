@@ -1,13 +1,26 @@
+@import "@/styles/_media-query.scss";
+
 .section {
   padding: 120px 0;
   color: var(--secondary-100);
   position: relative;
 
   > div {
+    min-height: 948px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: auto 210px;
+  }
+
+  @include tablet {
+    padding: 56px 24px;
+    > div {
+      min-height: auto;
+      flex-direction: column-reverse;
+      margin: 0;
+    }
   }
 }
 
@@ -15,9 +28,18 @@
   width: 730px;
   word-break: break-all;
   flex-shrink: 0;
+
+  @include tablet {
+    padding-top: 57px;
+    width: auto;
+  }
 }
 
 .image {
   width: 100%;
   padding-left: 100px;
+
+  @include tablet {
+    padding-left: 0;
+  }
 }

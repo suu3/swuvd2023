@@ -15,9 +15,35 @@ exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
   actions.setWebpackConfig({
     output,
     resolve: {
+      modules: [path.resolve(__dirname, "src"), "node_modules"],
       alias: {
         "@": path.resolve(__dirname, "src"),
       },
     },
   });
+};
+
+// exports.createSchemaCustomization = ({ actions }) => {
+//   const { createTypes } = actions;
+//   const typeDefs = `
+//     type DesignerJson implements Node {
+//       uid: String
+//       title: String
+//       authors: [String]
+//       about: String
+//       project_image: Node
+//       project: ProjectJson
+//     }
+
+//   `;
+//   createTypes(typeDefs);
+// };
+
+exports.onCreatePage = ({ page, actions }) => {
+  const { createPage } = actions;
+
+  if (page.path.match(/designer/)) {
+    page.context.layout = "designer";
+    createPage(page);
+  }
 };

@@ -1,0 +1,60 @@
+@import "@/styles/_media-query.scss";
+
+.design-main {
+  margin: 304px 96px 142px 96px;
+  color: var(--white);
+  position: relative;
+
+  padding-left: 227px;
+
+  @include tablet {
+    margin: 0;
+    padding: 103px 0 0 0;
+  }
+}
+
+.main {
+  min-width: var(--global-max-width);
+
+  @include tablet {
+    min-width: auto;
+  }
+}
+
+.footer {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  /* or 167% */
+
+  text-align: center;
+  letter-spacing: -0.01em;
+
+  /* B3 */
+
+  color: #636363;
+  padding: 12px 0;
+
+  &.light {
+    background-color: var(--white);
+  }
+}
+
+// .footer {
+//   font-weight: 500;
+//   font-size: 12px;
+//   line-height: 20px;
+//   /* or 167% */
+
+//   text-align: center;
+//   letter-spacing: -0.01em;
+
+//   /* B3 */
+
+//   color: #636363;
+//   position: absolute;
+//   bottom: 12px;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   // padding: 12px 0;
+// }

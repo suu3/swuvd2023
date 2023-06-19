@@ -1,0 +1,32 @@
+.section {
+  padding: 24px 24px 48px 24px;
+
+  > h1 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 36px;
+    letter-spacing: -0.02em;
+
+    padding-bottom: 28px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 20px;
+    text-align: center;
+
+    > span {
+      cursor: pointer;
+      padding: 7px;
+      border: 1px solid rgba(0, 0, 0, 0);
+
+      transition: all 0.15s ease-in-out;
+
+      &:hover {
+        border: 1px solid var(--primary-400);
+        color: var(--primary-400);
+      }
+    }
+  }
+}

@@ -1,6 +1,14 @@
+@import "@/styles/_media-query.scss";
+
 @mixin section-styles {
   margin: auto 210px;
   padding: 120px 0;
+
+  @include tablet {
+    margin: 0;
+    padding: 70px 24px;
+    overflow: hidden;
+  }
 }
 
 .section {
@@ -9,8 +17,16 @@
   min-height: 1080px;
   color: var(--secondary-100);
 
+  @include tablet {
+    min-height: auto;
+  }
+
   > div {
     position: absolute;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   > article {
@@ -21,6 +37,12 @@
     > svg {
       padding-bottom: 80px;
       box-sizing: content-box;
+
+      @include tablet {
+        width: 203px;
+        height: 34px;
+        padding-bottom: 37px;
+      }
     }
   }
 }
