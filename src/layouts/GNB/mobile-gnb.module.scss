@@ -22,6 +22,27 @@
 
     transition: all 0.15s ease-in-out;
 
+    .text {
+      position: absolute;
+      left: 100px;
+      color: var(--white);
+      /* mobile sub headline */
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 40px;
+
+      display: flex;
+      align-items: center;
+
+      > span {
+        display: inline-block;
+        width: 2px;
+        height: 18px;
+        background-color: var(--white);
+        margin: 0 10px;
+        transform: translateY(1px);
+      }
+    }
     svg {
       tarnsition: filter 0.15s ease-in-out;
     }
