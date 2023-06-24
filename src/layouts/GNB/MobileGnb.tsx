@@ -85,7 +85,7 @@ const MobileGnb = ({ pathname, theme = "dark" }: GNBType) => {
           isOpen ? styles["dark"] : styles[_theme]
         )}
       >
-        <div>
+        <Link to="/">
           <svg
             width="40"
             height="39"
@@ -98,7 +98,7 @@ const MobileGnb = ({ pathname, theme = "dark" }: GNBType) => {
               fill="black"
             />
           </svg>
-        </div>
+        </Link>
 
         <div className={styles["hamburger"]} onClick={toggleMenu}>
           {icon}
@@ -114,7 +114,14 @@ const MobileGnb = ({ pathname, theme = "dark" }: GNBType) => {
 export default MobileGnb;
 
 const Options = ({ pathname, toggleMenu }) => {
-  useLockBody();
+  const [blockScroll, allowScroll] = useLockBody();
+
+  useEffect(() => {
+    blockScroll();
+    return () => {
+      allowScroll();
+    };
+  }, []);
 
   const renderMenus = menus.map(({ title, link }, idx) => {
     const isActive = link === "/" ? pathname === link : pathname.includes(link);

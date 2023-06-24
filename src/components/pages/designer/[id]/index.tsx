@@ -2,6 +2,7 @@ import React from "react";
 import { section, author, projectsStyle } from "./desinger-detail.module.scss";
 import Card from "@/components/common/Card";
 import useIsMobile from "@/hooks/useIsMobile";
+import { motion, Variants } from "framer-motion";
 
 const DesignerDetail = ({ data }) => {
   const { name, enName, email, instagram, projects } = data;
