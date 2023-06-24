@@ -19,7 +19,7 @@
 
     @include tablet {
       margin: 0;
-      padding: 24px;
+      padding: 24px 24px 100px 24px;
 
       > h1 {
         font-weight: 700;
@@ -77,7 +77,7 @@
             flex-direction: column;
 
             &:not(:last-child) {
-              padding-bottom: 8px;
+              padding-bottom: 0px;
             }
           }
 
