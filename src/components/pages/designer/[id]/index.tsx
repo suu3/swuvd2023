@@ -8,6 +8,20 @@ const DesignerDetail = ({ data }) => {
   const { name, enName, email, instagram, projects } = data;
   const isMobile = useIsMobile();
 
+  const cardVariants: Variants = {
+    offscreen: {
+      y: 100,
+      opacity: 0,
+    },
+    onscreen: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "easeInOut",
+        duration: 0.5,
+      },
+    },
+  };
   return (
     <section className={section}>
       <div className={author}>
@@ -62,9 +76,16 @@ const DesignerDetail = ({ data }) => {
             idx: string
           ) => {
             return (
-              <div key={idx}>
+              <motion.div
+                //className="card-container"
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0.5 }}
+                key={idx}
+              >
                 <span>{category}</span>
-                <div>
+
+                <motion.div variants={cardVariants}>
                   <Card
                     item={{
                       uid,
@@ -73,8 +94,8 @@ const DesignerDetail = ({ data }) => {
                       project_image,
                     }}
                   />
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             );
           }
         )}
