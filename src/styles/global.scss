@@ -1,7 +1,7 @@
 @use "./_reset.scss";
 @use "./_fonts.scss";
 @use "./_variables.scss";
-@use "./_media-query.scss";
+@import "./_media-query.scss";
 
 /*
 * global Styles
