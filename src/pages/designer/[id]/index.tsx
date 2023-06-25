@@ -34,6 +34,7 @@ export const query = graphql`
       email
       instagram
       projects {
+        uid
         title
         authors {
           name

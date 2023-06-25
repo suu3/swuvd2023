@@ -2,6 +2,7 @@
 
 .section {
   padding-left: 100px;
+  width: 100%;
 
   @include tablet {
     padding-left: 0;

@@ -6,8 +6,9 @@
   //padding-left: 227px;
   .designer-main {
     margin: auto;
-    padding-left: 106px;
-    max-width: var(--global-max-width);
+    width: 100%;
+    padding: 4px 100px 72px 100px;
+    min-width: var(--global-max-width);
     display: flex;
 
     @include tablet {
