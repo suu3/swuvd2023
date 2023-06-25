@@ -42,8 +42,14 @@ const ProjectNav = ({ curMenu, toggleMenu, handleMenu, isOpen }) => {
 export default ProjectNav;
 
 const Options = ({ handleMenu, curMenu }) => {
-  useLockBody();
+  const [blockScroll, allowScroll] = useLockBody();
 
+  useEffect(() => {
+    blockScroll();
+    return () => {
+      allowScroll();
+    };
+  }, []);
   return (
     <motion.div
       className={options}

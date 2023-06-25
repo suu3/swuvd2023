@@ -26,7 +26,9 @@
       line-height: 52px;
 
       > svg {
+        margin-right: 15px;
         filter: invert(1);
+        transform: translateY(2.5px);
       }
     }
   }
@@ -97,7 +99,7 @@
     // right: 0;
     // bottom: 0;
     background: var(--white);
-    padding: 24px 24px 48px 24px;
+    padding: 24px 24px 148px 24px;
     color: var(--secondary-400);
   }
 
