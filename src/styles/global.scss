@@ -1,6 +1,7 @@
 @use "./_reset.scss";
 @use "./_fonts.scss";
 @use "./_variables.scss";
+@use "./_media-query.scss";
 
 /*
 * global Styles
@@ -17,7 +18,6 @@ html {
 
 body {
   background-color: var(--secondary-400);
-  position: relative;
   min-height: 100vh;
 
   -ms-overflow-style: none; /* IE and Edge */
@@ -25,5 +25,9 @@ body {
 
   &::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera*/
+  }
+
+  @include tablet {
+    position: relative;
   }
 }
