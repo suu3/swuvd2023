@@ -3,8 +3,10 @@ import { section } from "./concept-section.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
 import AbsoluteText from "@/components/common/AbsoluteText";
 import ExplainText from "./ExplainText";
+import useIsMobile from "@/hooks/useIsMobile";
 
 const ConceptSection = () => {
+  const isMobile = useIsMobile();
   return (
     <section className={section}>
       <div>
@@ -17,7 +19,11 @@ const ConceptSection = () => {
           height={1080}
         />
       </div>
-      <AbsoluteText text="40TH EXHIBITION_CONCEPT" type="left" />
+      <AbsoluteText
+        text="40TH EXHIBITION_CONCEPT"
+        desktopOnly={false}
+        type={isMobile ? "right" : "left"}
+      />
       <article>
         <Title />
         <ExplainText

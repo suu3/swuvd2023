@@ -14,6 +14,11 @@ const DesignSection = () => {
       />
       <div>
         <article className={text}>
+          <AbsoluteText
+            text="40TH EXHIBITION_DESIGN_CONCEPT"
+            type="right"
+            mobileOnly
+          />
           <ExplainText
             ko={[
               <>“금”은 금색, 선, 깨진 틈 등 다양한 의미를 가집니다. </>,

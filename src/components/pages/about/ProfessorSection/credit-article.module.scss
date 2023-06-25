@@ -3,11 +3,18 @@
 .wrapper {
   position: relative;
 
+  > p {
+    color: var(--secondary-100);
+  }
   .credit {
     position: relative;
     z-index: 2;
     margin: auto 210px;
     color: var(--white);
+
+    > p {
+      color: var(--secondary-100);
+    }
 
     > h1 {
       font-weight: 700;
@@ -47,6 +54,7 @@
 
       @include tablet {
         padding-bottom: 30px;
+        padding-right: 50px;
 
         > span {
           font-weight: 700;

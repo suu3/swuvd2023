@@ -2,6 +2,7 @@
 
 .section {
   padding-left: 100px;
+  width: 100%;
 
   @include tablet {
     padding-left: 0;
@@ -37,8 +38,7 @@
     justify-content: space-between;
 
     min-height: 433px;
-    padding: 24px;
-    padding-bottom: 42px;
+    padding: 0 24px 42px 24px;
 
     > span {
       //SWUVD 40TH  EXHIBITION
@@ -97,7 +97,7 @@
     // right: 0;
     // bottom: 0;
     background: var(--white);
-    padding: 24px 24px 148px 24px;
+    padding: 48px 24px 117px 24px;
     color: var(--secondary-400);
   }
 

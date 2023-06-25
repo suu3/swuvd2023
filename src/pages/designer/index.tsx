@@ -2,6 +2,7 @@ import * as React from "react";
 import { graphql, type HeadFC, type PageProps } from "gatsby";
 import Designer from "@/components/pages/designer";
 import useIsMobile from "@/hooks/useIsMobile";
+import SEO from "@/layouts/SEO";
 
 const IndexPage: React.FC<PageProps> = ({ location, data }) => {
   const isMobile = useIsMobile();
@@ -24,4 +25,9 @@ export const query = graphql`
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Designer | SWUVD 2023</title>;
+export const Head: HeadFC = () => (
+  <>
+    <title>Designer | SWUVD 2023</title>
+    <SEO />
+  </>
+);

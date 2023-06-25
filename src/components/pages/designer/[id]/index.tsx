@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { section, author, projectsStyle } from "./desinger-detail.module.scss";
 import Card from "@/components/common/Card";
 import useIsMobile from "@/hooks/useIsMobile";
@@ -7,6 +7,7 @@ import { motion, Variants } from "framer-motion";
 const DesignerDetail = ({ data }) => {
   const { name, enName, email, instagram, projects } = data;
   const isMobile = useIsMobile();
+  const [clickCard, setClickCard] = useState(null);
 
   const cardVariants: Variants = {
     offscreen: {
@@ -87,6 +88,7 @@ const DesignerDetail = ({ data }) => {
 
                 <motion.div variants={cardVariants}>
                   <Card
+                    {...{ clickCard, setClickCard }}
                     item={{
                       uid,
                       title,

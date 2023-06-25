@@ -6,6 +6,7 @@ import DesignSection from "@/components/pages/about/DesignSection";
 import InfoSection from "@/components/pages/about/InfoSection";
 import ExhibitionSection from "@/components/pages/about/ExhibitionSection";
 import ProfessorSection from "@/components/pages/about/ProfessorSection";
+import SEO from "@/layouts/SEO";
 
 const IndexPage: React.FC<PageProps> = ({ location }) => {
   return (
@@ -22,4 +23,9 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>About | SWUVD 2023</title>;
+export const Head: HeadFC = () => (
+  <>
+    <title>About | SWUVD 2023</title>
+    <SEO />
+  </>
+);

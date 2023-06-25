@@ -15,6 +15,8 @@ import { navigate } from "gatsby";
 import useIsMobile from "@/hooks/useIsMobile";
 
 type CardType = {
+  clickCard: null | number;
+  setClickCard: any;
   item: {
     uid: number;
     title: string;
@@ -26,9 +28,12 @@ type CardType = {
   };
 };
 
-const Card = ({ item: { uid, title, authors, project_image } }: CardType) => {
+const Card = ({
+  clickCard,
+  setClickCard,
+  item: { uid, title, authors, project_image },
+}: CardType) => {
   const isMobile = useIsMobile();
-  const [clickCnt, setClickCnt] = useState(0);
 
   const goToDetail = useCallback(() => {
     navigate(`/project/${uid}`);
@@ -36,11 +41,8 @@ const Card = ({ item: { uid, title, authors, project_image } }: CardType) => {
 
   const handleClick = () => {
     if (isMobile) {
-      setClickCnt((prev) => prev + 1);
-      if (clickCnt === 0) {
-        //한번 클릭
-      } else {
-        //두번 클릭
+      setClickCard(uid);
+      if (clickCard === uid) {
         goToDetail();
       }
     } else {
@@ -51,14 +53,20 @@ const Card = ({ item: { uid, title, authors, project_image } }: CardType) => {
   const hoverImageCls = {
     [imageInfo]: true,
     [hoverImage]: !isMobile,
-    [clickImage]: isMobile && clickCnt >= 1,
+    [clickImage]: isMobile && clickCard === uid,
   };
 
   return (
     // <Link to={`/project/${uid}`}>
     <div className={card} onClick={handleClick}>
       <div className={image}>
-        <GatsbyImage image={getImage(project_image)} alt={title} />
+        <GatsbyImage
+          layout="fixed"
+          objectFit="cover"
+          sizes="100%"
+          image={getImage(project_image)}
+          alt={title}
+        />
       </div>
       <div className={classNames(hoverImageCls)}>
         <div className={circle} />
