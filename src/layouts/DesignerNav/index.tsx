@@ -3,7 +3,6 @@ import classNames from "classnames";
 import { sidebar, menuWrapper, menu, active } from "./desinger-nav.module.scss";
 import { Link } from "gatsby";
 // import ScrollBar from "./ScrollBar";
-import CustomScroll from "react-custom-scroll";
 
 const DesignerNav = ({ data: { edges }, location }) => {
   const menuRef = useRef(null);
@@ -25,12 +24,10 @@ const DesignerNav = ({ data: { edges }, location }) => {
   );
   return (
     <nav className={sidebar}>
-      <CustomScroll allowOuterScroll={true}>
-        {/* <ScrollBar menuRef={menuRef} /> */}
-        <div ref={menuRef} className={menuWrapper}>
-          {renderMenus}
-        </div>
-      </CustomScroll>
+      {/* <ScrollBar menuRef={menuRef} /> */}
+      <div ref={menuRef} className={menuWrapper}>
+        {renderMenus}
+      </div>
     </nav>
   );
 };

@@ -6,6 +6,15 @@
 /*
 * global Styles
 */
+#___gatsby,
+#gatsby-focus-wrapper {
+}
+
+#gatsby-plugin-page-progress {
+  @include tablet {
+    display: none;
+  }
+}
 
 html {
   box-sizing: border-box;
@@ -17,17 +26,13 @@ html {
 }
 
 body {
-  background-color: var(--secondary-400);
+  position: relative;
   min-height: 100vh;
-
+  background-color: var(--secondary-400);
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 
   &::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera*/
-  }
-
-  @include tablet {
-    position: relative;
   }
 }

@@ -1,12 +1,10 @@
 @import "@/styles/_media-query.scss";
 
 .section {
-  min-width: var(--global-max-width);
-  padding-left: 106px;
+  padding-left: 100px;
 
   @include tablet {
-    min-width: auto;
-    padding: 0;
+    padding-left: 0;
   }
 }
 
