@@ -3,7 +3,15 @@
 .section {
   overflow: hidden;
   color: var(--secondary-400);
+  min-height: 1080px;
   position: relative;
+  background-image: url("@/images/about/background-main.svg");
+
+  @include tablet {
+    min-height: 640px;
+    background-image: url("@/images/about/m-background-main.png");
+    background-position: center;
+  }
 
   .title {
     font-weight: 700;

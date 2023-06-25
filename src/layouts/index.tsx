@@ -1,7 +1,13 @@
 import React, { ReactNode, useEffect, useState, useCallback } from "react";
 import DesktopGnb from "@/layouts/GNB/DesktopGnb";
 import MobileGnb from "@/layouts/GNB/MobileGnb";
-import { footer, main, designMain, light } from "./layout.module.scss";
+import {
+  footer,
+  main,
+  designerWrapper,
+  designerMain,
+  light,
+} from "./layout.module.scss";
 import DesignerNav from "@/layouts/DesignerNav";
 import { type PageProps } from "gatsby";
 import useIsMobile from "@/hooks/useIsMobile";
@@ -36,8 +42,6 @@ export default function CommonLayout({
 
   const CommonLayout = ({ children }) => (
     <>
-      {!isMobile && <DesktopGnb theme={theme} pathname={location.pathname} />}
-      {isMobile && <MobileGnb theme={theme} pathname={location.pathname} />}
       {children}
       {isMobile && (
         <footer
@@ -58,17 +62,27 @@ export default function CommonLayout({
   if (pageContext.layout === "designer") {
     return (
       <CommonLayout>
-        <main className={designMain}>
-          {!isMobile && <DesignerNav location={location} data={data?.list} />}
-          {children}
-        </main>
+        <div className={designerWrapper}>
+          {!isMobile && (
+            <DesktopGnb theme={theme} pathname={location.pathname} />
+          )}
+          {isMobile && <MobileGnb theme={theme} pathname={location.pathname} />}
+          <main className={designerMain}>
+            {!isMobile && <DesignerNav location={location} data={data?.list} />}
+            {children}
+          </main>
+        </div>
       </CommonLayout>
     );
   }
 
   return (
     <CommonLayout>
-      <main className={main}>{children}</main>
+      <main className={main}>
+        {!isMobile && <DesktopGnb theme={theme} pathname={location.pathname} />}
+        {isMobile && <MobileGnb theme={theme} pathname={location.pathname} />}
+        {children}
+      </main>
     </CommonLayout>
   );
 }

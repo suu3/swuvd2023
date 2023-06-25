@@ -53,6 +53,14 @@ const config: GatsbyConfig = {
     },
     "gatsby-transformer-sharp",
     `gatsby-plugin-layout`,
+    {
+      resolve: "gatsby-plugin-page-progress",
+      options: {
+        height: 3,
+        prependToBody: false,
+        color: `#ffbe39`,
+      },
+    },
   ],
   trailingSlash: `never`, // url 뒤 후행 슬래쉬 trailing slash
 };

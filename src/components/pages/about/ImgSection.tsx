@@ -14,7 +14,7 @@ const ImgSection: React.FC = () => {
 
   return (
     <section className={section}>
-      {!isMobile && (
+      {/* {!isMobile && (
         <StaticImage
           layout="fixed"
           placeholder="tracedSVG"
@@ -34,7 +34,7 @@ const ImgSection: React.FC = () => {
           objectPosition="top right"
           height={640}
         />
-      )}
+      )} */}
       <AbsoluteText text="40TH EXHIBITION" type="left" desktopOnly />
       <AbsoluteText text="2023.07.07 - 07.15" type="right" desktopOnly />
       {isMobile && (

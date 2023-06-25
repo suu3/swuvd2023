@@ -9,10 +9,7 @@
 .nav {
   @include css-variables;
   min-width: var(--global-max-width);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
   z-index: var(--nav-z-index);
 
   padding: var(--nav-padding);
@@ -49,6 +46,11 @@
   * theme
   */
   &.light {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
     .menu {
       color: var(--secondary-400);
 

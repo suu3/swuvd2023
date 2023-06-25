@@ -1,11 +1,20 @@
 @import "@/styles/_media-query.scss";
 
-.design-main {
-  margin: 304px 96px 142px 96px;
+.designer-wrapper {
   color: var(--white);
-  position: relative;
 
-  padding-left: 227px;
+  //padding-left: 227px;
+  .designer-main {
+    margin: auto;
+    padding-left: 106px;
+    max-width: var(--global-max-width);
+    display: flex;
+
+    @include tablet {
+      min-width: auto;
+      padding: 0;
+    }
+  }
 
   @include tablet {
     margin: 0;

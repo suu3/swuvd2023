@@ -10,6 +10,7 @@ import {
 import classNames from "classnames";
 import { AnimatePresence, motion } from "framer-motion";
 import useLockBody from "@/hooks/useLockBody";
+import useIsMobile from "@/hooks/useIsMobile";
 
 const ProjectNav = ({ curMenu, toggleMenu, handleMenu, isOpen }) => {
   return (
@@ -42,12 +43,17 @@ const ProjectNav = ({ curMenu, toggleMenu, handleMenu, isOpen }) => {
 export default ProjectNav;
 
 const Options = ({ handleMenu, curMenu }) => {
+  const isMobile = useIsMobile();
   const [blockScroll, allowScroll] = useLockBody();
 
   useEffect(() => {
-    blockScroll();
+    if (isMobile) {
+      blockScroll();
+    }
     return () => {
-      allowScroll();
+      if (isMobile) {
+        allowScroll();
+      }
     };
   }, []);
   return (

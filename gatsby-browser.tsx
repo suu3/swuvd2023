@@ -2,8 +2,7 @@ import "./src/styles/global.scss";
 // Logs when the client route changes
 
 export const onRouteUpdate = ({ location, prevLocation }) => {
-  console.log("new pathname", location.pathname);
-  console.log("old pathname", prevLocation ? prevLocation.pathname : null);
+  window.scrollTo(0, 0);
 };
 
 // Wraps every page in a component
@@ -21,6 +20,5 @@ export const shouldUpdateScroll = ({
   // if (scrollToTopRoutes.indexOf(pathname) !== -1) {
   //   window.scrollTo(0, 0);
   // }
-  window.scrollTo(0, 0);
   return false;
 };

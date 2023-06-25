@@ -1,13 +1,27 @@
 .menu-wrapper {
   width: 162px;
-  height: 500px;
-  overflow: scroll;
+  height: 839px;
+  overflow-y: scroll;
+  z-index: var(--nav-z-index);
 
-  /* Hide scrollbar for IE, Edge and Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  /* 아래의 모든 코드는 영역::코드로 사용 */
+  /* width */
   &::-webkit-scrollbar {
-    display: none;
+    width: 15px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    box-shadow: inset 0 0 5px var(--primary-400);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: var(--primary-400);
+    border-radius: 9px;
   }
 }
 
@@ -15,9 +29,9 @@
   width: 162px;
   height: 500px;
   // overflow: scroll;
-  position: absolute;
-  top: 0;
-  left: 0;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
 
   .menu {
     padding: 2px;
