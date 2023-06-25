@@ -26,6 +26,7 @@
     "gatsby-plugin-layout": "^4.11.0",
     "gatsby-plugin-manifest": "^5.10.0",
     "gatsby-plugin-mdx": "^5.11.0",
+    "gatsby-plugin-page-progress": "^2.2.1",
     "gatsby-plugin-sass": "^6.10.0",
     "gatsby-plugin-sharp": "^5.10.0",
     "gatsby-plugin-typescript": "^5.10.0",
