@@ -14,6 +14,7 @@ const Project = ({ data }) => {
   });
 
   const [isOpen, setIsOpen] = useState(false);
+  const [clickCard, setClickCard] = useState(null);
 
   const toggleMenu = () => {
     setIsOpen((p) => !p);
@@ -29,7 +30,9 @@ const Project = ({ data }) => {
       if (curMenu.id === "all") return true;
       return item.categoryId === curMenu.id;
     })
-    .map(({ node: item }, idx) => <Card key={idx} item={item} />);
+    .map(({ node: item }, idx) => (
+      <Card {...{ clickCard, setClickCard }} key={idx} item={item} />
+    ));
   return (
     <section className={section}>
       {isMobile && <TopBtn />}
