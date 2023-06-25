@@ -1,3 +1,5 @@
+@import "@/styles/_media-query.scss";
+
 .section {
   padding: 24px 24px 48px 24px;
   width: 100%;
@@ -29,5 +31,9 @@
         color: var(--primary-400);
       }
     }
+  }
+
+  @include tablet {
+    padding: 0 25px 88px 25px;
   }
 }

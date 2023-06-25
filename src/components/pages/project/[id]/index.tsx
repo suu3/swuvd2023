@@ -24,7 +24,6 @@ const project = {
 };
 
 const IndexPage: React.FC<PageProps> = ({ location, data }) => {
-  console.log(data);
   return <ProjectDetail project={project} />;
 };
 

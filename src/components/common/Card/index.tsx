@@ -58,7 +58,13 @@ const Card = ({ item: { uid, title, authors, project_image } }: CardType) => {
     // <Link to={`/project/${uid}`}>
     <div className={card} onClick={handleClick}>
       <div className={image}>
-        <GatsbyImage image={getImage(project_image)} alt={title} />
+        <GatsbyImage
+          layout="fixed"
+          objectFit="cover"
+          sizes="100%"
+          image={getImage(project_image)}
+          alt={title}
+        />
       </div>
       <div className={classNames(hoverImageCls)}>
         <div className={circle} />

@@ -42,8 +42,8 @@ const ProjectDetail = ({ project }: ProjectDetailType) => {
         </div>
         <div className={imgWrapper}>
           <GatsbyImage
-            // layout="fixed"
-            layout="fullWidth"
+            layout="fixed"
+            // layout="fullWidth"
             objectFit="cover"
             sizes="100%"
             image={getImage(project_image)}
