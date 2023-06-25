@@ -1,6 +1,7 @@
 import * as React from "react";
 import { graphql, type HeadFC, type PageProps } from "gatsby";
 import DesignerDetail from "@/components/pages/designer/[id]";
+import SEO from "@/layouts/SEO";
 
 const IndexPage: React.FC<PageProps> = ({ location, data }) => {
   return (
@@ -14,7 +15,12 @@ const IndexPage: React.FC<PageProps> = ({ location, data }) => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Designer | SWUVD 2023</title>;
+export const Head: HeadFC = () => (
+  <>
+    <title>Designer | SWUVD 2023</title>
+    <SEO />
+  </>
+);
 
 export const query = graphql`
   query ($id: String) {

@@ -44,6 +44,12 @@ const CreditArticle = () => {
     <div className={wrapper}>
       <AbsoluteText text="40TH EXHIBITION_CREDITS" type="left" desktopOnly />
       <article className={credit}>
+        <AbsoluteText
+          text="40TH EXHIBITION_CREDITS"
+          type="right"
+          mobileOnly
+          location="top"
+        />
         <h1>Credit</h1>
         {renderCredit}
       </article>

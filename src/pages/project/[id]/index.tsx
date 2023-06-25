@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql, type HeadFC, type PageProps } from "gatsby";
 import ProjectDetail from "@/components/pages/project/detail";
+import SEO from "@/layouts/SEO";
 
 const IndexPage: React.FC<PageProps> = ({ location, data }) => {
   return <ProjectDetail project={data?.projectJson} />;
@@ -8,7 +9,12 @@ const IndexPage: React.FC<PageProps> = ({ location, data }) => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Project | SWUVD 2023</title>;
+export const Head: HeadFC = () => (
+  <>
+    <title>Project | SWUVD 2023</title>
+    <SEO />
+  </>
+);
 
 export const query = graphql`
   query MyQuery($id: String) {

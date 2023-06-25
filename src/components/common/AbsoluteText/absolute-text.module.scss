@@ -3,28 +3,71 @@
 .left,
 .right {
   position: absolute;
-  top: 50%;
   z-index: 2;
 
   font-weight: 700;
   font-size: 30px;
   line-height: 52px;
 
+  &.center {
+    top: 50%;
+  }
+
+  &.top {
+    top: 80px;
+  }
+
   &.desktop-only {
+    display: inline-block;
     @include tablet {
       display: none;
     }
+  }
+
+  &.mobile-only {
+    display: none;
+    @include tablet {
+      display: inline-block;
+    }
+  }
+
+  @include tablet {
+    font-size: 12px;
+
+    font-weight: 600;
+    line-height: 20px;
   }
 }
 
 .left {
   writing-mode: vertical-rl;
-  transform: rotate(180deg) translateY(50%);
   left: 96px;
+
+  &.center {
+    transform: rotate(180deg) translateY(50%);
+  }
+
+  &.top {
+    transform: rotate(180deg);
+  }
+
+  @include tablet {
+    left: 24px;
+  }
 }
 
 .right {
   writing-mode: vertical-rl;
-  transform: translateY(-50%);
   right: 96px;
+
+  &.center {
+    transform: translateY(-50%);
+  }
+
+  &.top {
+  }
+
+  @include tablet {
+    right: 24px;
+  }
 }

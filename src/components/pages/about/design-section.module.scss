@@ -1,7 +1,7 @@
 @import "@/styles/_media-query.scss";
 
 .section {
-  padding-bottom: 120px;
+  padding: 120px 0;
   color: var(--secondary-100);
   position: relative;
 
@@ -15,7 +15,7 @@
   }
 
   @include tablet {
-    padding: 56px 24px;
+    padding: 56px 0 0 0;
     > div {
       min-height: auto;
       flex-direction: column-reverse;
@@ -25,12 +25,13 @@
 }
 
 .text {
+  position: relative;
   width: 730px;
   word-break: break-all;
   flex-shrink: 0;
 
   @include tablet {
-    padding-top: 57px;
+    padding: 57px 74px calc(106px - 32px) 24px;
     width: auto;
   }
 }
@@ -40,6 +41,6 @@
   padding-left: 100px;
 
   @include tablet {
-    padding-left: 0;
+    padding: 0 24px;
   }
 }

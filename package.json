@@ -29,6 +29,7 @@
     "gatsby-plugin-page-progress": "^2.2.1",
     "gatsby-plugin-sass": "^6.10.0",
     "gatsby-plugin-sharp": "^5.10.0",
+    "gatsby-plugin-sitemap": "^6.11.0",
     "gatsby-plugin-typescript": "^5.10.0",
     "gatsby-source-filesystem": "^5.10.0",
     "gatsby-transformer-json": "^5.11.0",

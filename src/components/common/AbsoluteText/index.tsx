@@ -6,12 +6,25 @@ type AbsoluteTextType = {
   text: string;
   type: "left" | "right";
   desktopOnly?: boolean;
+  mobileOnly?: boolean;
+  location?: "top" | "center";
 };
 
-const AbsoluteText = ({ text, type, desktopOnly = true }: AbsoluteTextType) => {
+const AbsoluteText = ({
+  text,
+  type,
+  desktopOnly = true,
+  mobileOnly = false,
+  location = "center",
+}: AbsoluteTextType) => {
   return (
     <p
-      className={classNames(styles[type], desktopOnly && styles["desktopOnly"])}
+      className={classNames(
+        styles[type],
+        desktopOnly && styles["desktopOnly"],
+        mobileOnly && styles["mobileOnly"],
+        styles[location]
+      )}
     >
       {text}
     </p>
