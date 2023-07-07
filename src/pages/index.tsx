@@ -14,14 +14,14 @@ import ReactPageScroller from "react-page-scroller";
 const IndexPage: React.FC<PageProps> = ({ location }) => {
   const isMobile = useIsMobile();
   return (
-    <ReactPageScroller>
+    <>
       <ImgSection />
       <ConceptSection />
       <DesignSection />
       <InfoSection />
       <ExhibitionSection />
       <ProfessorSection />
-    </ReactPageScroller>
+    </>
   );
 };
 
