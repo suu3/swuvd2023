@@ -13,15 +13,17 @@ import ReactPageScroller from "react-page-scroller";
 
 const IndexPage: React.FC<PageProps> = ({ location }) => {
   const isMobile = useIsMobile();
+
+  const Wrapper = isMobile ? React.Fragment : ReactPageScroller;
   return (
-    <ReactPageScroller>
+    <Wrapper animationTimer={700} animationTimerBuffer={100}>
       <ImgSection />
       <ConceptSection />
       <DesignSection />
       <InfoSection />
       <ExhibitionSection />
       <ProfessorSection />
-    </ReactPageScroller>
+    </Wrapper>
   );
 };
 

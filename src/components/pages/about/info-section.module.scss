@@ -1,6 +1,7 @@
 @import "@/styles/_media-query.scss";
 
 .info {
+  height: 100vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,6 +20,7 @@
   }
 
   @include tablet {
+    height: auto;
     padding: 2px 24px;
     margin: 0;
 

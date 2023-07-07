@@ -3,12 +3,12 @@
 .section {
   overflow: hidden;
   color: var(--secondary-400);
-  min-height: 1080px;
+  height: 100vh;
   position: relative;
   background-image: url("@/images/about/background-main.svg");
 
   @include tablet {
-    min-height: 640px;
+    height: 640px;
     background-image: url("@/images/about/m-background-main.png");
     background-position: center;
   }

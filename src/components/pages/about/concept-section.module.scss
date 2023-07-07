@@ -14,11 +14,11 @@
 .section {
   overflow: hidden;
   position: relative;
-  min-height: 1080px;
+  height: 100vh;
   color: var(--secondary-100);
 
   @include tablet {
-    min-height: auto;
+    height: auto;
   }
 
   > div {

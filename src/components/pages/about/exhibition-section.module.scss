@@ -8,7 +8,9 @@
   flex-wrap: nowrap;
   justify-content: center;
 
+  height: 100vh;
   @include tablet {
+    height: auto;
     padding-top: 63px;
   }
 }
