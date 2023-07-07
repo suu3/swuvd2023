@@ -7,17 +7,21 @@ import InfoSection from "@/components/pages/about/InfoSection";
 import ExhibitionSection from "@/components/pages/about/ExhibitionSection";
 import ProfessorSection from "@/components/pages/about/ProfessorSection";
 import SEO from "@/layouts/SEO";
+import DesktopGnb from "@/layouts/GNB/DesktopGnb";
+import useIsMobile from "@/hooks/useIsMobile";
+import ReactPageScroller from "react-page-scroller";
 
 const IndexPage: React.FC<PageProps> = ({ location }) => {
+  const isMobile = useIsMobile();
   return (
-    <>
+    <ReactPageScroller>
       <ImgSection />
       <ConceptSection />
       <DesignSection />
       <InfoSection />
       <ExhibitionSection />
       <ProfessorSection />
-    </>
+    </ReactPageScroller>
   );
 };
 

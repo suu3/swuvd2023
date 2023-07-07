@@ -23,27 +23,18 @@ exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
   });
 };
 
-// exports.createSchemaCustomization = ({ actions }) => {
-//   const { createTypes } = actions;
-//   const typeDefs = `
-//     type DesignerJson implements Node {
-//       uid: String
-//       title: String
-//       authors: [String]
-//       about: String
-//       project_image: Node
-//       project: ProjectJson
-//     }
-
-//   `;
-//   createTypes(typeDefs);
-// };
-
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage } = actions;
 
+  if (page.path === "/") {
+    page.context.theme = "light";
+  } else {
+    page.context.theme = "dark";
+  }
+
   if (page.path.match(/designer/)) {
     page.context.layout = "designer";
+
     createPage(page);
   }
 };

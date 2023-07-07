@@ -8,12 +8,14 @@ import {
 } from "./img-section.module.scss";
 import AbsoluteText from "@/components/common/AbsoluteText";
 import useIsMobile from "@/hooks/useIsMobile";
+import DesktopGnb from "@/layouts/GNB/DesktopGnb";
 
 const ImgSection: React.FC = () => {
   const isMobile = useIsMobile();
 
   return (
     <section className={section}>
+      {!isMobile && <DesktopGnb theme="light" pathname="/" />}
       {/* {!isMobile && (
         <StaticImage
           layout="fixed"
