@@ -7,43 +7,31 @@
   "projects": [
     {
       "uid": "1",
-      "title": "프로젝트 명1",
-      "category": "출판",
+      "title": "락인더무비",
+      "category": "인쇄/출판",
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "강나경",
+          "email": "000310kang@naver.com"
         }
       ],
-      "project_image": "./1/projects/project-1.png"
+      "project_image": "./1/project-1.png"
     },
     {
       "uid": "2",
-      "title": "프로젝트 명1",
+      "title": "브랜딩",
       "category": "UX/UI",
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "강나경",
+          "email": "000310kang@naver.com"
         },
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "이세영",
+          "email": "sayoung85@naver.com"
         }
       ],
-      "project_image": "./1/projects/project-2.png"
+      "project_image": "./1/project-2.png"
     }
   ]
 }

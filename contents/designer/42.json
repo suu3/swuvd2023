@@ -6,46 +6,28 @@
   "instagram": "@mangdu_j",
   "projects": [
     {
-      "uid": "1",
-      "title": "프로젝트 명1",
-      "category": "출판",
-
+      "uid": "69",
+      "title": "Wicked",
+      "category": "영상",
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "정민선",
+          "email": "alstjs8802@naver.com"
         }
       ],
-      "project_image": "./1/projects/project-1.png"
+      "project_image": "./42/project-1.png"
     },
     {
-      "uid": "2",
-      "title": "프로젝트 명1",
-      "category": "출판",
-
+      "uid": "70",
+      "title": "츄카홀릭",
+      "category": "브랜딩",
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "정민선",
+          "email": "alstjs8802@naver.com"
         }
       ],
-      "project_image": "./1/projects/project-2.png"
+      "project_image": "./42/project-2.png"
     }
   ]
 }

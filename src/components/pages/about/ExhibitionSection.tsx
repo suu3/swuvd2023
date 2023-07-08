@@ -8,7 +8,7 @@ const ExhibitionSection = () => {
 
   return (
     <section className={section}>
-      {!isMobile && (
+      {/* {!isMobile && (
         <div className={img}>
           <StaticImage
             layout="fixed"
@@ -19,18 +19,17 @@ const ExhibitionSection = () => {
             width={700}
           />
         </div>
-      )}
+      )} */}
       <div className={img}>
         <StaticImage
-          layout="fixed"
+          layout="fullWidth"
           placeholder="dominantColor"
           alt="exhibition interior"
           src="./_images/exhibition.png"
           objectFit="cover"
-          width={1218}
         />
       </div>
-      {!isMobile && (
+      {/* {!isMobile && (
         <div className={img}>
           <StaticImage
             layout="fixed"
@@ -41,7 +40,7 @@ const ExhibitionSection = () => {
             width={700}
           />
         </div>
-      )}
+      )} */}
     </section>
   );
 };

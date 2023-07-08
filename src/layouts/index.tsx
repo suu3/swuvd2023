@@ -62,6 +62,7 @@ export default function CommonLayout({
   );
 
   if (pageContext.layout === "designer") {
+    console.log(pageContext.layout);
     return (
       <CommonLayout>
         <div className={designerWrapper}>

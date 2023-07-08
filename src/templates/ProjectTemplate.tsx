@@ -19,7 +19,6 @@ type ProjectTemplateProps = {
 const ProjectTemplate: FunctionComponent<ProjectTemplateProps> = function ({
   data,
 }) {
-  console.log(data);
   return <ProjectDetail project={data?.projectJson} />;
 };
 
@@ -27,7 +26,7 @@ export default ProjectTemplate;
 
 export const Head: HeadFC = () => (
   <>
-    <title>Project | SWUVD 2023</title>
+    <title>Project | 서울여자대학교 시각디자인전공 40회 졸업전시회</title>
     <SEO />
   </>
 );

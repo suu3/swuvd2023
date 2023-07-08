@@ -3,8 +3,8 @@ import type { GatsbyConfig } from "gatsby";
 //@ see https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v2-to-v3/#css-modules-are-imported-as-es-modules
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: "SWUVD2023",
-    description: "제 40회 서울여자대학교 시각디자인전공 졸업전시회",
+    title: "<금 : 線>",
+    description: "서울여자대학교 시각디자인전공 40회 졸업전시회",
     siteUrl: `https://www.swuvd2023.com`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.

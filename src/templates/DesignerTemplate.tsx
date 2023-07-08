@@ -2,9 +2,38 @@ import { HeadFC, graphql } from "gatsby";
 import React, { FunctionComponent } from "react";
 import DesignerDetail from "@/components/pages/designer/[id]";
 import SEO from "@/layouts/SEO";
+import { IGatsbyImageData } from "gatsby-plugin-image";
 
 type DesignerTemplateProps = {
-  data: any;
+  data: {
+    list: {
+      edges: {
+        node: {
+          uid: string;
+          name: string;
+        };
+      };
+    };
+    data: {
+      uid: string;
+      name: string;
+      enName: string;
+      email: string;
+      instagram: string;
+      projects: {
+        uid: string;
+        title: string;
+        authors: {
+          name: string;
+          email: string;
+        }[];
+        category: string;
+        project_image: {
+          src: IGatsbyImageData;
+        };
+      };
+    };
+  };
   location: any;
 };
 
@@ -18,14 +47,14 @@ export default DesignerTemplate;
 
 export const Head: HeadFC = () => (
   <>
-    <title>Project | SWUVD 2023</title>
+    <title>Project | 서울여자대학교 시각디자인전공 40회 졸업전시회</title>
     <SEO />
   </>
 );
 
 export const query = graphql`
   query DesingerQuery($uid: String) {
-    list: allDesignerJson {
+    list: allDesignerJson(sort: { name: ASC }) {
       edges {
         node {
           uid
