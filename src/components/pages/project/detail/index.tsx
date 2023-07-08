@@ -21,11 +21,13 @@ type ProjectDetailType = {
     detail_image: {
       src: IGatsbyImageData;
     };
+    youtubeUrl: string;
   };
 };
 const ProjectDetail = ({ project }: ProjectDetailType) => {
-  const { authors, about, project_image, detail_image, title } = project;
-
+  const { authors, about, project_image, detail_image, title, youtubeUrl } =
+    project;
+  console.log(youtubeUrl);
   return (
     <main className={main}>
       <h1>{title}</h1>
@@ -59,6 +61,15 @@ const ProjectDetail = ({ project }: ProjectDetailType) => {
       <section className={detailSection}>
         <h2>Project Detail</h2>
         <div>
+          {youtubeUrl && (
+            <iframe
+              width="100%"
+              height="780"
+              src={youtubeUrl}
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            ></iframe>
+          )}
           {detail_image &&
             detail_image?.map(({ src }, idx) => {
               return (
