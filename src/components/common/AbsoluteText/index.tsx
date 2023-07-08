@@ -4,6 +4,7 @@ import classNames from "classnames";
 
 type AbsoluteTextType = {
   text: string;
+  height?: string;
   type: "left" | "right";
   desktopOnly?: boolean;
   mobileOnly?: boolean;
@@ -11,6 +12,7 @@ type AbsoluteTextType = {
 };
 
 const AbsoluteText = ({
+  height = "auto",
   text,
   type,
   desktopOnly = true,
@@ -25,6 +27,9 @@ const AbsoluteText = ({
         mobileOnly && styles["mobileOnly"],
         styles[location]
       )}
+      style={{
+        height,
+      }}
     >
       {text}
     </p>

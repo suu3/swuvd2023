@@ -32,6 +32,8 @@
 }
 
 .footer {
+  width: 100%;
+
   font-weight: 500;
   font-size: 12px;
   line-height: 20px;
@@ -40,7 +42,7 @@
   text-align: center;
   letter-spacing: -0.01em;
   position: absolute;
-  bottom: 12px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   /* B3 */

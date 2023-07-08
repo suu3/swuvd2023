@@ -15,6 +15,7 @@ const DesignSection = () => {
       <div>
         <article className={text}>
           <AbsoluteText
+            height="222px"
             text="40TH EXHIBITION_DESIGN_CONCEPT"
             type="right"
             mobileOnly
@@ -39,7 +40,7 @@ const DesignSection = () => {
                 학우들을, 그늘은 힘들 때 잠깐 쉬어갈 수 있는 안식처를, 허들은
                 모두가 한 번쯤 경험하는 크고 작은 어려움을 의미합니다. 때로는
                 넘어지더라도 각자의 한계를 뛰어넘어 트랙을 완주하길 바라는
-                의도를 담았습니다.{" "}
+                의도를 담았습니다.
               </>,
               <>
                 새로운 시작을 향해 나아가는 47명의 학우분들 앞에 찬란한 금빛

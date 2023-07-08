@@ -64,7 +64,7 @@ type MemberType = { part: string; name: string[] }[][];
 const creditList: {
   pic: string;
   width: number;
-  mwith: number;
+  mwidth: number;
   member: MemberType;
 }[] = [
   {
@@ -75,7 +75,7 @@ const creditList: {
       [
         {
           part: "위원장",
-          name: ["김유정"],
+          name: ["김희정"],
         },
         {
           part: "부위원장",
@@ -120,7 +120,7 @@ const creditList: {
       [
         {
           part: "그래픽",
-          name: ["민병결 교수님"],
+          name: ["민병걸 교수님"],
         },
         {
           part: "브랜딩",
@@ -130,11 +130,11 @@ const creditList: {
       [
         {
           part: "영상",
-          name: ["최창섭 교수님"],
+          name: ["최장섭 교수님"],
         },
         {
           part: "UX/UI",
-          name: ["유병재 교수님"],
+          name: ["유영재 교수님"],
         },
       ],
     ],
@@ -142,6 +142,7 @@ const creditList: {
   {
     pic: "웹사이트 제작",
     width: 67,
+    mwidth: 70,
     member: [
       [
         {

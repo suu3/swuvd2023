@@ -46,8 +46,23 @@
 
   display: flex;
 
-  > svg {
-    margin-right: 36px;
+  .big-svg {
+    display: flex;
+    > svg {
+      margin-right: 42px;
+      transform: translateY(-4px);
+    }
+
+    > div {
+      display: flex;
+      flex-direction: column;
+
+      > svg {
+        &:first-of-type {
+          margin-bottom: 30px;
+        }
+      }
+    }
   }
 
   @include tablet {
@@ -55,19 +70,6 @@
     right: 24px;
 
     flex-direction: column;
-
-    > svg {
-      margin-right: 0;
-
-      &:first-child {
-        display: none;
-      }
-
-      &.location-svg {
-        width: 140px;
-        height: 41px;
-      }
-    }
 
     > p {
       padding-top: 2px;

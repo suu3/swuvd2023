@@ -4,7 +4,11 @@
   display: none;
 
   @include tablet {
+    &.is-open {
+      z-index: calc(var(--nav-z-index) + 1);
+    }
     z-index: var(--nav-z-index);
+
     position: fixed;
 
     display: flex;
@@ -82,28 +86,28 @@
 
     background: #000000;
 
-    &::after {
-      z-index: calc(var(--nav-z-index) + 2);
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 86px;
+    // &::after {
+    //   z-index: calc(var(--nav-z-index) + 2);
+    //   content: "";
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   right: 0;
+    //   height: 86px;
 
-      background: radial-gradient(
-        170.93% 170.93% at 50% 9.88%,
-        rgba(245, 245, 245, 0.16) 0%,
-        rgba(255, 255, 255, 0.13) 0.01%,
-        rgba(255, 255, 255, 0) 100%
-      );
-    }
+    //   background: radial-gradient(
+    //     170.93% 170.93% at 50% 9.88%,
+    //     rgba(245, 245, 245, 0.16) 0%,
+    //     rgba(255, 255, 255, 0.13) 0.01%,
+    //     rgba(255, 255, 255, 0) 100%
+    //   );
+    // }
 
     > p {
       position: absolute;
       left: 0;
       right: 0;
-      bottom: 36px;
+      bottom: 12px;
 
       font-weight: 500;
       font-size: 12px;
@@ -119,9 +123,13 @@
     }
 
     > ul {
+      transform: translateY(
+        -50px
+      ); // gnb 기준으로 맞추기 위해 gnb의 반만큼 이동.
       width: 100%;
       margin: 0 17px;
 
+      border-top: 0.5px solid #d7d7d7;
       .menu {
         font-weight: 700;
         font-size: 20px;
@@ -133,16 +141,14 @@
         color: var(--white);
         padding: 15px;
 
-        border-top: 0.5px solid var(--white);
         transition: all 0.15s ease-in-out;
 
-        &.active,
-        &:hover {
-          color: var(--primary-400);
-        }
-        &:last-of-type {
-          border-bottom: 0.5px solid var(--white);
-        }
+        // &.active,
+        // &:hover {
+        //   color: var(--primary-400);
+        // }
+
+        border-bottom: 0.5px solid #d7d7d7;
       }
     }
   }

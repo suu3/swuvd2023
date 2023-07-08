@@ -1,5 +1,5 @@
 import React from "react";
-import { section } from "./concept-section.module.scss";
+import { section, desktopOnly } from "./concept-section.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
 import AbsoluteText from "@/components/common/AbsoluteText";
 import ExplainText from "./ExplainText";
@@ -30,11 +30,11 @@ const ConceptSection = () => {
           ko={[
             <>
               실제로 그어진 임시의 선이라는 뜻을 가진 ‘금‘은 표면의 깨어진
-              자국을 뜻하기도 한다. <br />
+              자국을 뜻하기도 한다. <br className={desktopOnly} />
               우리가 의식적으로 스스로에게 그어뒀던 금은 지금, 졸업전시라는 이름
               아래 ‘출발선’ 이라는
-              <br /> 새로운 직선으로 거듭난다. 이제는 그 금을 밟아 완전히
-              깨뜨리고 앞으로 나아갈 차례다.
+              <br className={desktopOnly} /> 새로운 직선으로 거듭난다. 이제는 그
+              금을 밟아 완전히 깨뜨리고 앞으로 나아갈 차례다.
             </>,
             <>
               깨진 조각 틈새로 방출될 우리의 가능성은 무궁무진하며 다채롭다.

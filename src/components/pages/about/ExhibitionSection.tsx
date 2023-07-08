@@ -8,18 +8,6 @@ const ExhibitionSection = () => {
 
   return (
     <section className={section}>
-      {/* {!isMobile && (
-        <div className={img}>
-          <StaticImage
-            layout="fixed"
-            placeholder="dominantColor"
-            alt="exhibition interior"
-            src="./_images/exhibition.png"
-            objectFit="cover"
-            width={700}
-          />
-        </div>
-      )} */}
       <div className={img}>
         <StaticImage
           layout="fullWidth"
@@ -28,19 +16,8 @@ const ExhibitionSection = () => {
           src="./_images/exhibition.png"
           objectFit="cover"
         />
+        <p>IUM GALLARY 07.07 - 07.15</p>
       </div>
-      {/* {!isMobile && (
-        <div className={img}>
-          <StaticImage
-            layout="fixed"
-            placeholder="dominantColor"
-            alt="exhibition interior"
-            src="./_images/exhibition.png"
-            objectFit="cover"
-            width={700}
-          />
-        </div>
-      )} */}
     </section>
   );
 };
