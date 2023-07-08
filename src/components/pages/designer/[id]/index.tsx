@@ -5,6 +5,7 @@ import useIsMobile from "@/hooks/useIsMobile";
 import { motion, Variants } from "framer-motion";
 
 const DesignerDetail = ({ data }) => {
+  console.log(data);
   const { name, enName, email, instagram, projects } = data;
   const isMobile = useIsMobile();
   const [clickCard, setClickCard] = useState(null);

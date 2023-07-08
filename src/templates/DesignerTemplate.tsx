@@ -1,29 +1,30 @@
-import * as React from "react";
-import { graphql, type HeadFC, type PageProps } from "gatsby";
+import { HeadFC, graphql } from "gatsby";
+import React, { FunctionComponent } from "react";
 import DesignerDetail from "@/components/pages/designer/[id]";
 import SEO from "@/layouts/SEO";
 
-const IndexPage: React.FC<PageProps> = ({ location, data }) => {
-  return (
-    <DesignerDetail
-      location={location}
-      list={data.list.edges}
-      data={data.data}
-    />
-  );
+type DesignerTemplateProps = {
+  data: any;
+  location: any;
 };
 
-export default IndexPage;
+const DesignerTemplate: FunctionComponent<DesignerTemplateProps> = function ({
+  data,
+}) {
+  return <DesignerDetail list={data.list} data={data.data} />;
+};
+
+export default DesignerTemplate;
 
 export const Head: HeadFC = () => (
   <>
-    <title>Designer | SWUVD 2023</title>
+    <title>Project | SWUVD 2023</title>
     <SEO />
   </>
 );
 
 export const query = graphql`
-  query ($id: String) {
+  query DesingerQuery($uid: String) {
     list: allDesignerJson {
       edges {
         node {
@@ -33,8 +34,9 @@ export const query = graphql`
       }
     }
 
-    data: designerJson(uid: { eq: $id }) {
+    data: designerJson(uid: { eq: $uid }) {
       id
+      uid
       name
       enName
       email
