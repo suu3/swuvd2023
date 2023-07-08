@@ -30,7 +30,7 @@ const Project = ({ data }) => {
       return item.category === curMenu.label;
     })
     .map(({ node: item }, idx) => (
-      <Card {...{ clickCard, setClickCard }} key={idx} item={item} />
+      <Card {...{ clickCard, setClickCard }} key={item.uid} item={item} />
     ));
   return (
     <section className={section}>

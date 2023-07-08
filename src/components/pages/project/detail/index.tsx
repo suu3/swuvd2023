@@ -60,10 +60,10 @@ const ProjectDetail = ({ project }: ProjectDetailType) => {
         <h2>Project Detail</h2>
         <div>
           {detail_image &&
-            detail_image?.map(({ src }) => {
+            detail_image?.map(({ src }, idx) => {
               return (
                 <GatsbyImage
-                  key={src}
+                  key={idx}
                   // layout="fixed"
                   layout="fullWidth"
                   objectFit="cover"

@@ -18,7 +18,7 @@ export const Head: HeadFC = () => (
 
 export const query = graphql`
   query AllProjectQuery {
-    allProjectJson {
+    allProjectJson(sort: { uid: ASC }) {
       edges {
         node {
           uid
