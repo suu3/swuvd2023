@@ -1,0 +1,28 @@
+{
+  "uid": "72",
+  "title": "TITLE SEQUENCE: Blackberry Street",
+  "category": "영상",
+  "authors": [
+    {
+      "name": "최지연",
+      "email": "yeonji3140@gmail.com"
+    }
+  ],
+  "about": "자신이 가진 것에 대한 가치를 발견하고 스스로 행복을 결정할 수 있는 능력을 찾아가는 과정을 담은 뮤직비디오입니다. \n평범한 일상의 소중함을 모르고 자신이 가진 것에 만족하지 못하고 삶을 비판하는 사람들에게 꼭 들려 주고 싶은 메세지가 담겨있습니다.",
+  "project_image": "./72/represent.png",
+  "detail_image": [
+    {
+      "src": "./72/detail-1.png"
+    },
+    {
+      "src": "./72/detail-2.png"
+    },
+    {
+      "src": "./72/detail-3.png"
+    },
+    {
+      "src": "./72/detail-4.png"
+    }
+  ],
+  "youtubeUrl": "https://youtu.be/7f76Q53hJuA"
+}

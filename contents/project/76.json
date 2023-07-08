@@ -1,0 +1,19 @@
+{
+  "uid": "76",
+  "title": "ALLSHOT",
+  "category": "브랜딩",
+  "authors": [
+    {
+      "name": "한유진",
+      "email": "yooz_n@naver.com"
+    }
+  ],
+  "about": "ALLSHOT은 십이지신이 현대인들을 수호하며 일상의 에너지와 집중력을 부여해 준다는 콘셉트의 에너지 드링크로, 어떠한 캔을 선택하더라도 그것은 모두 옳은 선택일 것이라는 의미를 전달합니다.",
+  "project_image": "./76/represent.png",
+  "detail_image": [
+    {
+      "src": "./76/detail-1.png"
+    }
+  ],
+  "youtubeUrl": ""
+}

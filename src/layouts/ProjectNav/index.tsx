@@ -67,8 +67,11 @@ const Options = ({ handleMenu, curMenu }) => {
         return (
           <div
             onClick={() => handleMenu(item)}
-            className={classNames(option, curMenu.id === item.id && active)}
-            key={item.id}
+            className={classNames(
+              option,
+              curMenu.label === item.label && active
+            )}
+            key={item.label}
           >
             {item.label}
           </div>
@@ -79,27 +82,18 @@ const Options = ({ handleMenu, curMenu }) => {
 };
 const navList = [
   {
-    id: "all",
     label: "전체",
   },
   {
-    id: "branding",
     label: "브랜딩",
   },
   {
-    id: "publish",
     label: "인쇄/출판",
   },
   {
-    id: "video",
     label: "영상",
   },
   {
-    id: "ux/ui",
     label: "UX/UI",
-  },
-  {
-    id: "etc",
-    label: "기타",
   },
 ];

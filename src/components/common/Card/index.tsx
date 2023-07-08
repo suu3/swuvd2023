@@ -75,7 +75,7 @@ const Card = ({
           <p>{title}</p>
           <p>
             {authors.map(({ name }, idx) => (
-              <span key={idx}>
+              <span key={name}>
                 {name}
                 {idx !== authors.length - 1 && ", "}
               </span>

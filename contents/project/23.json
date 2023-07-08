@@ -1,0 +1,15 @@
+{
+  "uid": "23",
+  "title": "갈비 여행기",
+  "category": "영상",
+  "authors": [
+    {
+      "name": "김태희",
+      "email": "abc8116@naver.com"
+    }
+  ],
+  "about": "평생 주인만 보고 자라와 자신 또한 사람이라고 생각하는 토끼 갈비. 지나가는 별똥별에 '저도 주인을 닮게 해주세요.'라 소원을 빌자 정말로 모습이 바뀌어버렸다! 변해버린 모습으로 바깥세상을 돌아보며 자신의 진짜 정체성을 깨달아가는 갈비의 짧은 여행기.",
+  "project_image": "./23/represent.png",
+  "detail_image": [{ "src": "./23/detail-1.png" }],
+  "youtubeUrl": "https://youtu.be/JEZoics_43s"
+}
