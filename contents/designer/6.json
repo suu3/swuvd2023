@@ -6,46 +6,30 @@
   "instagram": "@jadeyoon_design",
   "projects": [
     {
-      "uid": "1",
-      "title": "프로젝트 명1",
-      "category": "출판",
+      "uid": "11",
+      "title": "Dive Dream",
+      "category": "영상",
 
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "김나윤",
+          "email": "wesujin12@gmail.com"
         }
       ],
-      "project_image": "./1/projects/project-personal.png"
+      "project_image": "./6/project-1.png"
     },
     {
-      "uid": "2",
-      "title": "프로젝트 명1",
-      "category": "출판",
+      "uid": "12",
+      "title": "E-별",
+      "category": "브랜딩",
 
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "김나윤",
+          "email": "wesujin12@gmail.com"
         }
       ],
-      "project_image": "./1/project-team.png"
+      "project_image": "./6/project-2.png"
     }
   ]
 }

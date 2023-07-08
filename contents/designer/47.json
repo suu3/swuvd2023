@@ -7,45 +7,27 @@
   "projects": [
     {
       "uid": "1",
-      "title": "프로젝트 명1",
-      "category": "출판",
-
+      "title": "서둘러 채채씨",
+      "category": "브랜딩",
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "한현지",
+          "email": "04guswl@naver.com"
         }
       ],
-      "project_image": "./1/projects/project-personal.png"
+      "project_image": "./47/project-1.png"
     },
     {
       "uid": "2",
-      "title": "프로젝트 명1",
-      "category": "출판",
-
+      "title": "‘NUDAKE’ A Fashion Show Of Dessert",
+      "category": "영상",
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "한현지",
+          "email": "04guswl@naver.com"
         }
       ],
-      "project_image": "./1/project-team.png"
+      "project_image": "./47/project-2.png"
     }
   ]
 }

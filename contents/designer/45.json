@@ -6,46 +6,28 @@
   "instagram": "",
   "projects": [
     {
-      "uid": "1",
-      "title": "프로젝트 명1",
-      "category": "출판",
-
+      "uid": "74",
+      "title": "TENET: intertwined book",
+      "category": "인쇄/출판",
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "한가은",
+          "email": "hangafor@naver.com"
         }
       ],
-      "project_image": "./1/projects/project-personal.png"
+      "project_image": "./45/project-1.png"
     },
     {
-      "uid": "2",
-      "title": "프로젝트 명1",
-      "category": "출판",
-
+      "uid": "75",
+      "title": "DOLDOL",
+      "category": "브랜딩",
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "한가은",
+          "email": "hangafor@naver.com"
         }
       ],
-      "project_image": "./1/project-team.png"
+      "project_image": "./45/project-2.png"
     }
   ]
 }

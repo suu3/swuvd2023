@@ -6,46 +6,33 @@
   "instagram": "@eeeeeeu_n",
   "projects": [
     {
-      "uid": "1",
-      "title": "프로젝트 명1",
-      "category": "출판",
+      "uid": "61",
+      "title": "할머니는 왜 그럴까?",
+      "category": "브랜딩",
 
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "이시은",
+          "email": "sieun12249@gmail.com"
         }
       ],
-      "project_image": "./1/projects/project-personal.png"
+      "project_image": "./35/project-1.png"
     },
     {
-      "uid": "2",
-      "title": "프로젝트 명1",
-      "category": "출판",
-
+      "uid": "25",
+      "title": "심해 아쿠아리움 마린다",
+      "category": "브랜딩",
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "이시은",
+          "email": "sieun12249@gmail.com"
         },
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "김해인",
+          "email": "rlagodls251@naver.com"
         }
       ],
-      "project_image": "./1/project-team.png"
+      "project_image": "./35/project-2.png"
     }
   ]
 }

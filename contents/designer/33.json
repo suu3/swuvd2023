@@ -6,46 +6,32 @@
   "instagram": "@00.230_",
   "projects": [
     {
-      "uid": "1",
-      "title": "프로젝트 명1",
-      "category": "출판",
-
+      "uid": "59",
+      "title": "한국 여성 오타쿠 관찰일지",
+      "category": "인쇄/출판",
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "이세영",
+          "email": "sayoung85@naver.com"
         }
       ],
-      "project_image": "./1/projects/project-personal.png"
+      "project_image": "./33/project-1.png"
     },
     {
       "uid": "2",
-      "title": "프로젝트 명1",
-      "category": "출판",
-
+      "title": "브랜딩",
+      "category": "UX/UI",
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "이세영",
+          "email": "sayoung85@naver.com"
         },
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "강나경",
+          "email": "000310kang@naver.com"
         }
       ],
-      "project_image": "./1/project-team.png"
+      "project_image": "./33/project-2.png"
     }
   ]
 }

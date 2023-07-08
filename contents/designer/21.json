@@ -6,46 +6,29 @@
   "instagram": "kimswuni",
   "projects": [
     {
-      "uid": "1",
-      "title": "프로젝트 명1",
-      "category": "출판",
+      "uid": "39",
+      "title": "우리 아이 우울증 알고가기",
+      "category": "인쇄/출판",
 
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "배주영",
+          "email": "qowndud1004@gmail.com"
         }
       ],
-      "project_image": "./1/projects/project-personal.png"
+      "project_image": "./21/project-1.png"
     },
     {
-      "uid": "2",
-      "title": "프로젝트 명1",
-      "category": "출판",
-
+      "uid": "40",
+      "title": "intruder",
+      "category": "영상",
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "배주영",
+          "email": "qowndud1004@gmail.com"
         }
       ],
-      "project_image": "./1/project-team.png"
+      "project_image": "./21/project-2.png"
     }
   ]
 }

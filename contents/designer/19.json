@@ -6,46 +6,30 @@
   "instagram": "@rosetoile_",
   "projects": [
     {
-      "uid": "1",
-      "title": "프로젝트 명1",
-      "category": "출판",
+      "uid": "35",
+      "title": "C.B.C.G",
+      "category": "브랜딩",
 
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "박현빈",
+          "email": "rosetoile24@naver.com"
         }
       ],
-      "project_image": "./1/projects/project-personal.png"
+      "project_image": "./19/project-1.png"
     },
     {
-      "uid": "2",
-      "title": "프로젝트 명1",
-      "category": "출판",
+      "uid": "36",
+      "title": "'가재가 노래하는 곳' 타이틀 시퀀스",
+      "category": "영상",
 
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "박현빈",
+          "email": "rosetoile24@naver.com"
         }
       ],
-      "project_image": "./1/project-team.png"
+      "project_image": "./19/project-2.png"
     }
   ]
 }

@@ -6,46 +6,29 @@
   "instagram": "@dau.ru",
   "projects": [
     {
-      "uid": "1",
-      "title": "프로젝트 명1",
-      "category": "출판",
-
+      "uid": "27",
+      "title": "LIMU' Brand identity",
+      "category": "영상",
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "김희정",
+          "email": "kim2141hj@naver.com"
         }
       ],
-      "project_image": "./1/projects/project-personal.png"
+      "project_image": "./15/project-1.png"
     },
     {
-      "uid": "2",
-      "title": "프로젝트 명1",
-      "category": "출판",
+      "uid": "28",
+      "title": "Ghostmates",
+      "category": "브랜딩",
 
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "김희정",
+          "email": "kim2141hj@naver.com"
         }
       ],
-      "project_image": "./1/project-team.png"
+      "project_image": "./15/project-2.png"
     }
   ]
 }
