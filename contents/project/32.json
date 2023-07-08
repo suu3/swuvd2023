@@ -18,6 +18,11 @@
   ],
   "about": "<ZZZ>는 이어폰/헤드폰을 오래 사용하는 현대인을 위해 재밌고 간단한 방법으로 청취 습관 개선을 도와주는 앱 서비스입니다. 지금부터 당신은 예민한 고양이의 '집사'입니다. 고양이가 푹 잘 수 있게 돌봐주세요! 적게, 그리고 작게 들을수록 고양이가 편히 잘 수 있답니다.",
   "project_image": "./32/represent.png",
-  "detail_image": [{ "src": "./32/detail-1.png" }],
+  "detail_image": [
+    { "src": "./32/detail-1.png" },
+    { "src": "./32/detail-2.png" },
+    { "src": "./32/detail-3.png" },
+    { "src": "./32/detail-4.png" }
+  ],
   "youtubeUrl": ""
 }
