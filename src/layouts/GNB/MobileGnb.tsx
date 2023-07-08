@@ -82,7 +82,8 @@ const MobileGnb = ({ pathname, theme = "dark" }: GNBType) => {
       <nav
         className={classnames(
           styles["nav"],
-          isOpen ? styles["dark"] : styles[_theme]
+          isOpen ? styles["dark"] : styles[_theme],
+          isOpen && styles["isOpen"]
         )}
       >
         <Link to="/">
@@ -99,7 +100,7 @@ const MobileGnb = ({ pathname, theme = "dark" }: GNBType) => {
             />
           </svg>
         </Link>
-        {isOpen && !pathname.includes("/project") && (
+        {isOpen && (
           <div className={styles["text"]}>
             금을
             <span />

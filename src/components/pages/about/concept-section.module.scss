@@ -11,20 +11,43 @@
   }
 }
 
+.desktop-only {
+  display: block;
+  @include tablet {
+    display: none;
+  }
+}
 .section {
   overflow: hidden;
   position: relative;
   min-height: 1080px;
   color: var(--secondary-100);
 
-  @include tablet {
-    min-height: auto;
+  &::after {
+    content: "";
+    background-color: var(--primary-400);
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    z-index: 1;
+    position: absolute;
+    right: 15%;
+    top: 30%;
+    opacity: 0.2;
   }
 
   > div {
     position: absolute;
+  }
 
-    @include tablet {
+  @include tablet {
+    min-height: auto;
+
+    &::after {
+      display: none;
+    }
+
+    > div {
       display: none;
     }
   }
