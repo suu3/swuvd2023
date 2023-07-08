@@ -1,51 +1,39 @@
 {
   "uid": "9",
-  "name": "김슈니",
-  "enName": "Kim swuni",
-  "email": "kimswuni@swu.co.kr",
-  "instagram": "kimswuni",
+  "name": "김시은",
+  "enName": "Sieun Kim",
+  "email": "beryl013@naver.com",
+  "instagram": "",
   "projects": [
     {
-      "uid": "1",
-      "title": "프로젝트 명1",
-      "category": "출판",
+      "uid": "17",
+      "title": "표상시 시집: 요정이 사는 집",
+      "category": "인쇄/출판",
 
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "김시은",
+          "email": "beryl013@naver.com"
         }
       ],
-      "project_image": "./1/projects/project-1.png"
+      "project_image": "./9/project-1.png"
     },
     {
-      "uid": "2",
-      "title": "프로젝트 명1",
-      "category": "출판",
+      "uid": "18",
+      "title": "haero",
+      "category": "브랜딩",
 
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "김시은",
+          "email": "beryl013@naver.com"
         },
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "이새",
+          "email": "leesae8252a@gmail.com"
         }
       ],
-      "project_image": "./1/projects/project-2.png"
+      "project_image": "./9/project-2.png"
     }
   ]
 }

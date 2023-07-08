@@ -1,51 +1,35 @@
 {
   "uid": "5",
-  "name": "김슈니",
-  "enName": "Kim swuni",
-  "email": "kimswuni@swu.co.kr",
-  "instagram": "kimswuni",
+  "name": "김경현",
+  "enName": "Kyunghyun Kim",
+  "email": "815kgh@naver.com",
+  "instagram": "@d_ghyn_o",
   "projects": [
     {
-      "uid": "1",
-      "title": "프로젝트 명1",
-      "category": "출판",
+      "uid": "9",
+      "title": "레고 브랜드 필름",
+      "category": "영상",
 
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "김경현",
+          "email": "815kgh@naver.com"
         }
       ],
-      "project_image": "./1/projects/project-1.png"
+      "project_image": "./5/project-1.png"
     },
     {
-      "uid": "2",
-      "title": "프로젝트 명1",
-      "category": "출판",
+      "uid": "10",
+      "title": "히어로즈 아카이브",
+      "category": "인쇄/출판",
 
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "김경현",
+          "email": "815kgh@naver.com"
         }
       ],
-      "project_image": "./1/projects/project-2.png"
+      "project_image": "./5/project-2.png"
     }
   ]
 }

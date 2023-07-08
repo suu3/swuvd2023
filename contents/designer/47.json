@@ -1,0 +1,33 @@
+{
+  "uid": "47",
+  "name": "한현지",
+  "enName": "Hyunji Han",
+  "email": "04guswl@naver.com",
+  "instagram": "@e0_ua",
+  "projects": [
+    {
+      "uid": "1",
+      "title": "서둘러 채채씨",
+      "category": "브랜딩",
+      "authors": [
+        {
+          "name": "한현지",
+          "email": "04guswl@naver.com"
+        }
+      ],
+      "project_image": "./47/project-1.png"
+    },
+    {
+      "uid": "2",
+      "title": "‘NUDAKE’ A Fashion Show Of Dessert",
+      "category": "영상",
+      "authors": [
+        {
+          "name": "한현지",
+          "email": "04guswl@naver.com"
+        }
+      ],
+      "project_image": "./47/project-2.png"
+    }
+  ]
+}

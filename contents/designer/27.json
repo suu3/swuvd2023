@@ -1,51 +1,37 @@
 {
-  "uid": "16",
-  "name": "김슈니",
-  "enName": "Kim swuni",
-  "email": "kimswuni@swu.co.kr",
-  "instagram": "kimswuni",
+  "uid": "27",
+  "name": "안서은",
+  "enName": "Seoeun An",
+  "email": "graphican2018@gmail.com",
+  "instagram": "",
   "projects": [
     {
-      "uid": "1",
-      "title": "프로젝트 명1",
-      "category": "출판",
-
+      "uid": "51",
+      "title": "2024 의성어・의태어 달력",
+      "category": "인쇄/출판",
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "안서은",
+          "email": "graphican2018@gmail.com"
         }
       ],
-      "project_image": "./1/projects/project-1.png"
+      "project_image": "./27/project-1.png"
     },
     {
-      "uid": "2",
-      "title": "프로젝트 명1",
-      "category": "출판",
-
+      "uid": "42",
+      "title": "D:ROOM",
+      "category": "UX/UI",
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "안서은",
+          "email": "graphican2018@gmail.com"
         },
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "백선영",
+          "email": "back-zero@naver.com"
         }
       ],
-      "project_image": "./1/projects/project-2.png"
+      "project_image": "./27/project-2.png"
     }
   ]
 }

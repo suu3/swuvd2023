@@ -1,51 +1,39 @@
 {
   "uid": "13",
-  "name": "김슈니",
-  "enName": "Kim swuni",
-  "email": "kimswuni@swu.co.kr",
-  "instagram": "kimswuni",
+  "name": "김해인",
+  "enName": "Haein Kim",
+  "email": "rlagodls251@naver.com",
+  "instagram": "",
   "projects": [
     {
-      "uid": "1",
-      "title": "프로젝트 명1",
-      "category": "출판",
+      "uid": "24",
+      "title": "I am not synthetic",
+      "category": "인쇄/출판",
 
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "김해인",
+          "email": "rlagodls251@naver.com"
         }
       ],
-      "project_image": "./1/projects/project-1.png"
+      "project_image": "./13/project-1.png"
     },
     {
-      "uid": "2",
-      "title": "프로젝트 명1",
-      "category": "출판",
+      "uid": "25",
+      "title": "심해 아쿠아리움 마린다",
+      "category": "브랜딩",
 
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "김해인",
+          "email": "rlagodls251@naver.com"
         },
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "이시은",
+          "email": "sieun12249@gmail.com"
         }
       ],
-      "project_image": "./1/projects/project-2.png"
+      "project_image": "./13/project-2.png"
     }
   ]
 }

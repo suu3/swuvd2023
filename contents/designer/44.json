@@ -1,0 +1,33 @@
+{
+  "uid": "44",
+  "name": "최지연",
+  "enName": "Jiyeon Choi",
+  "email": "yeonji3140@gmail.com",
+  "instagram": "@seemycake",
+  "projects": [
+    {
+      "uid": "72",
+      "title": "TITLE SEQUENCE: Blackberry Street",
+      "category": "영상",
+      "authors": [
+        {
+          "name": "최지연",
+          "email": "yeonji3140@gmail.com"
+        }
+      ],
+      "project_image": "./44/project-1.png"
+    },
+    {
+      "uid": "73",
+      "title": "TITLE SEQUENCE: SEEMYCAKE",
+      "category": "인쇄/출판",
+      "authors": [
+        {
+          "name": "최지연",
+          "email": "yeonji3140@gmail.com"
+        }
+      ],
+      "project_image": "./44/project-2.png"
+    }
+  ]
+}

@@ -1,51 +1,35 @@
 {
   "uid": "10",
-  "name": "김슈니",
-  "enName": "Kim swuni",
-  "email": "kimswuni@swu.co.kr",
-  "instagram": "kimswuni",
+  "name": "김연진",
+  "enName": "Yeonjin Kim",
+  "email": "go750915@naver.com",
+  "instagram": "@kimartwork20",
   "projects": [
     {
-      "uid": "1",
-      "title": "프로젝트 명1",
-      "category": "출판",
+      "uid": "19",
+      "title": "5도2촌",
+      "category": "UX/UI",
 
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "김연진",
+          "email": "go750915@naver.com"
         }
       ],
-      "project_image": "./1/projects/project-1.png"
+      "project_image": "./10/project-1.png"
     },
     {
-      "uid": "2",
-      "title": "프로젝트 명1",
-      "category": "출판",
+      "uid": "20",
+      "title": "다른 곳을 보더라도, 노을 앞에선 하나야",
+      "category": "인쇄/출판",
 
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "김연진",
+          "email": "go750915@naver.com"
         }
       ],
-      "project_image": "./1/projects/project-2.png"
+      "project_image": "./10/project-2.png"
     }
   ]
 }

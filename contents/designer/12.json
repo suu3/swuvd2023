@@ -1,51 +1,22 @@
 {
   "uid": "12",
-  "name": "김슈니",
-  "enName": "Kim swuni",
-  "email": "kimswuni@swu.co.kr",
-  "instagram": "kimswuni",
+  "name": "김태희",
+  "enName": "Taehee Kim",
+  "email": "abc8116@naver.com",
+  "instagram": "",
   "projects": [
     {
-      "uid": "1",
-      "title": "프로젝트 명1",
-      "category": "출판",
+      "uid": "23",
+      "title": "갈비 여행기",
+      "category": "영상",
 
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "김태희",
+          "email": "abc8116@naver.com"
         }
       ],
-      "project_image": "./1/projects/project-1.png"
-    },
-    {
-      "uid": "2",
-      "title": "프로젝트 명1",
-      "category": "출판",
-
-      "authors": [
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        }
-      ],
-      "project_image": "./1/projects/project-2.png"
+      "project_image": "./12/project-1.png"
     }
   ]
 }

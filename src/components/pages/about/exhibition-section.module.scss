@@ -15,23 +15,24 @@
 
 .img {
   margin: 0 68px;
-  position: relative;
-
+  max-width: var(--global-max-width);
+  width: 100%;
+  // position: relative;
   @include tablet {
     width: 100%;
     overflow: hidden;
     margin: 0 24px;
   }
 
-  &::after {
-    position: absolute;
-    z-index: 2;
-    content: "";
-    top: 247px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transform: rotate(180deg);
-    background: linear-gradient(#000000 13.39%, rgba(255, 255, 255, 0) 100%);
-  }
+  // &::after {
+  //   position: absolute;
+  //   z-index: 2;
+  //   content: "";
+  //   top: 247px;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   transform: rotate(180deg);
+  //   background: linear-gradient(#000000 13.39%, rgba(255, 255, 255, 0) 100%);
+  // }
 }

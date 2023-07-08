@@ -1,51 +1,33 @@
 {
-  "uid": "16",
-  "name": "김슈니",
-  "enName": "Kim swuni",
-  "email": "kimswuni@swu.co.kr",
-  "instagram": "kimswuni",
+  "uid": "38",
+  "name": "이은서",
+  "enName": "Eunseo Lee",
+  "email": "eslee3266@naver.com",
+  "instagram": "@line_______lee",
   "projects": [
     {
-      "uid": "1",
-      "title": "프로젝트 명1",
-      "category": "출판",
-
+      "uid": "64",
+      "title": "LEMON BEAM",
+      "category": "브랜딩",
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "이은서",
+          "email": "eslee3266@naver.com"
         }
       ],
-      "project_image": "./1/projects/project-1.png"
+      "project_image": "./38/project-1.png"
     },
     {
-      "uid": "2",
-      "title": "프로젝트 명1",
-      "category": "출판",
-
+      "uid": "65",
+      "title": "성격 대여소",
+      "category": "인쇄/출판",
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "이은서",
+          "email": "eslee3266@naver.com"
         }
       ],
-      "project_image": "./1/projects/project-2.png"
+      "project_image": "./38/project-2.png"
     }
   ]
 }

@@ -12,6 +12,7 @@ import DesignerNav from "@/layouts/DesignerNav";
 import { type PageProps } from "gatsby";
 import useIsMobile from "@/hooks/useIsMobile";
 import classNames from "classnames";
+import ReactPageScroller from "react-page-scroller";
 
 type LayoutProps = {
   children: ReactNode;
@@ -33,12 +34,13 @@ export default function CommonLayout({
   data,
 }: LayoutProps & React.FC<PageProps>) {
   const { pathname } = location;
-  const [theme, setTheme] = useState(pageTheme[pathname]);
+  //const [theme, setTheme] = useState(pageTheme[pathname]);
   const isMobile = useIsMobile();
 
-  useEffect(() => {
-    setTheme(pageTheme[pathname]);
-  }, [pathname]);
+  const theme = pageContext.theme;
+  // useEffect(() => {
+  //   setTheme(pageTheme[pathname]);
+  // }, [pathname]);
 
   const CommonLayout = ({ children }) => (
     <>
@@ -60,6 +62,7 @@ export default function CommonLayout({
   );
 
   if (pageContext.layout === "designer") {
+    console.log(pageContext.layout);
     return (
       <CommonLayout>
         <div className={designerWrapper}>
@@ -72,6 +75,17 @@ export default function CommonLayout({
             {children}
           </main>
         </div>
+      </CommonLayout>
+    );
+  }
+
+  if (pathname === "/") {
+    return (
+      <CommonLayout>
+        <main className={main}>
+          {isMobile && <MobileGnb theme={theme} pathname={location.pathname} />}
+          {children}
+        </main>
       </CommonLayout>
     );
   }

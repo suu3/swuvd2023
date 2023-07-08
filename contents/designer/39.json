@@ -1,51 +1,33 @@
 {
-  "uid": "16",
-  "name": "김슈니",
-  "enName": "Kim swuni",
-  "email": "kimswuni@swu.co.kr",
-  "instagram": "kimswuni",
+  "uid": "39",
+  "name": "이한나",
+  "enName": "Hanna Lee",
+  "email": "asaya.created@gmail.com",
+  "instagram": "@asaya_created",
   "projects": [
     {
-      "uid": "1",
-      "title": "프로젝트 명1",
-      "category": "출판",
-
+      "uid": "66",
+      "title": "옛 언약과 새 언약, 성막과 현대의 교회",
+      "category": "인쇄/출판",
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "이한나",
+          "email": "asaya.created@gmail.com"
         }
       ],
-      "project_image": "./1/projects/project-1.png"
+      "project_image": "./39/project-1.png"
     },
     {
-      "uid": "2",
-      "title": "프로젝트 명1",
-      "category": "출판",
-
+      "uid": "67",
+      "title": "@twelvefollowers #twelvefollowers",
+      "category": "브랜딩",
       "authors": [
         {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
-        },
-        {
-          "name": "김슈니",
-          "email": "aaaaa"
+          "name": "이한나",
+          "email": "asaya.created@gmail.com"
         }
       ],
-      "project_image": "./1/projects/project-2.png"
+      "project_image": "./39/project-2.png"
     }
   ]
 }
