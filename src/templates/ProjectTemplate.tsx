@@ -2,14 +2,24 @@ import { HeadFC, graphql } from "gatsby";
 import React, { FunctionComponent } from "react";
 import ProjectDetail from "@/components/pages/project/detail";
 import SEO from "@/layouts/SEO";
+import { IGatsbyImageData } from "gatsby-plugin-image";
 
 type ProjectTemplateProps = {
-  data: any;
+  data: {
+    projectJson: {
+      title: string;
+      authors: { name: string; email: string }[];
+      about: string;
+      project_image: IGatsbyImageData;
+      detail_image: { src: IGatsbyImageData };
+    };
+  };
 };
 
 const ProjectTemplate: FunctionComponent<ProjectTemplateProps> = function ({
   data,
 }) {
+  console.log(data);
   return <ProjectDetail project={data?.projectJson} />;
 };
 
@@ -23,7 +33,7 @@ export const Head: HeadFC = () => (
 );
 
 export const query = graphql`
-  query MyQuery($uid: String) {
+  query ProjectQuery($uid: String) {
     projectJson(uid: { eq: $uid }) {
       uid
       title

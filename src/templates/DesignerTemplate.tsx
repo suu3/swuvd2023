@@ -24,7 +24,7 @@ export const Head: HeadFC = () => (
 );
 
 export const query = graphql`
-  query MyQuery($uid: String) {
+  query DesingerQuery($uid: String) {
     list: allDesignerJson {
       edges {
         node {

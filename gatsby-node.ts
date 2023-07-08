@@ -56,7 +56,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
   // Get All Markdown File For Paging
   const queryAllProjectJsonData = await graphql(
     `
-      {
+      query AllProjectJsonQuery {
         allProjectJson {
           edges {
             node {
@@ -71,7 +71,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
   // Get All Markdown File For Paging
   const queryAllDesignerJsonData = await graphql(
     `
-      {
+      query AllDesignerJsonQuery {
         allDesignerJson {
           edges {
             node {

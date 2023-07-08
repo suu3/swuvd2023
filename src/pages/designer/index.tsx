@@ -11,7 +11,7 @@ const IndexPage: React.FC<PageProps> = ({ location, data }) => {
 };
 
 export const query = graphql`
-  query {
+  query allDesingerQuery {
     list: allDesignerJson {
       edges {
         node {

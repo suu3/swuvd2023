@@ -17,7 +17,7 @@ export const Head: HeadFC = () => (
 );
 
 export const query = graphql`
-  query allProjectJson {
+  query AllProjectQuery {
     allProjectJson {
       edges {
         node {
