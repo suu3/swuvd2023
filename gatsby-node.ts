@@ -1,3 +1,5 @@
+import { type GatsbyNode } from "gatsby";
+
 /**
  * Implement Gatsby's Node APIs in this file.
  *
@@ -37,4 +39,54 @@ exports.onCreatePage = ({ page, actions }) => {
 
     createPage(page);
   }
+};
+
+// Generate Post Page Through Markdown Data
+export const createPages: GatsbyNode["createPages"] = async ({
+  actions,
+  graphql,
+  reporter,
+}) => {
+  const { createPage } = actions;
+
+  // Get All Markdown File For Paging
+  const queryAllProjectJsonData = await graphql(
+    `
+      {
+        allProjectJson {
+          edges {
+            node {
+              uid
+            }
+          }
+        }
+      }
+    `
+  );
+
+  // Handling GraphQL Query Error
+  if (queryAllProjectJsonData.errors) {
+    reporter.panicOnBuild(`Error while running query`);
+    return;
+  }
+
+  // Import Post Template Component
+  const ProjectTemplateComponent = path.resolve(
+    __dirname,
+    "src/templates/ProjectTemplate.tsx"
+  );
+
+  // Page Generating Function
+  const generatePostPage = ({ node: { uid } }: { node: { uid: string } }) => {
+    const pageOptions = {
+      path: `/project/${uid}`,
+      component: ProjectTemplateComponent,
+      context: { uid },
+    };
+
+    createPage(pageOptions);
+  };
+
+  // Generate Post Page And Passing Slug Props for Query
+  queryAllProjectJsonData?.data?.allProjectJson.edges.forEach(generatePostPage);
 };
