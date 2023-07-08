@@ -1,0 +1,23 @@
+{
+  "uid": "50",
+  "title": "튜포(TUPO)",
+  "category": "UX/UI",
+  "authors": [
+    {
+      "name": "송주현",
+      "email": "wldb08@gmail.com"
+    },
+    {
+      "name": "원수정",
+      "email": "wonsujung@naver.com"
+    },
+    {
+      "name": "이미선",
+      "email": "sunnyofmine@gmail.com"
+    }
+  ],
+  "about": "FPS PC 게이머를 대상으로 한, 실력 향상을 위한 개인 맞춤 AI 게임 피드백 앱입니다. 타 유저에게 직접 피드백을 받는 것에 대한 불편함과 실효성이 부족한 인게임 피드백 메시지 등을 개선하고, 보다 전문적이고 활용도 높은 피드백을 제공합니다. 게임 시작 시 앱이 자동으로 영상을 저장하며, 이 중 원하는 영상과 개인 성향에 맞는 피드백 모드를 선택하여 분석 받을 수 있습니다. 또한 기록된 영상과 모든 피드백에 대해 커뮤니티에서 다른 유저와 자유롭게 의견을 나눌 수 있도록 구성하여 유저의 효율적인 실력 향상에 기여합니다.",
+  "project_image": "./50/represent.png",
+  "detail_image": [{ "src": "./50/detail-1.png" }],
+  "youtubeUrl": ""
+}

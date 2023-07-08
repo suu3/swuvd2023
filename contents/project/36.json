@@ -1,0 +1,15 @@
+{
+  "uid": "36",
+  "title": "'가재가 노래하는 곳' 타이틀 시퀀스",
+  "category": "영상",
+  "authors": [
+    {
+      "name": "박현빈",
+      "email": "rosetoile24@naver.com"
+    }
+  ],
+  "about": "영화 '가재가 노래하는 곳'에서는 자연엔 선과 악이 없으며 모든 생물이 살아남기 위해 그러는 것이고 가끔 먹잇감이 살아남으려면 포식자는 죽어야 한다고 말한다. 영화 속에서의 살인사건을 생태계의 법칙과 연결 지어 타이틀 시퀀스를 제작하였다.",
+  "project_image": "./36/represent.png",
+  "detail_image": [{ "src": "./36/detail-1.png" }],
+  "youtubeUrl": "https://youtu.be/1cLeE9jic-k"
+}

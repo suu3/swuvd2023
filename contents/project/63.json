@@ -1,0 +1,19 @@
+{
+  "uid": "63",
+  "title": "solty",
+  "category": "UX/UI",
+  "authors": [
+    {
+      "name": "이예진",
+      "email": "yj0039@naver.com"
+    },
+    {
+      "name": "한유진",
+      "email": "yooz_n@naver.com"
+    }
+  ],
+  "about": "솔티는 비합리적인 금융 행동으로 인해 충동적으로 소비되는 돈의 가치에 대해 다시 한번 고민하고, 이러한 습관을 저축으로 전환시킴으로써 건강한 소비패턴을 만들어나갈 수 있도록 돕는 금융 어플입니다.",
+  "project_image": "./63/represent.png",
+  "detail_image": [{ "src": "./63/detail-1.png" }],
+  "youtubeUrl": ""
+}

@@ -1,0 +1,15 @@
+{
+  "uid": "40",
+  "title": "intruder",
+  "category": "영상",
+  "authors": [
+    {
+      "name": "배주영",
+      "email": "qowndud1004@gmail.com"
+    }
+  ],
+  "about": "<intruder>는 주인공인 ‘다인’에게 불청객이 찾아오면서 벌어지는 이야기를 다룬 단편영화이다. 혼자 사는 공간에 누군가 들어왔다는 공포, 두려움뿐만 아니라 반전을 통해 ‘다인’의 또 다른 나를 만날 수 있다.",
+  "project_image": "./40/represent.JPG",
+  "detail_image": [],
+  "youtubeUrl": "https://youtu.be/p2ShYRJe1m0"
+}

@@ -1,0 +1,15 @@
+{
+  "uid": "24",
+  "title": "I am not synthetic",
+  "category": "영상",
+  "authors": [
+    {
+      "name": "김해인",
+      "email": "rlagodls251@naver.com"
+    }
+  ],
+  "about": "버츠비의 색조 화장품 프로모션 모션그래픽입니다. 컨셉은 꿀벌의 색상 연구실로, 기존의 색조 화장품 슬로건 'I am not synthetic'에 어울리는 '천연재료로 만들어졌다, 색감이 좋다'라는 이미지를 내포하고 있습니다. 벌집 안에 있는 붉은색을 연구하는 연구실에서 꿀벌들이 붉은색 계열의 꽃과 과일을 연구하는 과정(꽃을 빻기, 가루내기, 열매를 으깨기, 즙을 짜내기) 을 통해 버츠비 립스틱의 자연적 특성을 보여주고자 합니다. 귀엽고 따뜻한 버츠비만의 무드를 활용하여 기존의 성숙한 프로모션과 상반된 분위기로 연출하였습니다.",
+  "project_image": "./24/represent.png",
+  "detail_image": [],
+  "youtubeUrl": "https://youtu.be/AwwEnFc6RQY"
+}

@@ -1,0 +1,19 @@
+{
+  "uid": "73",
+  "title": "TITLE SEQUENCE: SEEMYCAKE",
+  "category": "인쇄/출판",
+  "authors": [
+    {
+      "name": "최지연",
+      "email": "yeonji3140@gmail.com"
+    }
+  ],
+  "about": "SEE MY CAKE는 감정을 다루는 자신만의 방법을 소개하는 책입니다. 책 속에서는 우리의 삶을 CMYK라고 표현합니다. 이는 하루 하루만 놓고 보면 우리의 각각의 순간들이 Cyan, Magenta, Yellow, Black같이 단색적이고 그 순간만이 전부인 것처럼 보이지만 이러한 순간들이 모여 비로소 다채로운 현재의 내가 될 수 있다는 의미를 가집니다. 이는 마치 각자 다른 종류의 빵 조각과 재료가 모여 달콤하고 맛있는 케이크가 완성되는 것처럼 순간 순간은 쓰기도, 달기도 하지만 결국 멋진 하나의 케이크가 된 우리들의 모습을 표현합니다. 이 책에선 이러한 다양한 감정들을 C, M, Y, K 컬러로 시각화하여 표현하고 이러한 감정들을 다루는 방법에 대한 각자의 방법들을 소개합니다.",
+  "project_image": "./73/represent.png",
+  "detail_image": [
+    {
+      "src": "./73/detail-1.png"
+    }
+  ],
+  "youtubeUrl": ""
+}

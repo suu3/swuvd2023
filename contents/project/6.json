@@ -1,0 +1,20 @@
+{
+  "uid": "6",
+  "title": "All 6!(올식스)",
+  "category": "인쇄/출판",
+
+  "authors": [
+    {
+      "name": "구나현",
+      "email": "ivy920411@naver.com"
+    },
+    {
+      "name": "이아림",
+      "email": "megajuluv@naver.com"
+    }
+  ],
+  "about": "2인용 보드게임으로 8세부터 가능한 퍼즐 전략게임이다. 땅따먹기 형식으로, 각자의 색상을 정하고 삼각형 6조각으로 육각형을 만든다. 진행방식은 기본판은 중앙에 배치하고, 파우치에서 퍼즐을 뽑아 배치한다. 퍼즐은 면대 면 배치만 가능하다. 퍼즐판이 다 채워지면 게임은 끝나고, 여섯개의 집을 가장 많이 완성하면 승리한다.",
+  "project_image": "./6/represent.png",
+  "detail_image": [{ "src": "./6/detail-1.png" }],
+  "youtubeUrl": ""
+}

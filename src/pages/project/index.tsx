@@ -23,7 +23,7 @@ export const query = graphql`
         node {
           uid
           title
-          categoryId
+          category
           authors {
             name
             email

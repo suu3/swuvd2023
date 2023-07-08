@@ -1,0 +1,15 @@
+{
+  "uid": "45",
+  "title": "Tiny's Daily Life Tips",
+  "category": "인쇄/출판",
+  "authors": [
+    {
+      "name": "변유나",
+      "email": "1004yunah@naver.com"
+    }
+  ],
+  "about": "작고 사소하지만 일상생활을 좀 더 편리하게 만들어주는 정보를 “팁”이라고 합니다. 본 프로젝트에서는 캐릭터 “티니”가 등장해 일상생활 속 유용한 12가지 팁을 글 없이 심플한 일러스트로 전달합니다. 이 책을 통해 여러분의 일상이 조금 더 편리해지길 바랍니다.",
+  "project_image": "./45/represent.png",
+  "detail_image": [{ "src": "./45/detail-1.png" }],
+  "youtubeUrl": ""
+}

@@ -1,0 +1,15 @@
+{
+  "uid": "35",
+  "title": "C.B.C.G",
+  "category": "브랜딩",
+  "authors": [
+    {
+      "name": "박현빈",
+      "email": "rosetoile24@naver.com"
+    }
+  ],
+  "about": "C.B.C.G는 남자 청소년들을 위한 악취 ZONE 케어 브랜드이다. 청소년을 자극하는 강렬한 비주얼을 컨셉으로, 폭포수처럼 강력하게 냄새를 제거하며 과일, 유칼립투스, 티트리 등의 향을 함유한 제품이다. 학교에서 간편하게 사용할 수 있는 제품들로 이루어져 있다.",
+  "project_image": "./35/represent.png",
+  "detail_image": [{ "src": "./35/detail-1.png" }],
+  "youtubeUrl": ""
+}
