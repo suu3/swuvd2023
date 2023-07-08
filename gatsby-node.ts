@@ -37,7 +37,7 @@ export const onCreatePage: GatsbyNode["onCreatePage"] = ({ page, actions }) => {
       page.context.theme = "dark";
     }
 
-    if (page.path.match(/designer/)) {
+    if (page.path.match("/designer")) {
       page.context.layout = "designer";
 
       createPage(page);
@@ -83,8 +83,6 @@ export const createPages: GatsbyNode["createPages"] = async ({
     `
   );
 
-  console.log(queryAllDesignerJsonData);
-
   // Handling GraphQL Query Error
   if (queryAllProjectJsonData.errors || queryAllDesignerJsonData.errors) {
     reporter.panicOnBuild(`Error while running query`);
@@ -126,7 +124,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
     const pageOptions = {
       path: `/designer/${uid}`,
       component: DesignerTemplateComponent,
-      context: { uid },
+      context: { uid, layout: "designer" },
     };
 
     createPage(pageOptions);

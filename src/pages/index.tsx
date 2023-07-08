@@ -25,7 +25,7 @@ export default IndexPage;
 
 export const Head: HeadFC = () => (
   <>
-    <title>About | SWUVD 2023</title>
+    <title>금 : 線 | 서울여자대학교 시각디자인전공 40회 졸업전시회</title>
     <SEO />
   </>
 );
