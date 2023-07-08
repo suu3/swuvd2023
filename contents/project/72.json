@@ -13,6 +13,15 @@
   "detail_image": [
     {
       "src": "./72/detail-1.png"
+    },
+    {
+      "src": "./72/detail-2.png"
+    },
+    {
+      "src": "./72/detail-3.png"
+    },
+    {
+      "src": "./72/detail-4.png"
     }
   ],
   "youtubeUrl": "https://youtu.be/7f76Q53hJuA"
