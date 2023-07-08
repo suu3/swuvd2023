@@ -1,0 +1,15 @@
+{
+  "uid": "21",
+  "title": "Mittern Heute: Robotterror in Mittern?! ",
+  "category": "영상",
+  "authors": [
+    {
+      "name": "김지연",
+      "email": "vanitatorium@gmail.com"
+    }
+  ],
+  "about": "독자적으로 만든 이야기에서 나오는 뉴스로 실제 세계의 단면을 비추려 한다. 가상의 도시 미테른에서는 로봇 테러가 주기적으로 일어나고 있다. 하지만, 10차 테러까지 일어나도, 로봇들을 잡지 못하고 계속 엉뚱한 대책만 세우기만 하는데...",
+  "project_image": "./21/represent.png",
+  "detail_image": [{ "src": "./21/detail-1.png" }],
+  "youtubeUrl": "https://youtu.be/yBSLmWFwNyg"
+}

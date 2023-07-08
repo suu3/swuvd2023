@@ -1,0 +1,19 @@
+{
+  "uid": "16",
+  "title": "TriptoK",
+  "category": "UX/UI",
+  "authors": [
+    {
+      "name": "김수미",
+      "email": "sumikim1217@gmail.com"
+    },
+    {
+      "name": "임수현",
+      "email": "dlatngus016@naver.com"
+    }
+  ],
+  "about": "최근 몇 년 사이 OTT 플랫폼을 통해 k 콘텐츠의 인기가 높아지면서 덩달아 k 푸드에 관한 관심도 높아졌습니다. TriptoK은 k푸드와 관련된 니즈를 좀 더 쉽게 충족시켜 주는 외국인 대상 한국 여행 앱입니다. TriptoK은 드라마와 k-pop 스타의 팬들에게 더욱 풍부한 덕질 라이프를 제공해 주고, 사용자들이 드라마 속 음식과 관련된 식당을 쉽게 찾아 한국을 여행할 수 있도록 해줍니다. 또한, 선택한 가게들의 동선을 파악하여 주변 관광지와 놀거리들을 추가하여 코스를 계획해 주는 여행코스 생성 기능이 있습니다.",
+  "project_image": "./16/represent.png",
+  "detail_image": [{ "src": "./16/detail-1.png" }],
+  "youtubeUrl": ""
+}

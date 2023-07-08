@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Card from "@/components/common/Card";
 import { grid, section } from "./project.module.scss";
 import ProjectNav from "@/layouts/ProjectNav";
@@ -9,7 +9,6 @@ const Project = ({ data }) => {
   const isMobile = useIsMobile();
 
   const [curMenu, setCurMenu] = useState({
-    id: "all",
     label: "전체",
   });
 
@@ -27,11 +26,11 @@ const Project = ({ data }) => {
 
   const renderCards = data
     ?.filter(({ node: item }) => {
-      if (curMenu.id === "all") return true;
-      return item.categoryId === curMenu.id;
+      if (curMenu.label === "전체") return true;
+      return item.category === curMenu.label;
     })
     .map(({ node: item }, idx) => (
-      <Card {...{ clickCard, setClickCard }} key={idx} item={item} />
+      <Card {...{ clickCard, setClickCard }} key={item.uid} item={item} />
     ));
   return (
     <section className={section}>

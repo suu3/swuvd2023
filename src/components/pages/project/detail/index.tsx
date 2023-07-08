@@ -59,19 +59,20 @@ const ProjectDetail = ({ project }: ProjectDetailType) => {
       <section className={detailSection}>
         <h2>Project Detail</h2>
         <div>
-          {detail_image.map(({ src }) => {
-            return (
-              <GatsbyImage
-                key={src}
-                // layout="fixed"
-                layout="fullWidth"
-                objectFit="cover"
-                sizes="100%"
-                image={getImage(src)}
-                alt={title}
-              />
-            );
-          })}
+          {detail_image &&
+            detail_image?.map(({ src }, idx) => {
+              return (
+                <GatsbyImage
+                  key={idx}
+                  // layout="fixed"
+                  layout="fullWidth"
+                  objectFit="cover"
+                  sizes="100%"
+                  image={getImage(src)}
+                  alt={title}
+                />
+              );
+            })}
         </div>
       </section>
     </main>

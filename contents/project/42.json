@@ -1,0 +1,19 @@
+{
+  "uid": "42",
+  "title": "D:ROOM",
+  "category": "UX/UI",
+  "authors": [
+    {
+      "name": "백선영",
+      "email": "back-zero@naver.com"
+    },
+    {
+      "name": "안서은",
+      "email": "graphican2018@gmail.com"
+    }
+  ],
+  "about": "포트폴리오 플랫폼, 더 재밌는 방식으로 함께할 수는 없을까요?\n 실용과 직관에 초점을 맞춘 기존의 플랫폼과는 조금 다른 형태를 제안합니다. 〈 D:ROOM 〉은 디자이너가 자신의 작품을 이용해 가상의 방을 인테리어 하는 새로운 개념을 도입했습니다. 자기표현의 일종인 방 꾸미기에서 착안하여, 소통을 즐기는 MZ 세대 이용자 간의 커뮤니티가 강화된 메타버스형 플랫폼입니다. 학생과 신입 디자이너들이 본인의 작업물을 가볍게 올리고 교류하는 소통의 장을 목표로 합니다.",
+  "project_image": "./42/represent.png",
+  "detail_image": [{ "src": "./42/detail-1.png" }],
+  "youtubeUrl": ""
+}

@@ -1,0 +1,15 @@
+{
+  "uid": "30",
+  "title": "MONTREAL PARASOL",
+  "category": "브랜딩",
+  "authors": [
+    {
+      "name": "박시연",
+      "email": "parksisi06@naver.com"
+    }
+  ],
+  "about": "중년 여성들의 전유물이라는 인식 때문에 뜨거운 여름날에도 양산 착용을 꺼려 하는 사회적 분위기에 변화를 불러오는 것을 목표로 하는 가장 트렌디한 양산 브랜드입니다.",
+  "project_image": "./30/represent.png",
+  "detail_image": [{ "src": "./30/detail-1.png" }],
+  "youtubeUrl": ""
+}
