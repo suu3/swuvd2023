@@ -19,13 +19,13 @@ type LayoutProps = {
   location: any;
 };
 
-const pageTheme: {
-  [key: string]: "light" | "dark";
-} = {
-  "/": "light",
-  "/project": "dark",
-  "/designer": "dark",
-};
+// const pageTheme: {
+//   [key: string]: "light" | "dark";
+// } = {
+//   "/": "light",
+//   "/project": "dark",
+//   "/designer": "dark",
+// };
 
 export default function CommonLayout({
   pageContext,
@@ -62,7 +62,6 @@ export default function CommonLayout({
   );
 
   if (pageContext.layout === "designer") {
-    console.log(pageContext.layout);
     return (
       <CommonLayout>
         <div className={designerWrapper}>

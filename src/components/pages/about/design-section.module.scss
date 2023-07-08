@@ -11,12 +11,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 100px;
     margin: auto 210px;
   }
 
   @include tablet {
     padding: 56px 0 0 0;
     > div {
+      gap: 0px;
+
       min-height: auto;
       flex-direction: column-reverse;
       margin: 0;
@@ -38,7 +41,6 @@
 
 .image {
   width: 100%;
-  padding-left: 100px;
 
   @include tablet {
     padding: 0 24px;

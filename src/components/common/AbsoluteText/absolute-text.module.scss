@@ -44,7 +44,7 @@
   left: 96px;
 
   &.center {
-    transform: rotate(180deg) translateY(100%);
+    transform: rotate(180deg) translateY(50%);
   }
 
   &.top {
@@ -61,7 +61,7 @@
   right: 96px;
 
   &.center {
-    transform: translateY(-100%);
+    transform: translateY(-50%);
   }
 
   &.top {

@@ -72,6 +72,20 @@ export default ProfessorSection;
 
 const professorData = [
   {
+    name: "민병걸",
+    content: (
+      <>
+        졸업전시회 개최를 축하합니다. 이 마지막 관문을 통해 그동안 겪어왔던 많은
+        고민과 도전의 흔적을 내보이게 됩니다. 그 동안의 고민과 도전은 어느새
+        넓은 시야와 깊은 지혜로 숙성되어 여러분의 생각 속에 스며있으리라
+        믿습니다. 이제 배움과 훈련의 마지막 단계를 넘어, 조금은 거칠어보이는
+        사회로 들어서게 됩니다. 왠지 모를 두려움으로 움츠려들 수도 있지만,
+        그곳이야말로 여러분을 기다리는 무대이기도 합니다. 긴장과 기회를 함께
+        즐겨보시길…
+      </>
+    ),
+  },
+  {
     name: "유영재",
     content: (
       <>
@@ -86,7 +100,7 @@ const professorData = [
     ),
   },
   {
-    name: "최창섭",
+    name: "최장섭",
     content: (
       <>
         먼저 4년간의 배움을 결산하는 졸업전시를 축하합니다. 빠르게 변화하는
@@ -112,17 +126,6 @@ const professorData = [
         졸업전시에서 얻는 기쁨이라 생각합니다. 앞으로도 이 매력과 이 기쁨을
         꾸준히 누릴 수 있길 기원하며, 여러분들 한 명 한 명의 앞날을
         응원하겠습니다.
-      </>
-    ),
-  },
-  {
-    name: "민병철",
-    content: (
-      <>
-        Welcome to Burger Bliss, where we take your cravings to a whole new
-        level! Our mouthwatering burgers are made from 100% beef and are served
-        on freshly baked buns. outhwatering burgers are made from 100% beef and
-        are served on freshly baked buns.
       </>
     ),
   },

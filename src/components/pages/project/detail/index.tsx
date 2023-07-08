@@ -8,6 +8,7 @@ import {
   detailSection,
 } from "./project-detail.module.scss";
 import { GatsbyImage, IGatsbyImageData, getImage } from "gatsby-plugin-image";
+import videoSrc from "@/../contents/project/5/video.mp4";
 
 type ProjectDetailType = {
   project: {
@@ -27,7 +28,25 @@ type ProjectDetailType = {
 const ProjectDetail = ({ project }: ProjectDetailType) => {
   const { authors, about, project_image, detail_image, title, youtubeUrl } =
     project;
-  console.log(youtubeUrl);
+
+  const renderVideo = (() => {
+    if (!youtubeUrl) return null;
+    if (youtubeUrl.includes("./"))
+      return (
+        <video controls width="100%">
+          <source src={videoSrc} type="video/mp4" />
+        </video>
+      );
+    return (
+      <iframe
+        width="100%"
+        height="780"
+        src={youtubeUrl}
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      ></iframe>
+    );
+  })();
   return (
     <main className={main}>
       <h1>{title}</h1>
@@ -61,15 +80,7 @@ const ProjectDetail = ({ project }: ProjectDetailType) => {
       <section className={detailSection}>
         <h2>Project Detail</h2>
         <div>
-          {youtubeUrl && (
-            <iframe
-              width="100%"
-              height="780"
-              src={youtubeUrl}
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            ></iframe>
-          )}
+          {renderVideo}
           {detail_image &&
             detail_image?.map(({ src }, idx) => {
               return (
