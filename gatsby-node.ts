@@ -1,4 +1,5 @@
 import { type GatsbyNode } from "gatsby";
+import path from "path";
 
 /**
  * Implement Gatsby's Node APIs in this file.
@@ -8,10 +9,11 @@ import { type GatsbyNode } from "gatsby";
 
 // You can delete this file if you're not using it
 
-const path = require("path");
-
 // Setup Import Alias
-exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
+export const onCreateWebpackConfig: GatsbyNode["onCreateWebpackConfig"] = ({
+  getConfig,
+  actions,
+}) => {
   const output = getConfig().output || {};
 
   actions.setWebpackConfig({
@@ -25,19 +27,21 @@ exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
   });
 };
 
-exports.onCreatePage = ({ page, actions }) => {
+export const onCreatePage: GatsbyNode["onCreatePage"] = ({ page, actions }) => {
   const { createPage } = actions;
 
-  if (page.path === "/") {
-    page.context.theme = "light";
-  } else {
-    page.context.theme = "dark";
-  }
+  if (page?.context) {
+    if (page.path === "/") {
+      page.context.theme = "light";
+    } else {
+      page.context.theme = "dark";
+    }
 
-  if (page.path.match(/designer/)) {
-    page.context.layout = "designer";
+    if (page.path.match(/designer/)) {
+      page.context.layout = "designer";
 
-    createPage(page);
+      createPage(page);
+    }
   }
 };
 
@@ -64,8 +68,25 @@ export const createPages: GatsbyNode["createPages"] = async ({
     `
   );
 
+  // Get All Markdown File For Paging
+  const queryAllDesignerJsonData = await graphql(
+    `
+      {
+        allDesignerJson {
+          edges {
+            node {
+              uid
+            }
+          }
+        }
+      }
+    `
+  );
+
+  console.log(queryAllDesignerJsonData);
+
   // Handling GraphQL Query Error
-  if (queryAllProjectJsonData.errors) {
+  if (queryAllProjectJsonData.errors || queryAllDesignerJsonData.errors) {
     reporter.panicOnBuild(`Error while running query`);
     return;
   }
@@ -76,8 +97,17 @@ export const createPages: GatsbyNode["createPages"] = async ({
     "src/templates/ProjectTemplate.tsx"
   );
 
+  const DesignerTemplateComponent = path.resolve(
+    __dirname,
+    "src/templates/DesignerTemplate.tsx"
+  );
+
   // Page Generating Function
-  const generatePostPage = ({ node: { uid } }: { node: { uid: string } }) => {
+  const generatePostProjectPage = ({
+    node: { uid },
+  }: {
+    node: { uid: string };
+  }) => {
     const pageOptions = {
       path: `/project/${uid}`,
       component: ProjectTemplateComponent,
@@ -87,6 +117,27 @@ export const createPages: GatsbyNode["createPages"] = async ({
     createPage(pageOptions);
   };
 
+  // Page Generating Function
+  const generatePostDesignerPage = ({
+    node: { uid },
+  }: {
+    node: { uid: string };
+  }) => {
+    const pageOptions = {
+      path: `/designer/${uid}`,
+      component: DesignerTemplateComponent,
+      context: { uid },
+    };
+
+    createPage(pageOptions);
+  };
+
   // Generate Post Page And Passing Slug Props for Query
-  queryAllProjectJsonData?.data?.allProjectJson.edges.forEach(generatePostPage);
+  queryAllProjectJsonData?.data?.allProjectJson?.edges.forEach(
+    generatePostProjectPage
+  );
+
+  queryAllDesignerJsonData?.data?.allDesignerJson?.edges.forEach(
+    generatePostDesignerPage
+  );
 };

@@ -1,13 +1,19 @@
-import React from "react";
-import { graphql, type HeadFC, type PageProps } from "gatsby";
+import { HeadFC, graphql } from "gatsby";
+import React, { FunctionComponent } from "react";
 import ProjectDetail from "@/components/pages/project/detail";
 import SEO from "@/layouts/SEO";
 
-const IndexPage: React.FC<PageProps> = ({ location, data }) => {
+type ProjectTemplateProps = {
+  data: any;
+};
+
+const ProjectTemplate: FunctionComponent<ProjectTemplateProps> = function ({
+  data,
+}) {
   return <ProjectDetail project={data?.projectJson} />;
 };
 
-export default IndexPage;
+export default ProjectTemplate;
 
 export const Head: HeadFC = () => (
   <>
@@ -17,8 +23,8 @@ export const Head: HeadFC = () => (
 );
 
 export const query = graphql`
-  query MyQuery($id: String) {
-    projectJson(uid: { eq: $id }) {
+  query MyQuery($uid: String) {
+    projectJson(uid: { eq: $uid }) {
       uid
       title
       authors {
