@@ -12,7 +12,8 @@
   "project_image": "./35/represent.png",
   "detail_image": [
     { "src": "./35/detail-1.png" },
-    { "src": "./35/detail-2.png" }
+    { "src": "./35/detail-2.png" },
+    { "src": "./35/detail-3.png" }
   ],
   "youtubeUrl": ""
 }
