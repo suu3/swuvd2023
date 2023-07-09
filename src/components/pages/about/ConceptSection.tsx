@@ -57,10 +57,8 @@ const ConceptSection = () => {
               Our possibilities to be released through the cracks of broken
               pieces are endless and colorful.
               <br />
-              48 graduates standing on the gold, the first step to take together
-              holding hands
-              <br />
-              It will be a leap towards a golden future.
+              47 graduates standing on the gold, the first step to take together
+              holding hands will be a leap towards a golden future.
             </>,
           ]}
         />

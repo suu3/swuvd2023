@@ -119,7 +119,7 @@ const creditList: {
     member: [
       [
         {
-          part: "그래픽",
+          part: "출판",
           name: ["민병걸 교수님"],
         },
         {
