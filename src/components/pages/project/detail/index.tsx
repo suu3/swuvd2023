@@ -31,12 +31,12 @@ const ProjectDetail = ({ project }: ProjectDetailType) => {
 
   const renderVideo = (() => {
     if (!youtubeUrl) return null;
-    if (youtubeUrl.includes("./"))
-      return (
-        <video controls width="100%">
-          <source src={videoSrc} type="video/mp4" />
-        </video>
-      );
+    // if (youtubeUrl.includes("./"))
+    //   return (
+    //     <video controls width="100%">
+    //       <source src={videoSrc} type="video/mp4" />
+    //     </video>
+    //   );
     return (
       <iframe
         width="100%"
@@ -80,19 +80,21 @@ const ProjectDetail = ({ project }: ProjectDetailType) => {
       <section className={detailSection}>
         <h2>Project Detail</h2>
         <div>
-          {renderVideo}
           {detail_image &&
             detail_image?.map(({ src }, idx) => {
               return (
-                <GatsbyImage
-                  key={idx}
-                  // layout="fixed"
-                  layout="fullWidth"
-                  objectFit="cover"
-                  sizes="100%"
-                  image={getImage(src)}
-                  alt={title}
-                />
+                <>
+                  <GatsbyImage
+                    key={idx}
+                    // layout="fixed"
+                    layout="fullWidth"
+                    objectFit="cover"
+                    sizes="100%"
+                    image={getImage(src)}
+                    alt={title}
+                  />
+                  {idx === 0 && renderVideo}
+                </>
               );
             })}
         </div>
