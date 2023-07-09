@@ -1,6 +1,6 @@
 import { HeadFC, graphql } from "gatsby";
 import React, { FunctionComponent } from "react";
-import DesignerDetail from "@/components/pages/designer/[id]";
+import DesignerDetail from "@/components/pages/designer/detail";
 import SEO from "@/layouts/SEO";
 import { IGatsbyImageData } from "gatsby-plugin-image";
 

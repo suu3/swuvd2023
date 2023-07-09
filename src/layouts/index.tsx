@@ -70,7 +70,13 @@ export default function CommonLayout({
           )}
           {isMobile && <MobileGnb theme={theme} pathname={location.pathname} />}
           <main className={designerMain}>
-            {!isMobile && <DesignerNav location={location} data={data?.list} />}
+            {!isMobile && (
+              <DesignerNav
+                uid={pageContext.uid}
+                location={location}
+                data={data?.list}
+              />
+            )}
             {children}
           </main>
         </div>
