@@ -22,7 +22,7 @@ const Project = ({ data }) => {
 
   const handleMenu = (item: { id: string; label: string }) => {
     setCurMenu(item);
-    navigate(`?category=${item.label}`);
+    // navigate(`?category=${item.label}`);
     toggleMenu();
   };
 
@@ -40,7 +40,7 @@ const Project = ({ data }) => {
       <ProjectNav
         curMenu={curMenu}
         toggleMenu={toggleMenu}
-        handleMenu={handleMenu}.
+        handleMenu={handleMenu}
         isOpen={isOpen}
       />
       <div className={grid}>{renderCards}</div>
