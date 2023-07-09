@@ -1,35 +1,43 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import classNames from "classnames";
-import { sidebar, menuWrapper, menu, active } from "./desinger-nav.module.scss";
-import { Link } from "gatsby";
+import { menuWrapper, menu, active } from "./desinger-nav.module.scss";
+import { navigate } from "gatsby";
 // import ScrollBar from "./ScrollBar";
 
-const DesignerNav = ({ data: { edges }, location }) => {
-  const menuRef = useRef(null);
+const DesignerNav = ({ uid, data: { edges }, location }) => {
+  const refs = edges.reduce((acc, value) => {
+    acc[value.node.uid] = React.createRef();
+    return acc;
+  }, {});
+
+  const goToDetail = (uid: string) => {
+    navigate(`/designer/${uid}`);
+  };
+
+  useEffect(() => {
+    refs?.[uid]?.current.scrollIntoView();
+  }, []);
+
   const renderMenus = edges.map(
     ({ node }: { node: { uid: string; name: string } }, idx: string) => {
       return (
-        <Link to={`/designer/${node.uid}`} key={idx}>
-          <div
-            className={classNames(
-              menu,
-              `/designer/${node.uid}` === location.pathname && active
-            )}
-          >
-            {node.name}
-          </div>
-        </Link>
+        <div
+          ref={refs[node.uid]}
+          key={idx}
+          onClick={() => {
+            goToDetail(node.uid);
+          }}
+          className={classNames(
+            menu,
+            `/designer/${node.uid}` === location.pathname && active
+          )}
+        >
+          {node.name}
+        </div>
       );
     }
   );
-  return (
-    <nav className={sidebar}>
-      {/* <ScrollBar menuRef={menuRef} /> */}
-      <div ref={menuRef} className={menuWrapper}>
-        {renderMenus}
-      </div>
-    </nav>
-  );
+  return <nav className={menuWrapper}>{renderMenus}</nav>;
 };
 
 export default DesignerNav;

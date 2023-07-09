@@ -19,8 +19,8 @@
     content: "";
     position: absolute;
 
-    width: 18px;
-    height: 21px;
+    width: 17px;
+    height: 17px;
 
     background-color: var(--primary-100);
 
@@ -64,7 +64,7 @@
     }
     &::before {
       @include circle;
-      bottom: 48px;
+      bottom: 33px;
       left: 80%;
       z-index: 2;
 
@@ -103,10 +103,10 @@
     .rectangle {
       &::before {
         @include rectangle;
-        top: 32px;
-        left: 32px;
-        right: 32px;
-        bottom: 32px;
+        top: 22px;
+        left: 25px;
+        right: 22px;
+        bottom: 25px;
 
         @include tablet {
           top: 16px;
@@ -118,10 +118,10 @@
 
       &::after {
         @include rectangle;
-        top: 83px;
-        left: 86px;
-        right: 80px;
-        bottom: 86px;
+        top: 58px;
+        left: 58px;
+        right: 58px;
+        bottom: 58px;
 
         @include tablet {
           top: 35px;
@@ -135,8 +135,8 @@
     .circle {
       &::before {
         @include circle;
-        top: 48px;
-        left: 60%;
+        top: 32px;
+        left: 70%;
 
         @include tablet {
           top: 22px;
@@ -145,7 +145,7 @@
       &::after {
         @include circle;
         top: 50%;
-        left: 52px;
+        left: 33px;
         transform: translateY(-50%);
 
         @include tablet {
@@ -160,7 +160,7 @@
 
       > p {
         word-break: keep-all;
-        // max-width: 70%;
+        max-width: 400px;
         margin: auto;
 
         &:first-of-type {
