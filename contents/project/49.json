@@ -10,6 +10,9 @@
   ],
   "about": "졸업전시를 준비하며 설치 팀장으로서 모든 학우들의 작품 배치를 구상했다. 구성을 짜며 어떤 의도로 배치했는지와 최종 배치도를 포스터로 표현하고자 했다.",
   "project_image": "./49/represent.png",
-  "detail_image": [{ "src": "./49/detail-1.png" }],
+  "detail_image": [
+    { "src": "./49/detail-1.png" },
+    { "src": "./49/detail-2.png" }
+  ],
   "youtubeUrl": ""
 }

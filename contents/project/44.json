@@ -10,6 +10,6 @@
   ],
   "about": "레드벨벳의 미니앨범 'The ReVe Festival 2022 - Birthday' 두 번째 수록곡인 'Bye Bye'의 뮤직비디오. \n주인공 이브(Eve)가 과거 연인인 루카(Ruka)와의 관계를 되돌아보며 이미 끝난 사랑을 인정하기까지의 과정을 보여준다.",
   "project_image": "./44/represent.png",
-  "detail_image": [],
+  "detail_image": [{ "src": "./44/detail-1.png" }],
   "youtubeUrl": "https://www.youtube.com/embed/qZLIVIQG1RY"
 }

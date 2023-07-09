@@ -10,6 +10,9 @@
   ],
   "about": "츄카홀릭은 성년들을 위한 술 초콜릿 브랜드입니다. 달콤하면서도 쌉쌀한 어른의 세계에 온 것을 오직 축하하고 응원하며, 소란스럽고 즐거운 분위기의 패턴을 활용합니다.",
   "project_image": "./70/represent.png",
-  "detail_image": [{ "src": "./70/detail-1.png" }],
+  "detail_image": [
+    { "src": "./70/detail-1.png" },
+    { "src": "./70/detail-2.png" }
+  ],
   "youtubeUrl": ""
 }

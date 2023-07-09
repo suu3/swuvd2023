@@ -11,6 +11,11 @@
   ],
   "about": "Dive Dream은 남의 꿈속에 들어갈 수 있는 능력을 가진 소녀(주인공)가 악몽을 찾아 정화하는 이야기를 담은 게임이다. 게임 트레일러를 2d 모션그래픽으로 보여주며 사람들에게 게임을 알리고 소개하기 위함과 동시에 스트레스, 과로로 인해 악몽을 꾸는 현대인들에게 좋은 꿈을 꿀 수 있도록 도와주겠다는 메시지를 전한다. 게임은 총 4가지 스테이지로 구성되어 있으며 소녀가 여행을 하는 장면을 통해 소개한다.",
   "project_image": "./11/represent.png",
-  "detail_image": [{ "src": "./11/detail-1.png" }],
+  "detail_image": [
+    {
+      "src": "./11/detail-1.png"
+    },
+    { "src": "./11/detail-2.png" }
+  ],
   "youtubeUrl": "https://www.youtube.com/embed/mZ1Pp89yo5M"
 }
