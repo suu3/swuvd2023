@@ -10,6 +10,9 @@
   ],
   "about": "mz세대 크리스천의 성경에 대한 흥미 유발, 비 기독교인의 크리스천 문화에 대한 관심 증가를 위해 현재 가장 핫한 컨텐츠인 3d 캐릭터와 성격유형검사를 융합해 만든 프로그램입니다. 애니어그램테스트(앱) > 유형도출 > 대표 인물 확인 > 굿즈를 통한 프로젝트의 상기로 이어집니다.",
   "project_image": "./67/represent.png",
-  "detail_image": [{ "src": "./67/detail-1.png" }],
+  "detail_image": [
+    { "src": "./67/detail-1.png" },
+    { "src": "./67/detail-2.png" }
+  ],
   "youtubeUrl": ""
 }

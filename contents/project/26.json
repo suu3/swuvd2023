@@ -10,6 +10,9 @@
   ],
   "about": "한식당을 운영하는 할머니 기순의 일상을 담은 관찰 다큐멘터리이다. 믿음식당을 운영하게 된 계기부터 믿음식당의 현재와 미래를 손녀의 시각으로 담아냈다. 혼자서 운영하지만 혼자서는 운영되지 않는 믿음식당처럼 우리가 살아가는 삶도, 세상도 이와 같은 모습이다.",
   "project_image": "./26/represent.png",
-  "detail_image": [{ "src": "./26/detail-1.png" }],
+  "detail_image": [
+    { "src": "./26/detail-1.png" },
+    { "src": "./26/detail-2.png" }
+  ],
   "youtubeUrl": "https://www.youtube.com/embed/oZXo2Ju8i4o"
 }

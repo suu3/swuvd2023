@@ -10,6 +10,9 @@
   ],
   "about": "‘월요병’을 주제로 한 2D애니메이션이다. 회사가 가시 싫은 ‘냐’의 일상 속 엉뚱한 상상을 주제로 기획하였다.",
   "project_image": "./34/represent.png",
-  "detail_image": [{ "src": "./34/detail-1.png" }],
+  "detail_image": [
+    { "src": "./34/detail-1.png" },
+    { "src": "./34/detail-2.png" }
+  ],
   "youtubeUrl": "https://www.youtube.com/embed/ovW6elbXxdI"
 }

@@ -11,6 +11,10 @@
   ],
   "about": "Tinyffect는 화학물질로부터 안전하고 지속 가능한 방식으로 청소에 도움을 주는 EM(유용미생물) 청소 브랜드이다. Tinyffect는 ‘작은 것들이 모여 이루는 강한 효과’라는 의미를 담고 있다. EM은 유익한 미생물 수십종을 조합/배양한 것인데, 이것의 생성물이 강한 항산화물질을 만들어내 악취 및 곰팡이 제거, 수질 정화 및 유해 물질 제거에 효과를 보여 가정 내에서 활용할 수 있다.",
   "project_image": "./31/represent.png",
-  "detail_image": [{ "src": "./31/detail-1.png" }],
+  "detail_image": [
+    { "src": "./31/detail-1.png" },
+    { "src": "./31/detail-2.png" }
+  ],
+
   "youtubeUrl": ""
 }

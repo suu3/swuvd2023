@@ -13,7 +13,8 @@
   "project_image": "./3/represent.png",
   "detail_image": [
     { "src": "./3/detail-1.png" },
-    { "src": "./3/detail-2.png" }
+    { "src": "./3/detail-2.png" },
+    { "src": "./3/detail-3.png" }
   ],
   "youtubeUrl": ""
 }
