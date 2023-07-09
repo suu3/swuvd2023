@@ -101,13 +101,13 @@ const MobileGnb = ({ pathname, theme = "dark" }: GNBType) => {
           </svg>
         </Link>
         {isOpen && (
-          <Link to="/">
-            <div className={styles["text"]}>
+          <div className={styles["text"]}>
+            <Link to="/">
               금을
               <span />
               넘어
-            </div>
-          </Link>
+            </Link>
+          </div>
         )}
         <div className={styles["hamburger"]} onClick={toggleMenu}>
           {icon}
