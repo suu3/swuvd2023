@@ -4,6 +4,7 @@ import { grid, section } from "./project.module.scss";
 import ProjectNav from "@/layouts/ProjectNav";
 import TopBtn from "@/layouts/TopBtn";
 import useIsMobile from "@/hooks/useIsMobile";
+import { navigate } from "gatsby";
 
 const Project = ({ data }) => {
   const isMobile = useIsMobile();
@@ -21,6 +22,7 @@ const Project = ({ data }) => {
 
   const handleMenu = (item: { id: string; label: string }) => {
     setCurMenu(item);
+    navigate(`?category=${item.label}`);
     toggleMenu();
   };
 
@@ -38,7 +40,7 @@ const Project = ({ data }) => {
       <ProjectNav
         curMenu={curMenu}
         toggleMenu={toggleMenu}
-        handleMenu={handleMenu}
+        handleMenu={handleMenu}.
         isOpen={isOpen}
       />
       <div className={grid}>{renderCards}</div>
