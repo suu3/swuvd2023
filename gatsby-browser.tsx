@@ -1,9 +1,9 @@
 import "./src/styles/global.scss";
 // Logs when the client route changes
 
-export const onRouteUpdate = ({ location, prevLocation }) => {
-  // window.scrollTo(0, 0);
-};
+// export const onRouteUpdate = ({ location, prevLocation }) => {
+//   // window.scrollTo(0, 0);
+// };
 
 // Wraps every page in a component
 // export const wrapPageElement = ({ element, props }) => {
@@ -18,8 +18,9 @@ export const shouldUpdateScroll = ({
   // const scrollToTopRoutes = [`/privacy-policy`, `/page-2`];
   // // if the new route is part of the list above, scroll to top (0, 0)
   if (pathname.includes("/desinger")) {
-    // window.scrollTo(0, 0);
     getSavedScrollPosition();
+  } else {
+    window.scrollTo(0, 0);
   }
   return false;
 };
