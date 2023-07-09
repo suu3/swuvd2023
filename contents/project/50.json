@@ -20,7 +20,8 @@
   "project_image": "./50/represent.png",
   "detail_image": [
     { "src": "./50/detail-1.png" },
-    { "src": "./50/detail-2.png" }
+    { "src": "./50/detail-2.png" },
+    { "src": "./50/detail-3.png" }
   ],
   "youtubeUrl": ""
 }
