@@ -10,6 +10,9 @@
   ],
   "about": "자라다는 초경축하선물키트입니다. 초경이라는 낯선 경험을 무섭지 않게, 자연스럽게 받아들일 수 있도록 합니다. \n초경이 여성이 임신을 할 수 있는 신체가 되었다는 증거가 아닌 건강히 잘 자라고 있다는 의미로 받아들일 수 있게 돕고자 합니다.",
   "project_image": "./62/represent.png",
-  "detail_image": [{ "src": "./62/detail-1.png" }],
+  "detail_image": [
+    { "src": "./62/detail-1.png" },
+    { "src": "./62/detail-2.png" }
+  ],
   "youtubeUrl": ""
 }

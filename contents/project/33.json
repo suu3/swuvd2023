@@ -10,6 +10,10 @@
   ],
   "about": "20대를 위한 홍삼 발포 비타민 브랜드이다. 청년층에게 어려울 수 있는 홍삼을 신선들의 세계를 재해석해 만든 홍삼계 일러스트로 시각화하여 새로운 홍삼의 모습을 제안한다.",
   "project_image": "./33/represent.png",
-  "detail_image": [{ "src": "./33/detail-1.png" }],
+  "detail_image": [
+    { "src": "./33/detail-1.png" },
+    { "src": "./33/detail-2.png" }
+  ],
+
   "youtubeUrl": ""
 }

@@ -10,6 +10,9 @@
   ],
   "about": "기독교 세계관을 바탕으로 죄책감의 문제를 어떻게 바라보아야 하는지를 다루고 있는 동화이다. 잃어버린 양과 돌아온 탕자의 이야기를 함께 풀어나간다. 잘못된 선택으로 인해 죄책감을 마주할 때, 다시 돌이키는 행위 자체가 문제 개선의 중요한 열쇠가 된다는 메시지를 전한다.",
   "project_image": "./37/represent.png",
-  "detail_image": [{ "src": "./37/detail-1.png" }],
+  "detail_image": [
+    { "src": "./37/detail-1.png" },
+    { "src": "./37/detail-2.png" }
+  ],
   "youtubeUrl": ""
 }
