@@ -4,6 +4,7 @@ import Project from "@/components/pages/project";
 import SEO from "@/layouts/SEO";
 
 const IndexPage: React.FC<PageProps> = ({ location, data }) => {
+  console.log(location);
   return <Project data={data.allProjectJson?.edges} />;
 };
 
