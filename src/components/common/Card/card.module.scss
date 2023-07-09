@@ -159,6 +159,10 @@
       text-align: center;
 
       > p {
+        word-break: keep-all;
+        max-width: 70%;
+        margin: auto;
+
         &:first-of-type {
           font-weight: 700;
           font-size: 40px;
