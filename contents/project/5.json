@@ -15,5 +15,5 @@
   "about": "어린이를 대상으로, 환경파괴로부터 자연을 복원하고 멸종위기동물을 구조하는 터치형 캐주얼 게임이다. 직관적인 플레이와 즉각적인 보상으로 자연 복원 필요성을 알려준다. 게임진행은 화면의 환경파괴 요소를 여러 번의 터치로 제거하고 서식지를 복원하면 동물들도 활기를 되찾는다.",
   "project_image": "./5/represent.png",
   "detail_image": [{ "src": "./5/detail-1.png" }],
-  "youtubeUrl": "./5/video.mp4"
+  "youtubeUrl": "https://www.youtube.com/embed/zIXq2t7VKJ0"
 }

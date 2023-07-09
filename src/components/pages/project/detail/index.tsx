@@ -31,12 +31,12 @@ const ProjectDetail = ({ project }: ProjectDetailType) => {
 
   const renderVideo = (() => {
     if (!youtubeUrl) return null;
-    if (youtubeUrl.includes("./"))
-      return (
-        <video controls width="100%">
-          <source src={videoSrc} type="video/mp4" />
-        </video>
-      );
+    // if (youtubeUrl.includes("./"))
+    //   return (
+    //     <video controls width="100%">
+    //       <source src={videoSrc} type="video/mp4" />
+    //     </video>
+    //   );
     return (
       <iframe
         width="100%"
