@@ -12,7 +12,7 @@ const IndexPage: React.FC<PageProps> = ({ location, data }) => {
 
 export const query = graphql`
   query allDesingerQuery {
-    list: allDesignerJson {
+    list: allDesignerJson(sort: { name: ASC }) {
       edges {
         node {
           uid

@@ -1,5 +1,19 @@
 @import "@/styles/_media-query.scss";
 
+.mobile-only {
+  display: none;
+  @include tablet {
+    display: inline-block;
+  }
+}
+
+.desktop-only {
+  display: inline-block;
+  @include tablet {
+    display: none;
+  }
+}
+
 .section {
   overflow: hidden;
   color: var(--secondary-400);
@@ -26,17 +40,6 @@
     color: var(--secondary-400);
   }
 }
-
-// .left-text,
-// .right-text {
-//   z-index: 2;
-//   position: absolute;
-//   top: 50%;
-
-//   font-weight: 700;
-//   font-size: 30px;
-//   line-height: 52px;
-// }
 
 .location {
   z-index: 2;

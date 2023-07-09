@@ -1,9 +1,11 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import classNames from "classnames";
 import {
   section,
   location,
   bigSvg,
+  desktopOnly,
+  mobileOnly,
   locationSvg,
   title,
 } from "./img-section.module.scss";
@@ -26,12 +28,10 @@ const ImgSection: React.FC = () => {
           <br /> EXHIBITION
         </p>
       )}
-      {/* <p className={leftText}>40TH EXHIBITION</p> */}
-      {/* <p className={rightText}>2023.07.07 - 07.15</p> */}
       <div className={location}>
         {!isMobile && <Location />}
         {isMobile && (
-          <>
+          <div className={mobileOnly}>
             <svg
               width="128"
               height="58"
@@ -296,7 +296,7 @@ const ImgSection: React.FC = () => {
                 fill="black"
               />
             </svg>
-          </>
+          </div>
         )}
       </div>
     </section>
@@ -306,7 +306,7 @@ const ImgSection: React.FC = () => {
 export default ImgSection;
 
 const Location = () => (
-  <div className={bigSvg}>
+  <div className={classNames(bigSvg, desktopOnly)}>
     <svg
       width="45"
       height="54"
