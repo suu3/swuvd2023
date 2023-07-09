@@ -102,9 +102,11 @@ const MobileGnb = ({ pathname, theme = "dark" }: GNBType) => {
         </Link>
         {isOpen && (
           <div className={styles["text"]}>
-            금을
-            <span />
-            넘어
+            <Link to="/">
+              금을
+              <span />
+              넘어
+            </Link>
           </div>
         )}
         <div className={styles["hamburger"]} onClick={toggleMenu}>
