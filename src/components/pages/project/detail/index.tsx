@@ -6,9 +6,10 @@ import {
   imgWrapper,
   aboutSection,
   detailSection,
+  thumbnail,
 } from "./project-detail.module.scss";
-import { GatsbyImage, IGatsbyImageData, getImage, Img } from "gatsby-plugin-image";
-import videoSrc from "@/../contents/project/5/video.mp4";
+import { GatsbyImage, IGatsbyImageData, getImage } from "gatsby-plugin-image";
+import classNames from "classnames";
 
 type ProjectDetailType = {
   project: {
@@ -28,19 +29,14 @@ type ProjectDetailType = {
 const ProjectDetail = ({ project }: ProjectDetailType) => {
   const { authors, about, project_image, detail_image, title, youtubeUrl } =
     project;
-    const imageStyles = {
-      width: "100%",
-      height: "100%",
-    }
-  
+  const imageStyles = {
+    width: "100%",
+    height: "100%",
+  };
+
   const renderVideo = (() => {
     if (!youtubeUrl) return null;
-    // if (youtubeUrl.includes("./"))
-    //   return (
-    //     <video controls width="100%">
-    //       <source src={videoSrc} type="video/mp4" />
-    //     </video>
-    //   );
+
     return (
       <iframe
         width="100%"
@@ -65,15 +61,8 @@ const ProjectDetail = ({ project }: ProjectDetailType) => {
             );
           })}
         </div>
-        <div className={imgWrapper}>
-          <GatsbyImage
-            layout="fixed"
-            // layout="fullWidth"
-            objectFit="cover"
-            sizes="100%"
-            image={getImage(project_image)}
-            alt={title}
-          />
+        <div className={classNames(thumbnail, imgWrapper)}>
+          <GatsbyImage image={getImage(project_image)} alt={title} />
         </div>
       </section>
       <section className={aboutSection}>
@@ -88,12 +77,8 @@ const ProjectDetail = ({ project }: ProjectDetailType) => {
             detail_image?.map(({ src }, idx) => {
               return (
                 <Fragment key={idx}>
-                  <div
-                  style={imageStyles}>
-                  <GatsbyImage
-                    image={getImage(src)} 
-                    alt={title}
-                  />
+                  <div className={imgWrapper}>
+                    <GatsbyImage image={getImage(src)} alt={title} />
                   </div>
                   {idx === 0 && renderVideo}
                 </Fragment>

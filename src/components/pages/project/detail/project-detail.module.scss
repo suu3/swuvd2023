@@ -16,7 +16,7 @@
 
   @include tablet {
     margin: 0;
-    padding: 369px 0 100px 0;
+    padding: 369px 0 80px 0;
 
     text-align: center;
     > h1 {
@@ -88,17 +88,16 @@
       }
     }
   }
+}
+.img-wrapper {
+  width: 100%;
+  height: 100%;
 
-  .img-wrapper {
-    width: 1067px;
-    height: 716px;
-
-    > div {
-      width: 100%;
-      height: 100%;
-    }
+  &.thumbnail {
+    max-width: 1067px;
 
     @include tablet {
+      max-width: auto;
       position: absolute;
       top: 100px;
 
@@ -173,7 +172,6 @@
 
     > div {
       padding-top: 39px;
-      padding-bottom: 16px;
     }
   }
 }
