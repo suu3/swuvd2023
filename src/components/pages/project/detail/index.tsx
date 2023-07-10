@@ -87,7 +87,7 @@ const ProjectDetail = ({ project }: ProjectDetailType) => {
           {detail_image &&
             detail_image?.map(({ src }, idx) => {
               return (
-                <Fragment>
+                <Fragment key={idx}>
                   <div
                   style={imageStyles}>
                   <GatsbyImage
