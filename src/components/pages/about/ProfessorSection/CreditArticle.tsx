@@ -113,7 +113,7 @@ const creditList: {
     ],
   },
   {
-    pic: "교수",
+    pic: "지도교수",
     width: 67,
     mwidth: 70,
     member: [

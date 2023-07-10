@@ -22,6 +22,10 @@
       font-weight: 700;
       font-size: 55px;
       line-height: 90px;
+
+      &:last-of-type{
+        padding-bottom: 32px;
+      }
     }
 
     > p {
