@@ -13,7 +13,10 @@
   "project_image": "./12/represent.png",
   "detail_image": [
     { "src": "./12/detail-1.png" },
-    { "src": "./12/detail-2.png" }
+    { "src": "./12/detail-2.png" },
+    { "src": "./12/detail-3.png" },
+    { "src": "./12/detail-4.png" },
+    { "src": "./12/detail-5.png" }
   ],
   "youtubeUrl": ""
 }
