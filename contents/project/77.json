@@ -1,0 +1,19 @@
+{
+  "uid": "77",
+  "title": "서둘러 채채씨",
+  "category": "브랜딩",
+  "authors": [
+    {
+      "name": "한현지",
+      "email": "04guswl@naver.com"
+    }
+  ],
+  "about": "우리의 아침 시간은 항상 바쁘고 정신없다. 촉박한 시간때문에 아침식사를 거르거나 패스트푸드로 식사를 대체하는 경우가 많다. ‘바쁜 현대인들을 위해 스피드, 영양소, 맛까지 한 번에 잡은 야채 간편식을 만들어보면 어떨까?’ 라는 생각으로 이 브랜드를 만들게 되었다.",
+  "project_image": "./77/represent.png",
+  "detail_image": [
+    {
+      "src": "./77/detail-1.png"
+    }
+  ],
+  "youtubeUrl": "https://www.youtube.com/embed/g1m3btkwmiA"
+}
