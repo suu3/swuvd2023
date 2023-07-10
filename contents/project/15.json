@@ -11,8 +11,10 @@
   "about": "uglicious는 버려지는 못난이 농산물을 새롭게 이용하여, 가치 있고 건강한 발효 피클을 만드는 브랜드입니다. uglicious는 버려지는 못난이 농산물을 활용하여 피클을 만듦으로써 환경에 기여하고, 소비자에게는 가치 있는 선택과 소비의 경험을 제공하는 것을 목적으로 나아갑니다.",
   "project_image": "./15/represent.png",
   "detail_image": [
-    { "src": ".er/1/detail-1.png" },
-    { "src": "./15/detail-2.png" }
+    { "src": "./15/detail-1.png" },
+    { "src": "./15/detail-2.png" },
+    { "src": "./15/detail-3.png" },
+    { "src": "./15/detail-4.png" }
   ],
   "youtubeUrl": ""
 }
