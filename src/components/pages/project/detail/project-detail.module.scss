@@ -9,6 +9,9 @@
     font-weight: 700;
     font-size: 55px;
     line-height: 90px;
+
+    border-bottom: 1px solid #636363;
+    padding-bottom: 40px;
   }
 
   @include tablet {
@@ -20,13 +23,18 @@
       font-weight: 700;
       font-size: 20px;
       line-height: 40px;
+
+      border-bottom: none;
+      padding-bottom: 0px;
+
     }
   }
 }
 
 .designers-section {
   display: flex;
-  padding-top: 142px;
+  padding-top: 96px;
+  justify-content: space-between;
 
   @include tablet {
     padding-top: 24px;
