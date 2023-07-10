@@ -69,7 +69,7 @@ const creditList: {
 }[] = [
   {
     pic: "졸업준비위원회",
-    width: 120,
+    width: 140,
     mwidth: 70,
     member: [
       [
@@ -79,7 +79,11 @@ const creditList: {
         },
         {
           part: "부위원장",
-          name: ["이 새"],
+          name: [`이 새 `],
+        },
+        {
+          part: "웹 팀장",
+          name: ["이미선"],
         },
       ],
       [
@@ -92,8 +96,8 @@ const creditList: {
           name: ["이세영"],
         },
         {
-          part: "웹 팀장",
-          name: ["이미선"],
+          part: "영상 팀장",
+          name: ["박지원"],
         },
       ],
       [
@@ -106,15 +110,15 @@ const creditList: {
           name: ["강나경"],
         },
         {
-          part: "영상 팀장",
-          name: ["박지원"],
+          part: "회계 팀장",
+          name: ["김수미"],
         },
       ],
     ],
   },
   {
     pic: "지도교수",
-    width: 67,
+    width: 75,
     mwidth: 70,
     member: [
       [
@@ -141,7 +145,7 @@ const creditList: {
   },
   {
     pic: "웹사이트 제작",
-    width: 67,
+    width: 75,
     mwidth: 70,
     member: [
       [

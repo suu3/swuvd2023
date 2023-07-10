@@ -12,7 +12,9 @@
   color: var(--white);
 
   padding: 15px 0;
-  margin: auto 210px;
+
+  max-width: var(--global-max-width);
+  margin: auto;
 
   .info-content {
     width: 431px;
