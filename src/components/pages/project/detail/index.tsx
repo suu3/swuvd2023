@@ -7,9 +7,11 @@ import {
   aboutSection,
   detailSection,
   thumbnail,
+  titleCls,
 } from "./project-detail.module.scss";
 import { GatsbyImage, IGatsbyImageData, getImage } from "gatsby-plugin-image";
 import classNames from "classnames";
+import useIsMobile from "@/hooks/useIsMobile";
 
 type ProjectDetailType = {
   project: {
@@ -29,10 +31,8 @@ type ProjectDetailType = {
 const ProjectDetail = ({ project }: ProjectDetailType) => {
   const { authors, about, project_image, detail_image, title, youtubeUrl } =
     project;
-  const imageStyles = {
-    width: "100%",
-    height: "100%",
-  };
+
+  const isMobile = useIsMobile();
 
   const renderVideo = (() => {
     if (!youtubeUrl) return null;
@@ -49,9 +49,10 @@ const ProjectDetail = ({ project }: ProjectDetailType) => {
   })();
   return (
     <main className={main}>
-      <h1>{title}</h1>
+      {!isMobile && <h1 className={titleCls}>{title}</h1>}
       <section className={designersSection}>
         <div className={designerInfo}>
+          {isMobile && <h1 className={titleCls}>{title}</h1>}
           {authors?.map((designer, idx) => {
             return (
               <div key={idx}>
