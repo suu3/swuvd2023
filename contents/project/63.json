@@ -17,7 +17,19 @@
   "detail_image": [
     { "src": "./63/detail-1.png" },
     { "src": "./63/detail-2.png" },
-    { "src": "./63/detail-3.png" }
+    { "src": "./63/detail-3.png" },
+    { "src": "./63/detail-4.png" },
+    { "src": "./63/detail-5.png" },
+    { "src": "./63/detail-6.png" },
+    { "src": "./63/detail-7.png" },
+    { "src": "./63/detail-8.png" },
+    { "src": "./63/detail-9.png" },
+    { "src": "./63/detail-10.png" },
+    { "src": "./63/detail-11.png" },
+    { "src": "./63/detail-12.png" },
+    { "src": "./63/detail-13.png" },
+    { "src": "./63/detail-14.png" },
+    { "src": "./63/detail-15.png" }
   ],
   "youtubeUrl": ""
 }

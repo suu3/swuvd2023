@@ -13,7 +13,16 @@
   "detail_image": [
     { "src": "./55/detail-1.png" },
     { "src": "./55/detail-2.png" },
-    { "src": "./55/detail-3.png" }
+    { "src": "./55/detail-3.png" },
+    { "src": "./55/detail-4.png" },
+    { "src": "./55/detail-5.png" },
+    { "src": "./55/detail-6.png" },
+    { "src": "./55/detail-7.png" },
+    { "src": "./55/detail-8.png" },
+    { "src": "./55/detail-9.png" },
+    { "src": "./55/detail-10.png" },
+    { "src": "./55/detail-11.png" },
+    { "src": "./55/detail-12.png" }
   ],
   "youtubeUrl": ""
 }

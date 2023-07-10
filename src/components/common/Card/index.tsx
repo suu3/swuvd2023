@@ -3,7 +3,6 @@ import {
   card,
   image,
   imageInfo,
-  hoverImage,
   clickImage,
   text,
   rectangle,
@@ -52,7 +51,7 @@ const Card = ({
 
   const hoverImageCls = {
     [imageInfo]: true,
-    [hoverImage]: !isMobile,
+    // [hoverImage]: !isMobile,
     [clickImage]: isMobile && clickCard === uid,
   };
 

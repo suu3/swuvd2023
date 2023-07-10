@@ -1,7 +1,8 @@
 @import "@/styles/_media-query.scss";
 
 @mixin section-styles {
-  margin: auto 210px;
+  max-width: var(--global-max-width);
+  margin: auto;
   padding: 120px 0;
 
   @include tablet {

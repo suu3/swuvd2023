@@ -9,7 +9,9 @@
   .credit {
     position: relative;
     z-index: 2;
-    margin: auto 210px;
+
+    max-width: var(--global-max-width);
+    margin: auto;
     color: var(--white);
 
     > p {
@@ -47,10 +49,18 @@
         }
       }
 
+      &:first-of-type {
+        .one-member {
+          > div {
+            min-width: 80px;
+          }
+        }
+      }
+
       > span {
         flex-shrink: 0;
         //졸업 준비 위원회...
-        width: 194px;
+        width: 215px;
         font-weight: 700;
         font-size: 30px;
         line-height: 52px;
@@ -68,7 +78,7 @@
           line-height: 20px;
 
           margin-right: 24px;
-          width: 91px;
+          width: 100px;
         }
       }
 
@@ -102,7 +112,7 @@
             > span {
               display: inline-block;
 
-              margin-right: 37px;
+              margin-right: 45px;
             }
 
             > div {
@@ -126,7 +136,7 @@
               > div {
                 > span {
                   font-weight: 500;
-                  width: 70px;
+                  width: 80px;
                 }
 
                 display: flex;

@@ -20,6 +20,8 @@
   min-height: 1080px;
   position: relative;
   background-image: url("@/images/about/background-main.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 
   @include tablet {
     min-height: 640px;

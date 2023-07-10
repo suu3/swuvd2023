@@ -133,11 +133,14 @@ const Options = ({ pathname, toggleMenu }) => {
   }, []);
 
   const renderMenus = menus.map(({ title, link }, idx) => {
-    const isActive = link === "/" ? pathname === link : pathname.includes(link);
+    // const isActive = link === "/" ? pathname === link : pathname.includes(link);
     return (
       <Link to={link} key={title} onClick={toggleMenu}>
         <li
-          className={classnames(styles["menu"], isActive && styles["active"])}
+          className={classnames(
+            styles["menu"]
+            // ,isActive && styles["active"]
+          )}
         >
           {title}
         </li>

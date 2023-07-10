@@ -17,7 +17,10 @@
 .professor {
   position: relative;
   z-index: 2;
-  margin: auto 210px;
+
+  max-width: var(--global-max-width);
+  margin: auto;
+
   color: var(--white);
 
   padding-top: 150px;

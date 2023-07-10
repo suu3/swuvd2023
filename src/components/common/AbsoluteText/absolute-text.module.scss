@@ -9,6 +9,10 @@
   font-size: 30px;
   line-height: 52px;
 
+  @media (min-width: 991px) and (max-width: 1720px) {
+    display: none;
+  }
+
   &.center {
     top: 50%;
   }
@@ -19,7 +23,7 @@
 
   &.desktop-only {
     display: inline-block;
-    @include tablet {
+    @media (max-width: 1720px) {
       display: none;
     }
   }
@@ -62,9 +66,6 @@
 
   &.center {
     transform: translateY(-50%);
-  }
-
-  &.top {
   }
 
   @include tablet {

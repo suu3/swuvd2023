@@ -26,5 +26,7 @@ $colors: (
   }
 
   --nav-z-index: 1000;
-  --global-max-width: 1500px;
+  --global-max-width: 1500px; // 1500 + 210 * 2
+  --global-min-width: 1920px;
+  --global-margin-horizontal: 210px;
 }

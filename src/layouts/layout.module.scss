@@ -25,7 +25,7 @@
 
 .main {
   min-width: var(--global-max-width);
-
+  overflow: hidden;
   @include tablet {
     min-width: auto;
   }
