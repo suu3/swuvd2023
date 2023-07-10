@@ -52,7 +52,13 @@ const DesignerDetail = ({ data }) => {
                   fill="black"
                 />
               </svg>
-              {instagram}
+              <a
+                href={`https://www.instagram.com/${instagram}/`}
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                {instagram}
+              </a>
             </p>
           )}
           <p>
