@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import {
   main,
   designersSection,
@@ -7,7 +7,7 @@ import {
   aboutSection,
   detailSection,
 } from "./project-detail.module.scss";
-import { GatsbyImage, IGatsbyImageData, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, IGatsbyImageData, getImage, Img } from "gatsby-plugin-image";
 import videoSrc from "@/../contents/project/5/video.mp4";
 
 type ProjectDetailType = {
@@ -28,7 +28,11 @@ type ProjectDetailType = {
 const ProjectDetail = ({ project }: ProjectDetailType) => {
   const { authors, about, project_image, detail_image, title, youtubeUrl } =
     project;
-
+    const imageStyles = {
+      width: "100%",
+      height: "100%",
+    }
+  
   const renderVideo = (() => {
     if (!youtubeUrl) return null;
     // if (youtubeUrl.includes("./"))
@@ -83,18 +87,16 @@ const ProjectDetail = ({ project }: ProjectDetailType) => {
           {detail_image &&
             detail_image?.map(({ src }, idx) => {
               return (
-                <>
+                <Fragment key={idx}>
+                  <div
+                  style={imageStyles}>
                   <GatsbyImage
-                    key={idx}
-                    // layout="fixed"
-                    layout="fullWidth"
-                    objectFit="cover"
-                    sizes="100%"
-                    image={getImage(src)}
+                    image={getImage(src)} 
                     alt={title}
                   />
+                  </div>
                   {idx === 0 && renderVideo}
-                </>
+                </Fragment>
               );
             })}
         </div>
