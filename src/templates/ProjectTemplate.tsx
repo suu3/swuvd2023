@@ -49,7 +49,12 @@ export const query = graphql`
       detail_image {
         src {
           childImageSharp {
-            gatsbyImageData
+            gatsbyImageData(
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+              quality: 100
+              layout: FULL_WIDTH
+            )
           }
         }
       }
