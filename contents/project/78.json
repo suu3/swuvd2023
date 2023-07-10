@@ -11,9 +11,13 @@
   "about": "디저트 브랜드 ‘NUDAKE’는 ‘New Different Cake’의 약자로, 케이크에 대한 관념을 깨부수는 독창적린 디저트를 추구한다. ‘NUDAKE’만이 가지고 있는 그로테스크하며 독특한 분위기와 그들이 추구하는 ‘디저트계의 패션’에 영감을 받아 영상을 제작하였다.",
   "project_image": "./78/represent.png",
   "detail_image": [
-    {
-      "src": "./78/detail-1.png"
-    }
+    { "src": "./78/detail-1.png" },
+    { "src": "./78/detail-2.png" },
+    { "src": "./78/detail-3.png" },
+    { "src": "./78/detail-4.png" },
+    { "src": "./78/detail-5.png" },
+    { "src": "./78/detail-6.png" },
+    { "src": "./78/detail-7.png" }
   ],
   "youtubeUrl": "https://www.youtube.com/embed/1LyB4Wu5JP0"
 }

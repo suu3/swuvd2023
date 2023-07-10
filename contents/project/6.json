@@ -14,10 +14,17 @@
     }
   ],
   "about": "2인용 보드게임으로 8세부터 가능한 퍼즐 전략게임이다. 땅따먹기 형식으로, 각자의 색상을 정하고 삼각형 6조각으로 육각형을 만든다. 진행방식은 기본판은 중앙에 배치하고, 파우치에서 퍼즐을 뽑아 배치한다. 퍼즐은 면대 면 배치만 가능하다. 퍼즐판이 다 채워지면 게임은 끝나고, 여섯개의 집을 가장 많이 완성하면 승리한다.",
-  "project_image": "./6/represent2.png",
+  "project_image": "./6/represent.png",
   "detail_image": [
     { "src": "./6/detail-1.png" },
-    { "src": "./6/detail-2.png" }
+    { "src": "./6/detail-2.png" },
+    { "src": "./6/detail-3.png" },
+    { "src": "./6/detail-4.png" },
+    { "src": "./6/detail-5.png" },
+    { "src": "./6/detail-6.png" },
+    { "src": "./6/detail-7.png" },
+    { "src": "./6/detail-8.png" },
+    { "src": "./6/detail-9.png" }
   ],
   "youtubeUrl": ""
 }

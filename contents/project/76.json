@@ -9,13 +9,28 @@
     }
   ],
   "about": "ALLSHOT은 십이지신이 현대인들을 수호하며 일상의 에너지와 집중력을 부여해 준다는 콘셉트의 에너지 드링크로, 어떠한 캔을 선택하더라도 그것은 모두 옳은 선택일 것이라는 의미를 전달합니다.",
-  "project_image": "./76/represent2.png",
+  "project_image": "./76/represent.png",
   "detail_image": [
     {
       "src": "./76/detail-1.png"
     },
     {
       "src": "./76/detail-2.png"
+    },
+    {
+      "src": "./76/detail-3.png"
+    },
+    {
+      "src": "./76/detail-4.png"
+    },
+    {
+      "src": "./76/detail-5.png"
+    },
+    {
+      "src": "./76/detail-6.png"
+    },
+    {
+      "src": "./76/detail-7.png"
     }
   ],
   "youtubeUrl": ""
