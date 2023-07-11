@@ -5,13 +5,31 @@ import ProjectNav from "@/layouts/ProjectNav";
 import TopBtn from "@/layouts/TopBtn";
 import useIsMobile from "@/hooks/useIsMobile";
 import { navigate } from "gatsby";
+import { IGatsbyImageData } from "gatsby-plugin-image";
+import { navList } from "@/layouts/ProjectNav";
 
-const Project = ({ data }) => {
+type ProjectProps = {
+  data: {
+    node: {
+      category: string;
+      uid: number;
+      title: string;
+      authors: {
+        name: string;
+        email: string;
+      }[];
+      project_image: IGatsbyImageData;
+    };
+  }[];
+  cate: string;
+};
+
+const Project = ({ data, cate }: ProjectProps) => {
   const isMobile = useIsMobile();
 
-  const [curMenu, setCurMenu] = useState({
-    label: "전체",
-  });
+  const [curMenu, setCurMenu] = useState(
+    navList.find((item) => item.id === cate) ?? navList[0]
+  );
 
   const [isOpen, setIsOpen] = useState(false);
   const [clickCard, setClickCard] = useState(null);
@@ -22,7 +40,7 @@ const Project = ({ data }) => {
 
   const handleMenu = (item: { id: string; label: string }) => {
     setCurMenu(item);
-    // navigate(`?category=${item.label}`);
+    navigate(`?cate=${item.id}`);
     toggleMenu();
   };
 

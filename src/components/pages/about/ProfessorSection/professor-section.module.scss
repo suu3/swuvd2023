@@ -2,16 +2,6 @@
 
 .section {
   position: relative;
-
-  .image {
-    opacity: 0.5;
-    width: 960px;
-    margin: auto;
-
-    @include tablet {
-      display: none;
-    }
-  }
 }
 
 .professor {

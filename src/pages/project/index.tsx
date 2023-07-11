@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { graphql, type HeadFC, type PageProps } from "gatsby";
 import Project from "@/components/pages/project";
 import SEO from "@/layouts/SEO";
 
 const IndexPage: React.FC<PageProps> = ({ location, data }) => {
-  return <Project data={data.allProjectJson?.edges} />;
+  const searchParams = new URLSearchParams(location.search);
+  const cate = searchParams.get("cate");
+
+  return <Project data={data.allProjectJson?.edges} cate={cate ?? "all"} />;
 };
 
 export default IndexPage;

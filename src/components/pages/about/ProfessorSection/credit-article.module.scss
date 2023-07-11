@@ -65,7 +65,7 @@
         font-size: 30px;
         line-height: 52px;
 
-        margin-right: 109px;
+        margin-right: 85px;
       }
 
       @include tablet {
@@ -112,11 +112,11 @@
             > span {
               display: inline-block;
 
-              margin-right: 45px;
+              margin-right: 48px;
             }
 
             > div {
-              margin-right: 117px;
+              margin-right: 80px;
 
               > span {
                 &:not(:last-child) {

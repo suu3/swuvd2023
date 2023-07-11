@@ -3,15 +3,23 @@ import type { GatsbyConfig } from "gatsby";
 //@ see https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v2-to-v3/#css-modules-are-imported-as-es-modules
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: "<금 : 線>",
+    title: "금 : 線",
     description: "서울여자대학교 시각디자인전공 40회 졸업전시회",
     siteUrl: `https://www.swuvd2023.com`,
+    og: {
+      siteName: "금 : 線 | 서울여자대학교 시각디자인전공 40회 졸업전시회",
+    },
   },
-  // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
-  // If you use VSCode you can also use the GraphQL plugin
-  // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "`https://www.swuvd2023.com",
+        sitemap: "`https://www.swuvd2023.com/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
     "gatsby-plugin-pnpm",
     `gatsby-plugin-sass`,
     "gatsby-plugin-image",
@@ -19,7 +27,7 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        icon: `src/images/favicon.svg`,
+        icon: `./src/images/favicon.svg`,
       },
     },
     {
