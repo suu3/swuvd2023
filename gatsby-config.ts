@@ -16,10 +16,11 @@ const config: GatsbyConfig = {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "`https://www.swuvd2023.com",
-        sitemap: "`https://www.swuvd2023.com/sitemap.xml",
+        sitemap: "https://www.swuvd2023.com/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
+    "gatsby-plugin-sitemap",
     "gatsby-plugin-pnpm",
     `gatsby-plugin-sass`,
     "gatsby-plugin-image",
@@ -70,7 +71,6 @@ const config: GatsbyConfig = {
         color: `#ffbe39`,
       },
     },
-    "gatsby-plugin-sitemap",
   ],
   trailingSlash: `never`, // url 뒤 후행 슬래쉬 trailing slash
 };
