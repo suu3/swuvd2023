@@ -2,14 +2,13 @@ import React, { Fragment } from "react";
 import {
   section,
   message,
-  image,
   grid,
   professor,
   specialMessage,
 } from "./professor-section.module.scss";
-import { StaticImage } from "gatsby-plugin-image";
+import classNames from "classnames";
 import CreditArticle from "./CreditArticle";
-import lineImg from "../_images/background-line.svg";
+import BackgroundLine from "@/components/common/BackgroundLine";
 
 const ProfessorSection = () => {
   const renderMsgs = professorData.map(({ name, content }, idx) => {
@@ -21,18 +20,8 @@ const ProfessorSection = () => {
     );
   });
   return (
-    <section className={section}>
-      <article className={image}>
-        <img
-          // layout="fullWidth"
-          // placeholder="dominantColor"
-          alt="background - track line"
-          // // objectFit="cover"
-          width={960}
-          height={3080}
-          src={lineImg}
-        />
-      </article>
+    <section className={classNames(section)}>
+      <BackgroundLine />
       <article className={professor}>
         <h1>Professor's congratulatory message</h1>
 

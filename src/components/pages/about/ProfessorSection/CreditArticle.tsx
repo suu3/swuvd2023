@@ -50,7 +50,7 @@ const CreditArticle = () => {
           mobileOnly
           location="top"
         />
-        <h1>Credit</h1>
+        <h1>CREDIT</h1>
         {renderCredit}
       </article>
     </div>
@@ -69,7 +69,7 @@ const creditList: {
 }[] = [
   {
     pic: "졸업준비위원회",
-    width: 140,
+    width: 128,
     mwidth: 70,
     member: [
       [
@@ -118,7 +118,7 @@ const creditList: {
   },
   {
     pic: "지도교수",
-    width: 75,
+    width: 85,
     mwidth: 70,
     member: [
       [

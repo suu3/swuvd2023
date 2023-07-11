@@ -1,0 +1,28 @@
+.background-line-1 {
+  position: absolute;
+  left: 25%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--secondary-300);
+  //   opacity: 0.8;
+}
+
+.background-line-2 {
+  width: 1px;
+  background: var(--secondary-300);
+  position: absolute;
+  left: 75%;
+  top: 0;
+  bottom: 0;
+  //   opacity: 0.8;
+}
+.background-line-3 {
+  width: 1px;
+  background: var(--secondary-300);
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  //   opacity: 0.8;
+}
