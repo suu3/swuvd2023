@@ -15,7 +15,7 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "`https://www.swuvd2023.com",
+        host: "https://www.swuvd2023.com",
         sitemap: "https://www.swuvd2023.com/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
