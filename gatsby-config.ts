@@ -20,7 +20,7 @@ const config: GatsbyConfig = {
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
-    "gatsby-plugin-sitemap",
+    "gatsby-plugin-advanced-sitemap",
     "gatsby-plugin-pnpm",
     `gatsby-plugin-sass`,
     "gatsby-plugin-image",
