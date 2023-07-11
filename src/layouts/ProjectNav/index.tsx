@@ -80,20 +80,26 @@ const Options = ({ handleMenu, curMenu }) => {
     </motion.div>
   );
 };
-const navList = [
+
+export const navList = [
   {
+    id: "all",
     label: "전체",
   },
   {
+    id: "branding",
     label: "브랜딩",
   },
   {
+    id: "printing",
     label: "인쇄/출판",
   },
   {
+    id: "video",
     label: "영상",
   },
   {
+    id: "uxui",
     label: "UX/UI",
   },
 ];
