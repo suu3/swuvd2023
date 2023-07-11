@@ -1,4 +1,3 @@
-import { HeadFC } from "gatsby";
 import React from "react";
 
 const SEO = () => (
