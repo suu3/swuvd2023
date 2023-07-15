@@ -16,6 +16,11 @@
   max-width: var(--global-max-width);
   margin: auto;
 
+  span{
+  z-index: 1;
+
+  }
+
   .info-content {
     width: 431px;
   }
