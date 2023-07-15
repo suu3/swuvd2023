@@ -1,19 +1,5 @@
 @import "@/styles/_media-query.scss";
 
-.mobile-only {
-  display: none;
-  @include tablet {
-    display: inline-block;
-  }
-}
-
-.desktop-only {
-  display: inline-block;
-  @include tablet {
-    display: none;
-  }
-}
-
 .section {
   overflow: hidden;
   color: var(--secondary-400);
@@ -51,37 +37,42 @@
 
   display: flex;
 
-  .big-svg {
-    display: flex;
-    > svg {
-      margin-right: 42px;
-      transform: translateY(-4px);
-    }
-
-    > div {
-      display: flex;
-      flex-direction: column;
-
-      > svg {
-        &:first-of-type {
-          margin-bottom: 30px;
-        }
-      }
-    }
-  }
-
   @include tablet {
     bottom: 52px;
     right: 24px;
 
     flex-direction: column;
+  }
+}
 
-    > p {
-      padding-top: 2px;
+.mobile-only {
+  display: none;
 
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 20px;
+  @include tablet {
+    display: inline-block;
+  }
+}
+
+.desktop-only {
+  display: flex;
+
+  > svg {
+    margin-right: 42px;
+    transform: translateY(-4px);
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+
+    > svg {
+      &:first-of-type {
+        margin-bottom: 30px;
+      }
     }
+  }
+
+  @include tablet {
+    display: none;
   }
 }
