@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import classNames from "classnames";
 import { menuWrapper, menu, active } from "./desinger-nav.module.scss";
 import { navigate } from "gatsby";
+import { DESIGNER_URL } from "@/constants/urls";
 // import ScrollBar from "./ScrollBar";
 
 const DesignerNav = ({ uid, data: { edges }, location }) => {
@@ -9,13 +10,29 @@ const DesignerNav = ({ uid, data: { edges }, location }) => {
     acc[value.node.uid] = React.createRef();
     return acc;
   }, {});
+  const containerRef = useRef();
 
   const goToDetail = (uid: string) => {
-    navigate(`/designer/${uid}`);
+    navigate(`${DESIGNER_URL}${uid}`);
   };
 
   useEffect(() => {
     refs?.[uid]?.current.scrollIntoView();
+
+    const container = containerRef.current;
+    const item = refs?.[uid]?.current;
+
+    if (!container || !item) return;
+
+    const containerRect = container?.getBoundingClientRect();
+    const itemRect = item.getBoundingClientRect();
+    const scrollPosition =
+      itemRect.top -
+      containerRect.top -
+      (containerRect.height - itemRect.height) / 2;
+
+    // Scroll the container to the calculated position
+    container?.scrollTop += scrollPosition;
   }, []);
 
   const renderMenus = edges.map(
@@ -37,7 +54,11 @@ const DesignerNav = ({ uid, data: { edges }, location }) => {
       );
     }
   );
-  return <nav className={menuWrapper}>{renderMenus}</nav>;
+  return (
+    <nav className={menuWrapper} ref={containerRef}>
+      {renderMenus}
+    </nav>
+  );
 };
 
 export default DesignerNav;

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { graphql, type HeadFC, type PageProps } from "gatsby";
-import Project from "@/components/pages/project";
+import Project from "@/components/domains/project";
 import SEO from "@/layouts/SEO";
 
 const IndexPage: React.FC<PageProps> = ({ location, data }) => {

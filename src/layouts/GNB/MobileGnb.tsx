@@ -2,9 +2,10 @@ import React, { useEffect, useState, useCallback } from "react";
 import * as styles from "./mobile-gnb.module.scss";
 import classnames from "classnames";
 import { Link } from "gatsby";
-import { menus, GNBType } from "./contants";
+import { menus } from "./@utils/contants";
 import { AnimatePresence, motion } from "framer-motion";
 import useLockBody from "@/hooks/useLockBody";
+import { GNBType } from "./@utils/types";
 
 const SECTION_HEIGHT = 640;
 

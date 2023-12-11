@@ -22,10 +22,10 @@ type ProjectDetailType = {
     }[];
     about: string;
     project_image: IGatsbyImageData;
-    detail_image: {
+    detail_image: Array<{
       src: IGatsbyImageData;
-    };
-    youtubeUrl: string;
+    }>;
+    youtubeUrl?: string;
   };
 };
 const ProjectDetail = ({ project }: ProjectDetailType) => {
@@ -34,19 +34,6 @@ const ProjectDetail = ({ project }: ProjectDetailType) => {
 
   const isMobile = useIsMobile();
 
-  const renderVideo = (() => {
-    if (!youtubeUrl) return null;
-
-    return (
-      <iframe
-        width="100%"
-        height="780"
-        src={youtubeUrl}
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      ></iframe>
-    );
-  })();
   return (
     <main className={main}>
       {!isMobile && <h1 className={titleCls}>{title}</h1>}
@@ -81,7 +68,15 @@ const ProjectDetail = ({ project }: ProjectDetailType) => {
                   <div className={imgWrapper}>
                     <GatsbyImage image={getImage(src)} alt={title} />
                   </div>
-                  {idx === 0 && renderVideo}
+                  {idx === 0 && youtubeUrl && (
+                    <iframe
+                      width="100%"
+                      height="780"
+                      src={youtubeUrl}
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    ></iframe>
+                  )}
                 </Fragment>
               );
             })}

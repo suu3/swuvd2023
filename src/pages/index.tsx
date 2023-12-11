@@ -1,11 +1,11 @@
 import * as React from "react";
 import { type HeadFC, type PageProps } from "gatsby";
-import ImgSection from "@/components/pages/about/ImgSection";
-import ConceptSection from "@/components/pages/about/ConceptSection";
-import DesignSection from "@/components/pages/about/DesignSection";
-import InfoSection from "@/components/pages/about/InfoSection";
-import ExhibitionSection from "@/components/pages/about/ExhibitionSection";
-import ProfessorSection from "@/components/pages/about/ProfessorSection";
+import ImgSection from "@/components/domains/about/ImgSection";
+import ConceptSection from "@/components/domains/about/ConceptSection";
+import DesignSection from "@/components/domains/about/DesignSection";
+import InfoSection from "@/components/domains/about/InfoSection";
+import ExhibitionSection from "@/components/domains/about/ExhibitionSection";
+import ProfessorSection from "@/components/domains/about/ProfessorSection";
 import SEO from "@/layouts/SEO";
 import BackgroundLine from "@/components/common/BackgroundLine";
 import useIsMobile from "@/hooks/useIsMobile";

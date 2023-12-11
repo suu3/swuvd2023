@@ -12,5 +12,3 @@ export const menus = [
     link: "/designer",
   },
 ];
-
-export type GNBType = { pathname: string; theme: "light" | "dark" };

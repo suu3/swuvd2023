@@ -1,3 +1,4 @@
+import { DESIGNER_URL } from "@/constants/urls";
 import { type GatsbyNode } from "gatsby";
 import path from "path";
 
@@ -122,7 +123,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
     node: { uid: string };
   }) => {
     const pageOptions = {
-      path: `/designer/${uid}`,
+      path: `${DESIGNER_URL}/${uid}`,
       component: DesignerTemplateComponent,
       context: { uid, layout: "designer" },
     };

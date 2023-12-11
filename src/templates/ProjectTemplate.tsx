@@ -1,6 +1,6 @@
 import { HeadFC, graphql } from "gatsby";
 import React, { FunctionComponent } from "react";
-import ProjectDetail from "@/components/pages/project/detail";
+import ProjectDetail from "@/components/domains/project/detail";
 import SEO from "@/layouts/SEO";
 import { IGatsbyImageData } from "gatsby-plugin-image";
 

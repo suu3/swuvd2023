@@ -1,6 +1,7 @@
 import React from "react";
 import { section, grid } from "./desinger.module.scss";
 import { navigate } from "gatsby";
+import { DESIGNER_URL } from "@/constants/urls";
 
 const Designer = ({ data }) => {
   return (
@@ -12,7 +13,7 @@ const Designer = ({ data }) => {
           return (
             <span
               onClick={() => {
-                navigate(`/designer/${uid}`);
+                navigate(`${DESIGNER_URL}/${uid}`);
               }}
               key={uid}
             >

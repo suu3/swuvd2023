@@ -2,7 +2,8 @@ import React, { Fragment } from "react";
 import * as styles from "./desktop-gnb.module.scss";
 import classnames from "classnames";
 import { Link } from "gatsby";
-import { menus, GNBType } from "./contants";
+import { menus } from "./@utils/contants";
+import { GNBType } from "./@utils/types";
 
 const DesktopGnb = ({ pathname, theme = "dark" }: GNBType) => {
   const renderMenus = menus.map(({ title, link }, idx) => {

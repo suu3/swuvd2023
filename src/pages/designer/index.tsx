@@ -1,6 +1,6 @@
 import * as React from "react";
 import { graphql, type HeadFC, type PageProps } from "gatsby";
-import Designer from "@/components/pages/designer";
+import Designer from "@/components/domains/designer";
 import useIsMobile from "@/hooks/useIsMobile";
 import SEO from "@/layouts/SEO";
 
