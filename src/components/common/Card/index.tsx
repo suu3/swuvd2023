@@ -12,6 +12,7 @@ import { GatsbyImage, IGatsbyImageData, getImage } from "gatsby-plugin-image";
 import classNames from "classnames";
 import { navigate } from "gatsby";
 import useIsMobile from "@/hooks/useIsMobile";
+import { PROJECT_URL } from "@/constants/serviceUrls";
 
 type CardType = {
   clickCard: null | number;
@@ -35,7 +36,7 @@ const Card = ({
   const isMobile = useIsMobile();
 
   const goToDetail = useCallback(() => {
-    navigate(`/project/${uid}`);
+    navigate(`${PROJECT_URL}/${uid}`);
   }, []);
 
   const handleClick = () => {

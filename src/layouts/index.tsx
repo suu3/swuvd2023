@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useState, useCallback } from "react";
+import React, { ReactNode } from "react";
 import DesktopGnb from "@/layouts/GNB/DesktopGnb";
 import MobileGnb from "@/layouts/GNB/MobileGnb";
 import {
@@ -12,20 +12,11 @@ import DesignerNav from "@/layouts/DesignerNav";
 import { type PageProps } from "gatsby";
 import useIsMobile from "@/hooks/useIsMobile";
 import classNames from "classnames";
-import ReactPageScroller from "react-page-scroller";
 
 type LayoutProps = {
   children: ReactNode;
   location: any;
 };
-
-// const pageTheme: {
-//   [key: string]: "light" | "dark";
-// } = {
-//   "/": "light",
-//   "/project": "dark",
-//   "/designer": "dark",
-// };
 
 export default function CommonLayout({
   pageContext,
@@ -34,15 +25,11 @@ export default function CommonLayout({
   data,
 }: LayoutProps & React.FC<PageProps>) {
   const { pathname } = location;
-  //const [theme, setTheme] = useState(pageTheme[pathname]);
   const isMobile = useIsMobile();
 
   const theme = pageContext.theme;
-  // useEffect(() => {
-  //   setTheme(pageTheme[pathname]);
-  // }, [pathname]);
 
-  const CommonLayout = ({ children }) => (
+  const CommonLayout = ({ children }: { children: ReactNode }) => (
     <>
       {children}
       {isMobile && (

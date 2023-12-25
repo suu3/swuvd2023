@@ -1,15 +1,17 @@
+import { DESIGNER_URL, HOME_URL, PROJECT_URL } from "@/constants/serviceUrls";
+
 export const menus = [
   {
     title: "ABOUT",
-    link: "/",
+    link: HOME_URL,
   },
   {
     title: "PROJECT",
-    link: "/project",
+    link: PROJECT_URL,
   },
   {
     title: "DESIGNER",
-    link: "/designer",
+    link: DESIGNER_URL,
   },
 ];
 

@@ -39,33 +39,6 @@ const MobileGnb = ({ pathname, theme = "dark" }: GNBType) => {
     };
   }, [theme]);
 
-  // const icon = isOpen ? (
-  //   <svg
-  //     width="21"
-  //     height="22"
-  //     viewBox="0 0 21 22"
-  //     fill="none"
-  //     xmlns="http://www.w3.org/2000/svg"
-  //   >
-  //     <rect
-  //       x="20.999"
-  //       y="2.99609"
-  //       width="25.6326"
-  //       height="3"
-  //       transform="rotate(135 20.999 2.99609)"
-  //       fill="black"
-  //     />
-  //     <rect
-  //       x="2.87451"
-  //       y="0.875"
-  //       width="25.6326"
-  //       height="3"
-  //       transform="rotate(45 2.87451 0.875)"
-  //       fill="black"
-  //     />
-  //   </svg>
-  // )
-
   return (
     <>
       <nav
@@ -75,7 +48,7 @@ const MobileGnb = ({ pathname, theme = "dark" }: GNBType) => {
           isOpen && styles["isOpen"]
         )}
       >
-        <Link to="/">
+        <Link to={HOME_URL}>
           <svg
             width="40"
             height="39"
