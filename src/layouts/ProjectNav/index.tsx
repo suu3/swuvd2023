@@ -56,6 +56,7 @@ const Options = ({ handleMenu, curMenu }) => {
       }
     };
   }, []);
+
   return (
     <motion.div
       className={options}
@@ -65,7 +66,10 @@ const Options = ({ handleMenu, curMenu }) => {
     >
       {navList.map((item) => {
         return (
-          <div
+          <motion.div
+            initial={{ transform: "translateY(-20px)" }}
+            animate={{ transform: "translateY(0)" }}
+            exit={{ transform: "translateY(-20px)" }}
             onClick={() => handleMenu(item)}
             className={classNames(
               option,
@@ -74,7 +78,7 @@ const Options = ({ handleMenu, curMenu }) => {
             key={item.label}
           >
             {item.label}
-          </div>
+          </motion.div>
         );
       })}
     </motion.div>

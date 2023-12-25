@@ -62,15 +62,22 @@ const MobileGnb = ({ pathname, theme = "dark" }: GNBType) => {
             />
           </svg>
         </Link>
-        {isOpen && (
-          <div className={styles["text"]}>
-            <Link to={HOME_URL}>
-              금을
-              <span />
-              넘어
-            </Link>
-          </div>
-        )}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              className={styles["text"]}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <Link to={HOME_URL}>
+                금을
+                <span />
+                넘어
+              </Link>
+            </motion.div>
+          )}
+        </AnimatePresence>
         <div className={styles["hamburger"]} onClick={toggleMenu}>
           <svg
             className={classnames(styles["icon"], isOpen && styles["open"])}
@@ -127,10 +134,6 @@ const Options = ({ pathname, toggleMenu }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{
-        ease: "easeInOut",
-        duration: 0.15,
-      }}
     >
       <ul>{renderMenus}</ul>
       <p>

@@ -157,17 +157,17 @@
 .icon {
   rect:nth-child(1) {
     transform: rotate(0);
-    transition: all 0.1s ease-in-out;
+    transition: all 0.15s ease-in-out;
   }
 
   rect:nth-child(2) {
-    transition: all 0.1s ease-in-out;
+    transition: all 0.15s ease-in-out;
     transform: rotate(0);
   }
 
   rect:nth-child(3) {
     transform: rotate(0);
-    transition: all 0.1s ease-in-out;
+    transition: all 0.15s ease-in-out;
   }
 
   &.open {
