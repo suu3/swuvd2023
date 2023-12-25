@@ -1,10 +1,11 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState } from "react";
 import * as styles from "./mobile-gnb.module.scss";
 import classnames from "classnames";
 import { Link } from "gatsby";
 import { menus, GNBType } from "./contants";
 import { AnimatePresence, motion } from "framer-motion";
 import useLockBody from "@/hooks/useLockBody";
+import { HOME_URL } from "@/constants/serviceUrls";
 
 const SECTION_HEIGHT = 640;
 
@@ -27,55 +28,43 @@ const MobileGnb = ({ pathname, theme = "dark" }: GNBType) => {
   useEffect(() => {
     _setTheme(theme);
 
-    if (pathname === "/") {
+    if (pathname === HOME_URL) {
       window.addEventListener("scroll", changeHeader);
     }
 
     return () => {
-      if (pathname === "/") {
+      if (pathname === HOME_URL) {
         window.removeEventListener("scroll", changeHeader);
       }
     };
   }, [theme]);
 
-  const icon = isOpen ? (
-    <svg
-      width="21"
-      height="22"
-      viewBox="0 0 21 22"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect
-        x="20.999"
-        y="2.99609"
-        width="25.6326"
-        height="3"
-        transform="rotate(135 20.999 2.99609)"
-        fill="black"
-      />
-      <rect
-        x="2.87451"
-        y="0.875"
-        width="25.6326"
-        height="3"
-        transform="rotate(45 2.87451 0.875)"
-        fill="black"
-      />
-    </svg>
-  ) : (
-    <svg
-      width="22"
-      height="21"
-      viewBox="0 0 22 21"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect width="22" height="3" fill="black" />
-      <rect y="9" width="22" height="3" fill="black" />
-      <rect y="18" width="22" height="3" fill="black" />
-    </svg>
-  );
+  // const icon = isOpen ? (
+  //   <svg
+  //     width="21"
+  //     height="22"
+  //     viewBox="0 0 21 22"
+  //     fill="none"
+  //     xmlns="http://www.w3.org/2000/svg"
+  //   >
+  //     <rect
+  //       x="20.999"
+  //       y="2.99609"
+  //       width="25.6326"
+  //       height="3"
+  //       transform="rotate(135 20.999 2.99609)"
+  //       fill="black"
+  //     />
+  //     <rect
+  //       x="2.87451"
+  //       y="0.875"
+  //       width="25.6326"
+  //       height="3"
+  //       transform="rotate(45 2.87451 0.875)"
+  //       fill="black"
+  //     />
+  //   </svg>
+  // )
 
   return (
     <>
@@ -102,7 +91,7 @@ const MobileGnb = ({ pathname, theme = "dark" }: GNBType) => {
         </Link>
         {isOpen && (
           <div className={styles["text"]}>
-            <Link to="/">
+            <Link to={HOME_URL}>
               금을
               <span />
               넘어
@@ -110,7 +99,18 @@ const MobileGnb = ({ pathname, theme = "dark" }: GNBType) => {
           </div>
         )}
         <div className={styles["hamburger"]} onClick={toggleMenu}>
-          {icon}
+          <svg
+            className={classnames(styles["icon"], isOpen && styles["open"])}
+            width="22"
+            height="21"
+            viewBox="0 0 22 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="22" height="3" fill="black" />
+            <rect y="9" width="22" height="3" fill="black" />
+            <rect y="18" width="22" height="3" fill="black" />
+          </svg>
         </div>
       </nav>
       <AnimatePresence>
@@ -132,7 +132,7 @@ const Options = ({ pathname, toggleMenu }) => {
     };
   }, []);
 
-  const renderMenus = menus.map(({ title, link }, idx) => {
+  const renderMenus = menus.map(({ title, link }) => {
     // const isActive = link === "/" ? pathname === link : pathname.includes(link);
     return (
       <Link to={link} key={title} onClick={toggleMenu}>

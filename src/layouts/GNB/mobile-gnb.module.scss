@@ -48,7 +48,7 @@
       }
     }
     svg {
-      tarnsition: filter 0.15s ease-in-out;
+      transition: filter 0.15s ease-in-out;
     }
     &.dark {
       background: #000000;
@@ -150,6 +150,43 @@
 
         border-bottom: 0.5px solid #d7d7d7;
       }
+    }
+  }
+}
+
+.icon {
+  rect:nth-child(1) {
+    transform: rotate(0);
+    transition: all 0.1s ease-in-out;
+  }
+
+  rect:nth-child(2) {
+    transition: all 0.1s ease-in-out;
+    transform: rotate(0);
+  }
+
+  rect:nth-child(3) {
+    transform: rotate(0);
+    transition: all 0.1s ease-in-out;
+  }
+
+  &.open {
+    rect:nth-child(1) {
+      // x: 20.999;tarnsition
+      // y: 2.99609;
+      width: 25.6326px;
+      height: 3px;
+      transform: translate(20.999px, 2.99609px) rotate(135deg);
+    }
+    rect:nth-child(2) {
+      // x: 2.87451;
+      // y: 0.875;
+      opacity: 0;
+    }
+    rect:nth-child(3) {
+      width: 25.6326px;
+      height: 3px;
+      transform: translate(15.87451px, -12.125px) rotate(45deg);
     }
   }
 }
